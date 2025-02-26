@@ -32,16 +32,16 @@ const Hero = () => {
               }}
             />
             <br />
-            <div style={{
+            {/*<div style={{
               display: "flex", flexDirection: "row", justifyContent: "center",
               alignItems: "center",
             }}>
               <iframe width="640" height="360" src="https://www.youtube.com/embed/1RQqJjkSFZA?si=N6pbdwlDksqGwNv6&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            </div>*/}
           </p>
         </div>
       </div>
-      {/*<ComputersCanvas />*/}
+      <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

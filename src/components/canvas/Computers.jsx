@@ -16,7 +16,7 @@ const ComputerModel = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <hemisphereLight intensity={1.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 30]}
         angle={0.12}
@@ -29,7 +29,7 @@ const ComputerModel = ({ isMobile }) => {
         position={[20, 50, -30]}
         angle={0.12}
         penumbra={1}
-        intensity={0.4}
+        intensity={1.4}
         castShadow
         shadow-mapSize={1024}
       />
