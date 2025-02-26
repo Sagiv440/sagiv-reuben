@@ -1,12 +1,12 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useAnimations  } from "@react-three/drei";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader";
 import CanvasLoader from "../Loader";
 
 const ComputerModel = ({ isMobile }) => {
-  const { scene } = useGLTF(
-    "./Robot/Robot_Lamber(Rig).gltf",
+  const { scene ,animations } = useGLTF(
+    "./Plazma/PlazmaCanonFinal.gltf",
     undefined,
     (loader) => {
       const dracoLoader = new DRACOLoader();
@@ -14,26 +14,43 @@ const ComputerModel = ({ isMobile }) => {
     }
   );
 
+  const { actions } = useAnimations(animations, scene); // Get animation actions
+
+  useEffect(() => {
+    if (actions) {
+      console.log("Available animations:", Object.keys(actions)); // Debugging: log animation names
+      actions["idal briving"]?.play(); // Replace "Walk" with the correct animation name
+    }
+  }, [actions]);
+
   return (
     <mesh>
-      <hemisphereLight intensity={1.15} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 30]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
+      {/* Global Ambient Light for Basic Visibility */}
+      <ambientLight intensity={0.6} />
+
+      {/* Hemisphere Light for a soft sky effect */}
+      <hemisphereLight intensity={0.6} groundColor="black" />
+
+      {/* Stronger Directional Light to simulate sunlight */}
+      <directionalLight
+        position={[5, 10, 5]}
+        intensity={2}
         castShadow
-        shadow-mapSize={1024}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
       />
+
+      {/* SpotLight for extra highlighting */}
       <spotLight
-        position={[20, 50, -30]}
-        angle={0.12}
+        position={[-10, 15, 10]}
+        angle={0.3}
         penumbra={1}
-        intensity={1.4}
+        intensity={2}
         castShadow
-        shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+
+      {/* Point Light for some extra glow */}
+      <pointLight position={[0, 5, 5]} intensity={2} />
       <primitive
         object={scene}
         scale={isMobile ? 2 : 2}
