@@ -65,8 +65,7 @@ const Contact = () => {
 
     setLoading(true);
 
-    emailjs
-      .send(
+    emailjs.send(
         "service_r2i0by4",
         "template_mf5x3bh",
         {
@@ -92,8 +91,8 @@ const Contact = () => {
       )
       .catch((error) => {
         setLoading(false);
-        console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+        console.log(error);
+        setConfirmation(`Something went wrong. Please try again. :/ `);
       });
   };
 
@@ -143,9 +142,9 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+      {/*<motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas />
-      </motion.div>
+      </motion.div>*/}
     </div>
   );
 };
