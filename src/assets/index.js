@@ -35,6 +35,10 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
+import ansible from "./tech/ansible.png";
+import linux from "./tech/linux.png";
+import docker from "./tech/docker.png";
+import mongodb from "./tech/mongodb.png";
 
 // Import common assets
 import logo from "./logo.svg";
@@ -73,5 +77,9 @@ export {
   fish_Season,
   logo,
   technion,
-  idf
+  idf,
+  ansible,
+  linux,
+  docker,
+  mongodb
 };

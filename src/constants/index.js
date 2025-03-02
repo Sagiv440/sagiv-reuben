@@ -25,7 +25,11 @@ import {
   threejs,
   Qualcomm,
   technion,
-  idf
+  idf,
+  ansible,
+  linux,
+  docker,
+  mongodb
 } from "../assets";
 
 export const navLinks = [
@@ -56,6 +60,10 @@ export const services = [
   { title: "Rect JS", icon: reactjs },
   { title: "git", icon: git },
   { title: "JavaScript", icon: javascript },
+  { title: "Docker", icon: docker },
+  { title: "Ansible", icon: ansible },
+  { title: "Linux", icon: linux },
+  { title: "MongoDB", icon: mongodb }
 ];
 
 export const technologies = [
