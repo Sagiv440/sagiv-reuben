@@ -57,7 +57,7 @@ export const services = [
   { title: "C#", icon: csharp },
   { title: "Unity", icon: unity },
   { title: "Python", icon: python },
-  { title: "Rect JS", icon: reactjs },
+  { title: "React", icon: reactjs },
   { title: "git", icon: git },
   { title: "JavaScript", icon: javascript },
   { title: "Docker", icon: docker },
