@@ -20,8 +20,7 @@ const Hero = () => {
             Hi, I'm <span className="text-[#7792E5]">Sagiv Reuben</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
-            <Typewriter
+            {/*<Typewriter
               options={{
                 strings: ["Game Development", "Electronics", "Tech Art"],
                 autoStart: true,
@@ -30,14 +29,8 @@ const Hero = () => {
                 deleteSpeed: "natural",
                 pauseFor: 1000,
               }}
-            />
+            />*/}
             <br />
-            {/*<div style={{
-              display: "flex", flexDirection: "row", justifyContent: "center",
-              alignItems: "center",
-            }}>
-              <iframe width="640" height="360" src="https://www.youtube.com/embed/1RQqJjkSFZA?si=N6pbdwlDksqGwNv6&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>*/}
           </p>
         </div>
       </div>

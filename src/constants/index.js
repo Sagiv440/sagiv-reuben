@@ -142,7 +142,7 @@ export const projects = [
       { name: "Photoshop", color: "yellow-text-gradient" },
     ],
     image: fish_Season,
-    source_code_link: "https://www.youtube.com/watch?v=MKdnPXl3_ng",
+    source_code_link: "https://www.youtube.com/watch?v=YhcMZusfbZg",
   },
   {
     name: "RTS Game",
