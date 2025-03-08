@@ -212,9 +212,9 @@ export const projects = [
     source_code_link: "https://github.com/TechArtGeorgi/GGJ-2024-Haifa",
   },
   {
-    name: "React Mid Project",
+    name: "Database Management Webpage",
     description:
-      "This app is designed to highlight skills in front-end development.",
+      "Developed a simple yet effective web interface for managing data on a web server, built with React and utilizing Axios for HTTP communication.",
     tags: [
       { name: "JavaScript", color: "blue-text-gradient" },
       { name: "React", color: "green-text-gradient" },
@@ -232,5 +232,16 @@ export const projects = [
     ],
     image: eCommers,
     source_code_link: "https://github.com/Sagiv440/ReactFinalProject",
+  },
+  {
+    name: "Factory Employee Management System",
+    description:
+      "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",
+    tags: [
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+    ],
+    image: midProject,
+    source_code_link: "https://github.com/Sagiv440/NodeJSProject",
   },
 ];

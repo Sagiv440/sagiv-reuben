@@ -19,17 +19,17 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#7792E5]">Sagiv Reuben</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            {/*<Typewriter
+         <p className={`${styles.heroSubText} mt-2 text-white-100`}> I do:
+            {<Typewriter
               options={{
-                strings: ["Game Development", "Electronics", "Tech Art"],
+                strings: ["Fullstack", "Game Dev", "Low Level", "Automation"],
                 autoStart: true,
                 loop: true,
                 loopCount: Infinity,
                 deleteSpeed: "natural",
                 pauseFor: 1000,
               }}
-            />*/}
+            />}
             <br />
           </p>
         </div>
