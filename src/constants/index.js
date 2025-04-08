@@ -142,7 +142,7 @@ export const projects = [
       { name: "Photoshop", color: "yellow-text-gradient" },
     ],
     image: fish_Season,
-    source_code_link: "https://www.youtube.com/watch?v=YhcMZusfbZg",
+    source_code_link: "https://store.steampowered.com/app/3602600/Fish_Season/",
   },
   {
     name: "RTS Game",
