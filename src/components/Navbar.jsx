@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = '/sagiv-reuben/public/Resume.pdf';
+    const resumeUrl = '/sagiv-reuben/Resume.pdf';
     window.open(resumeUrl);
   };
 
