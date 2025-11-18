@@ -1,3 +1,7 @@
+// Profile
+
+import Profile from "./profile.jpeg";
+
 // Import company logos
 
 import Qualcomm from "./company/Qualcomm.png";
@@ -47,6 +51,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
+  Profile,
   c,
   csharp,
   python,

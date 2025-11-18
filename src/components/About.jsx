@@ -42,13 +42,13 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-Hi, I'm Sagiv—a passionate game developer at heart and in mind. I bring worlds to life with love, dedication, and a touch of creativity. From crafting cooperative adventures like Bubble Bi Bubble Boo to exploring the depths of Unity's tools, I thrive on creating experiences that connect players. Outside of coding, you'll find me dancing salsa, cooking pizzas, and sharing laughs with friends. Game development isn't just what I do—it's how I bring joy and creativity into every corner of life
+      Hi, I'm Sagiv—a passionate game developer at heart and in mind. I bring worlds to life with love, dedication, and a touch of creativity. From crafting cooperative adventures like Bubble Bi Bubble Boo to exploring the depths of Unity's tools, I thrive on creating experiences that connect players. Outside of coding, you'll find me dancing salsa, cooking pizzas, and sharing laughs with friends. Game development isn't just what I do—it's how I bring joy and creativity into every corner of life
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
+        {/*services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        ))*/}
       </div>
     </>
   );

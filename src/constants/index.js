@@ -34,20 +34,12 @@ import {
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "showreal",
-    title: "Showreal",
-  },
-  {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contact Me",
   },
 ];
 
@@ -80,10 +72,24 @@ export const technologies = [
 export const experiences = [
   
   {
+    title: "Game Developer",
+    company_name: "Independent",
+    icon: fish_Season,
+    iconBg: "#191919",
+    date: "Jan 2023 - Jan 2024",
+    summery: "Game developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. The role required me to:", 
+    points: [
+      "Lead meetings and manage the team to align expectations and divide tasks",
+      "Learn and apply new technologies and skills throughout the development process",
+      "Manage time and resources to maximize efficiency and reduce confusion",
+      "Find creative solutions to limitations that arose during development",
+    ],
+  },
+  {
     title: "Layout Designer",
     company_name: "Qualcomm",
     icon: Qualcomm,
-    iconBg: "#161329",
+    iconBg: "#191919",
     date: "Jan 2021 - Jan 2023",
     summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
     points: [
@@ -97,7 +103,7 @@ export const experiences = [
     title: "Electronics Practical Engineer",
     company_name: "EngineerTechnion Institute",
     icon: technion,
-    iconBg: "#161329",
+    iconBg: "#191919",
     date: "Jan 2018 - Jan 2020",
     summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
     points: [
@@ -108,7 +114,7 @@ export const experiences = [
     title: "Artillery Gun Crewman",
     company_name: "Artillery Corps IDF",
     icon: idf,
-    iconBg: "#161329",
+    iconBg: "#191919",
     date: "Nov 2013 - Nov 2016",
     summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
     points: [
