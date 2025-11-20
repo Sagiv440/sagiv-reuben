@@ -32,14 +32,34 @@ import {
   mongodb
 } from "../assets";
 
+
+export const subjectLinks = [
+  {
+    id: "game-development",
+    title: "Game Development",
+  },
+  {
+    id: "electronics",
+    title: "Electronics",
+  },
+  {
+    id: "linux",
+    title: "Linux",
+  },
+];
+
 export const navLinks = [
   {
     id: "experience",
     title: "Experience",
   },
   {
-    id: "contact",
-    title: "Contact Me",
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "contect",
+    title: "Contect",
   },
 ];
 
@@ -70,14 +90,15 @@ export const technologies = [
 ];
 
 export const experiences = [
-  
+
   {
     title: "Game Developer",
     company_name: "Independent",
     icon: fish_Season,
     iconBg: "#191919",
     date: "Jan 2023 - Jan 2024",
-    summery: "Game developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. The role required me to:", 
+    about: "Lead Game Developer – “Fish Season” Video Game ",
+    summery: "Lead Game Developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. The role required me to:",
     points: [
       "Lead meetings and manage the team to align expectations and divide tasks",
       "Learn and apply new technologies and skills throughout the development process",
@@ -91,7 +112,8 @@ export const experiences = [
     icon: Qualcomm,
     iconBg: "#191919",
     date: "Jan 2021 - Jan 2023",
-    summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
+    about: "industry leader in micro-processors and RF communication chips.",
+    summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:",
     points: [
       "Lead my team’s presentations in meetings with management.",
       "Mentor colleagues and debug their code before final submission.",
@@ -101,11 +123,12 @@ export const experiences = [
   },
   {
     title: "Electronics Practical Engineer",
-    company_name: "EngineerTechnion Institute",
+    company_name: "Technion Institute",
     icon: technion,
     iconBg: "#191919",
     date: "Jan 2018 - Jan 2020",
-    summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
+    about: "Electronics Practical Engineer | Technion Institute GPA: 96.1",
+    summery: "",
     points: [
       "Awarded a High preformence student with a GPA: 96.1",
     ],
@@ -116,7 +139,8 @@ export const experiences = [
     icon: idf,
     iconBg: "#191919",
     date: "Nov 2013 - Nov 2016",
-    summery: "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:", 
+    about: "Manditory Service",
+    summery: "",
     points: [
       "Awarded for outstanding performance by the regiment officer.",
     ],

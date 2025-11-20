@@ -2,10 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { About, Contact, Experience, Navbar, StarsCanvas, Tech, Works } from './components';
 import Hero from './components/hero_component'
-import TechHero from './components/tech_hero_component'
 import Showreal from './components/Showreal';
 import Projects from './components/Projects';
-import {projects} from './constants/index';
 
 const App = () => {
   return (
@@ -21,8 +19,10 @@ const App = () => {
         </div>
         <Hero/>
         <About />
-        <Projects projects={projects}/>
-        {/*<Showreal />
+        <Experience/>
+        <Projects />
+        <Contact/>
+         {/*<Showreal />
         <Experience />
         <Works />*/}
       </div>

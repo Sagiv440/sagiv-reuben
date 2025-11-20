@@ -43,7 +43,7 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-      Hi, I'm Sagiv—a passionate game developer at heart and in mind. I bring worlds to life with love, dedication, and a touch of creativity. From crafting cooperative adventures like Bubble Bi Bubble Boo to exploring the depths of Unity's tools, I thrive on creating experiences that connect players. Outside of coding, you'll find me dancing salsa, cooking pizzas, and sharing laughs with friends. Game development isn't just what I do—it's how I bring joy and creativity into every corner of life
+      My name is Sagiv Reuben. From a young age, I was drawn to understanding how things work, taking apart mechanisms, studying their inner structures, and putting them back together. That curiosity naturally grew into a strong passion for computers, which I consider one of the most complex and fascinating machines ever created. On this website, you’ll find work from many disciplines within the world of computing from web and application development to systems, hardware, and more.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

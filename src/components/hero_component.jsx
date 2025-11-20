@@ -34,15 +34,12 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">
-          Crafting Worlds.
-          <br />
-          Engineering Experiences.
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 whitespace-nowrap">
+          Hi, I'm Sagiv
         </h1>
 
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-          Hi, I'm Sagiv — an independent game & software developer building immersive
-          gameplay, sci-fi atmospheres, and smooth user experiences.
+          Hello. This website is a little archive of my work and the path I’ve taken. Feel free to look around.
         </p>
 
         <motion.a
