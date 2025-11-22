@@ -26,7 +26,10 @@ const Projects = () => {
       <div className="flex flex-col gap-6 p-6 max-w-5xl mx-auto w-full">
         {projects.map((project, index) => (
           <div
-            className="bg-tertiary rounded-xl"
+            className="bg-tertiary rounded-xl border-border border-1px border-solid"
+            style={{
+              border: "1px solid #414141ff",      // border
+            }}
           >
             <div
               key={project.name}

@@ -36,14 +36,13 @@ const Contact = () => {
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-10 p-6 rounded-2xl"
+    <div className="w-full max-w-2xl mx-auto mt-10 p-6 rounded-2xl bg-tertiary border-border"
       style={{
-        backgroundColor: "#242424ff",   // tertiary
-        border: "1px solid #414141ff",  // border
+        border: "1px solid #414141ff",      // border
       }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-center"
-        style={{ color: "#b1b1b1ff" }} // secondary
+      <h2 className="text-3xl font-bold mb-6 text-center text-secondary "
+
       >
         Contact Me
       </h2>
@@ -63,15 +62,13 @@ const Contact = () => {
           >
             <div className="flex items-center space-x-3">
               <div
-                className="transition"
-                style={{ color: "#b1b1b1ff" }}
+                className="transition text-white-100"
               >
                 {c.icon}
               </div>
 
               <span
-                className="text-lg transition"
-                style={{ color: "#b1b1b1ff" }}    // secondary
+                className="text-lg transition text-white-100"
               >
                 {c.name}
               </span>
