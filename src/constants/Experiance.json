@@ -2,7 +2,7 @@
   {
     "title": "Game Developer",
     "company_name": "Independent",
-    "icon": "fish_Season",
+    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
     "iconBg": "#191919",
     "date": "Jan 2023 - Jan 2024",
     "about": "Lead Game Developer – “Fish Season” Video Game ",
@@ -17,7 +17,7 @@
   {
     "title": "Layout Designer",
     "company_name": "Qualcomm",
-    "icon": "Qualcomm",
+    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/Qualcomm.png?raw=true",
     "iconBg": "#191919",
     "date": "Jan 2021 - Jan 2023",
     "about": "industry leader in micro-processors and RF communication chips.",
@@ -32,7 +32,7 @@
   {
     "title": "Electronics Practical Engineer",
     "company_name": "Technion Institute",
-    "icon": "technion",
+    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/technion.png?raw=true",
     "iconBg": "#191919",
     "date": "Jan 2018 - Jan 2020",
     "about": "Electronics Practical Engineer | Technion Institute GPA: 96.1",
@@ -44,7 +44,7 @@
   {
     "title": "Artillery Gun Crewman",
     "company_name": "Artillery Corps IDF",
-    "icon": "idf",
+    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/idf.png?raw=true",
     "iconBg": "#191919",
     "date": "Nov 2013 - Nov 2016",
     "about": "Manditory Service",

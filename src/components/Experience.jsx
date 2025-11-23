@@ -94,7 +94,8 @@ const Experience = () => {
 
     useEffect(()=>{
     const getExperiences = async()=>{
-        const {data} = await getAll("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json");
+        const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json");
+        const data = await res.json()
         setExperiences(data);
     }  
     getExperiences();

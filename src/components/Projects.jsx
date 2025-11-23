@@ -1,20 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { projects } from '../constants/index';
+
 
 // Pass your "projects" array as props
 // Example: <Projects projects={projectsData} />
 
 const Projects = () => {
   const [expanded, setExpanded] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
   };
 
+    useEffect(()=>{
+    const getProjects = async()=>{
+        const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json");
+        const data = await res.json()
+        setProjects(data);
+    }  
+    getProjects();
+  })
   return (
     <>
       <motion.div variants={textVariant}>
