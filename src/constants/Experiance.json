@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Game Developer",
+    "company_name": "Independent",
+    "icon": "fish_Season",
+    "iconBg": "#191919",
+    "date": "Jan 2023 - Jan 2024",
+    "about": "Lead Game Developer – “Fish Season” Video Game ",
+    "summery": "Lead Game Developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. The role required me to:",
+    "points": [
+      "Lead meetings and manage the team to align expectations and divide tasks",
+      "Learn and apply new technologies and skills throughout the development process",
+      "Manage time and resources to maximize efficiency and reduce confusion",
+      "Find creative solutions to limitations that arose during development",
+    ]
+  },
+  {
+    "title": "Layout Designer",
+    "company_name": "Qualcomm",
+    "icon": "Qualcomm",
+    "iconBg": "#191919",
+    "date": "Jan 2021 - Jan 2023",
+    "about": "industry leader in micro-processors and RF communication chips.",
+    "summery": "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:",
+    "points": [
+      "Lead my team’s presentations in meetings with management.",
+      "Mentor colleagues and debug their code before final submission.",
+      "Find innovative and creative solutions to complicated tasks with strict constraints.",
+      "Explore efficiency boosters to increase my team’s and my own productivity."
+    ]
+  },
+  {
+    "title": "Electronics Practical Engineer",
+    "company_name": "Technion Institute",
+    "icon": "technion",
+    "iconBg": "#191919",
+    "date": "Jan 2018 - Jan 2020",
+    "about": "Electronics Practical Engineer | Technion Institute GPA: 96.1",
+    "summery": "",
+    "points": [
+      "Awarded a High preformence student with a GPA: 96.1",
+    ]
+  },
+  {
+    "title": "Artillery Gun Crewman",
+    "company_name": "Artillery Corps IDF",
+    "icon": "idf",
+    "iconBg": "#191919",
+    "date": "Nov 2013 - Nov 2016",
+    "about": "Manditory Service",
+    "summery": "",
+    "points": [
+      "Awarded for outstanding performance by the regiment officer.",
+    ]
+  }
+];
