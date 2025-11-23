@@ -124,7 +124,7 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/midProject.png?raw=true",
     "source_code_link": "https://github.com/Sagiv440/NodeJSProject"
-  }
+  },
   {
     "name": "3D-Platformer",
     "description":
@@ -135,5 +135,5 @@
     ],
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTpWt2pYA42TTZnDkF1mvDbHVKy3QK0Nl9Gw&s",
     "source_code_link": "https://github.com/Sagiv440/ReactFinalProject"
-  },
+  }
 ]
