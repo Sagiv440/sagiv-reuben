@@ -12,6 +12,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import { getAll } from "../utils/utils";
+import Loading from "./canvas/loading";
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
   <VerticalTimelineElement
@@ -45,7 +46,7 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
         className="text-white-100 text-[14px] tracking-wider"
       >
         {experience.about}
-</div>
+      </div>
       <AnimatePresence>
         {expanded === index && (
           <motion.div
@@ -85,6 +86,7 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
 );
 
 const Experience = () => {
+  const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
   const [experiences, setExperiences] = useState([]);
 
@@ -92,12 +94,15 @@ const Experience = () => {
     setExpanded(expanded === index ? null : index);
   };
 
-    useEffect(()=>{
-    const getExperiences = async()=>{
-        const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json");
-        const data = await res.json()
-        setExperiences(data);
-    }  
+  useEffect(() => {
+    const getExperiences = async () => {
+      fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json")
+        .then(res => res.json())
+        .then(data => {
+          setExperiences(data);
+          setLoading(false);
+        })
+    }
     getExperiences();
   })
 
@@ -111,11 +116,12 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        {loading && <Loading />}
+        {!loading && <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={`experience-${index}`} experience={experience} index={index} expanded={expanded} setExpanded={toggleExpand} />
           ))}
-        </VerticalTimeline>
+        </VerticalTimeline>}
       </div>
     </>
   )

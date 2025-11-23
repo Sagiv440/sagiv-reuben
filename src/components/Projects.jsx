@@ -3,12 +3,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import Loading from "./canvas/loading";
 
 
 // Pass your "projects" array as props
 // Example: <Projects projects={projectsData} />
 
 const Projects = () => {
+  const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
   const [projects, setProjects] = useState([]);
 
@@ -18,9 +20,13 @@ const Projects = () => {
 
     useEffect(()=>{
     const getProjects = async()=>{
-        const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json");
-        const data = await res.json()
-        setProjects(data);
+        fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json")
+          .then(res=>        res.json())
+          .then(data=>{
+                    setProjects(data);
+                    setLoading(false);
+          })
+
     }  
     getProjects();
   })
@@ -33,7 +39,8 @@ const Projects = () => {
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
       <div className="flex flex-col gap-6 p-6 max-w-5xl mx-auto w-full">
-        {projects.map((project, index) => (
+        {loading && <Loading/>}
+        {!loading && projects.map((project, index) => (
           <div
             className="bg-tertiary rounded-xl border-border border-1px border-solid"
             style={{
