@@ -4,6 +4,8 @@ import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Loading from "./canvas/loading";
+import { loadImage } from "../utils/utils";
+import LImage from "./canvas/Image";
 
 
 // Pass your "projects" array as props
@@ -18,16 +20,18 @@ const Projects = () => {
     setExpanded(expanded === index ? null : index);
   };
 
-    useEffect(()=>{
-    const getProjects = async()=>{
-        fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json")
-          .then(res=>        res.json())
-          .then(data=>{
-                    setProjects(data);
-                    setLoading(false);
-          })
+  useEffect(() => {
+    const getProjects = async () => {
+      const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json")
+      const data = await res.json()
 
-    }  
+      setProjects(data);
+      /*const imageUrls = data.map(x => x.image);
+      await Promise.all(imageUrls.map(url => loadImage(url)))*/
+
+      setLoading(false);
+
+    }
     getProjects();
   })
   return (
@@ -39,7 +43,7 @@ const Projects = () => {
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
       <div className="flex flex-col gap-6 p-6 max-w-5xl mx-auto w-full">
-        {loading && <Loading/>}
+        {loading && <Loading />}
         {!loading && projects.map((project, index) => (
           <div
             className="bg-tertiary rounded-xl border-border border-1px border-solid"
@@ -73,11 +77,12 @@ const Projects = () => {
               </div>
               {/* Image */}
               <div className="max-w-80 mx-auto w-full">
-                <img
+                <LImage src={project.image} alt={project.name} className={"w-full h-40 object-cover rounded-lg "}/>
+                {/*<img
                   src={project.image}
                   alt={project.name}
                   className="w-full h-40 object-cover rounded-lg "
-                />
+                />*/}
               </div>
 
             </div>

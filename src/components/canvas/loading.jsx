@@ -1,8 +1,9 @@
-export default function Loading() {
+export default function Loading({hide_text = false}) {
   return (
+
     <div style={styles.wrapper}>
       <div style={styles.spinner}></div>
-      <p style={styles.text}>Loading...</p>
+      {!hide_text && <p style={styles.text}>Loading...</p>}
     </div>
   );
 }
