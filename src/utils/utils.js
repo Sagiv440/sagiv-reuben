@@ -23,14 +23,5 @@ const NewId = (data)=>
       return Id + 1;
     }
 
-const loadImage = (url) => {
-  return new Promise(resolve => {
-    const img = new Image();
-    img.src = url;
-    img.onload = resolve;
-    img.onerror = resolve; // prevents hanging
-  });
-}
-
-export { getAll, getById, addItem, updateItem, deleteItem , NewId , loadImage };
+export { getAll, getById, addItem, updateItem, deleteItem , NewId };
 
