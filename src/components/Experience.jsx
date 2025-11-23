@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -8,9 +8,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { getAll } from "../utils/utils";
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
   <VerticalTimelineElement
@@ -85,10 +86,19 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
 
 const Experience = () => {
   const [expanded, setExpanded] = useState(null);
+  const [experiences, setExperiences] = useState([]);
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
   };
+
+    useEffect(()=>{
+    const getExperiences = async()=>{
+        const {data} = await getAll("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json");
+        setExperiences(data);
+    }  
+    getExperiences();
+  })
 
   return (
     <>
