@@ -11,8 +11,9 @@ import { styles } from "../styles";
 
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { getAll } from "../utils/utils";
+import { getAll, loadImage } from "../utils/utils";
 import Loading from "./canvas/loading";
+import LImage from "./canvas/Image";
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
   <VerticalTimelineElement
@@ -25,11 +26,8 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[80%] h-[80%] object-contain rounded-full"
-        />
+        <LImage src={experience.icon} alt={experience.company_name} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true}/>
+
       </div>
     }
   >
@@ -96,15 +94,17 @@ const Experience = () => {
 
   useEffect(() => {
     const getExperiences = async () => {
-      fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json")
-        .then(res => res.json())
-        .then(data => {
-          setExperiences(data);
-          setLoading(false);
-        })
+      const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json")
+      const data = await res.json()
+      setExperiences(data);
+
+      /*const imageUrls = data.map(x => x.icon);
+      await Promise.all(imageUrls.map(url => loadImage(url)))*/
+
+      setLoading(false);
     }
     getExperiences();
-  })
+  });
 
   return (
     <>
