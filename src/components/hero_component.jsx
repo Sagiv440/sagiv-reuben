@@ -43,12 +43,12 @@ export default function Hero() {
         </p>
 
         <motion.a
-          href="#about"
+          href="#/projects"
           className="inline-block px-8 py-3 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:bg-white/20 transition-all text-white font-medium"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          About Me ↗
+          To My Projects ↗
         </motion.a>
       </motion.div>
 

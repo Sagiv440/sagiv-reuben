@@ -31,7 +31,7 @@ const ProjectDetails = () => {
         return (
             <div className="text-center text-white p-10">
                 <h2 className="text-2xl font-bold">Project Not Found</h2>
-                <Link to="/sagiv-reuben/#projects" className="underline text-secondary">
+                <Link to="/#/projects" className="underline text-secondary">
                     ← Back to Projects
                 </Link>
             </div>
@@ -44,12 +44,12 @@ const ProjectDetails = () => {
             {!loading && <div className="max-w-5xl mx-auto p-10 text-white">
 
                 {/* BACK BUTTON */}
-                <Link
-                    to="/sagiv-reuben/projects"
+                <a
+                    href="#/projects"
                     className="inline-block mb-8 text-secondary hover:text-white underline text-lg transition-colors"
                 >
                     ← Back to Projects
-                </Link>
+                </a>
 
                 {/* CONTENT WRAPPER */}
                 <div className="flex flex-col md:flex-row gap-10">
