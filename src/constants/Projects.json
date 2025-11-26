@@ -1,6 +1,6 @@
 [
   {
-    "id": "roboshift",
+    "id":"roboshift",
     "name": "Roboshift",
     "description": "Co-developed a first-person tower defense game with asymmetric level design. Designed dynamic AI, resource management systems, and fortifications like traps and turrets. Focused on story-driven gameplay and player",
     "tags": [
@@ -25,7 +25,7 @@
     "source_code_link": "https://www.youtube.com/watch?v=MKdnPXl3_ng"
   },
   {
-    "id": "fish-season",
+    "id":"fish-season",
     "name": "Fish Season",
     "description": "A mobile game for those who love fishing and blowing up boats while riding the bus. Sail the seas, find your fortune, and oh, don’t forget the fish! 🎣🛥️",
     "tags": [
@@ -50,7 +50,7 @@
     "source_code_link": "https://store.steampowered.com/app/3602600/Fish_Season/"
   },
   {
-    "id": "rts-game",
+        "id":"rts-game",
     "name": "RTS Game",
     "description": "A hobby project used to experiment with multi-layer AI using a Minimax-based decision system and AI-driven unit behavior. On the challenges was to create a general interface so that both AI and Player can control the units.",
     "tags": [
@@ -67,7 +67,7 @@
     "source_code_link": "https://github.com/Sagiv440/Unity_Strategy"
   },
   {
-    "id": "minecract",
+        "id":"minecract",
     "name": "Minecraft World Generator",
     "description": "A prototype built to explore 3D engines and rendering pipelines. build a custom C++ game engine with OpenGL for terrain generation and rendering. Implements Perlin noise for procedural terrain creation.",
     "tags": [
@@ -88,7 +88,7 @@
     "source_code_link": "https://github.com/Sagiv440/Minecraft-World-Generator"
   },
   {
-    "id": "nes-emulator",
+        "id":"nes-emulator",
     "name": "NES_emulator",
     "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
     "tags": [
@@ -109,7 +109,7 @@
     "source_code_link": "https://github.com/Sagiv440/NES_emulator"
   },
   {
-    "id": "tetris",
+        "id":"tetris",
     "name": "Tetris",
     "description": "This project is was made to as a way to learn the basics of making games And the princibls of games developments and framework. This project use the OLC Pixel Game Engine to render the game on to the screen.",
     "tags": [
@@ -122,7 +122,7 @@
     "source_code_link": "https://github.com/Sagiv440/Tetris"
   },
   {
-    "id": "bubble-bi-babble-boo",
+        "id":"bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
     "description": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
     "tags": [
@@ -139,7 +139,7 @@
     "source_code_link": "https://github.com/Sagiv440/GlobalGameJam2025"
   },
   {
-    "id": "grempa-and-me",
+        "id":"grempa-and-me",
     "name": "Grampa And Me (GlobalGameJam2024)",
     "description": "The game is about a kid who was sent to spend the weekend with his Old Grumpy Grampa. You, as the player, need to cheer the kid up by planting various pranks around the house to prank the grandpa in order to make the kid laugh. Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)",
     "tags": [
@@ -156,7 +156,7 @@
     "source_code_link": "https://github.com/TechArtGeorgi/GGJ-2024-Haifa"
   },
   {
-    "id": "database-management",
+        "id":"database-management",
     "name": "Database Management Webpage",
     "description": "Developed a simple yet effective web interface for managing data on a web server, built with React and utilizing Axios for HTTP communication.",
     "tags": [
@@ -173,7 +173,7 @@
     "source_code_link": "https://github.com/Sagiv440/ReactMidProject"
   },
   {
-    "id": "e-commerce",
+     "id":"e-commerce",
     "name": "E-Commerce",
     "description": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development.",
     "tags": [
@@ -190,7 +190,7 @@
     "source_code_link": "https://github.com/Sagiv440/ReactFinalProject"
   },
   {
-    "id": "factory-employee-management-system",
+        "id":"factory-employee-management-system",
     "name": "Factory Employee Management System",
     "description": "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",
     "tags": [

@@ -1,132 +1,109 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Loading from "./canvas/loading";
-import { loadImage } from "../utils/utils";
 import LImage from "./canvas/Image";
-
-
-// Pass your "projects" array as props
-// Example: <Projects projects={projectsData} />
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
-  const [expanded, setExpanded] = useState(null);
   const [projects, setProjects] = useState([]);
-
-  const toggleExpand = (index) => {
-    setExpanded(expanded === index ? null : index);
-  };
 
   useEffect(() => {
     const getProjects = async () => {
-      const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json")
-      const data = await res.json()
+      const res = await fetch(
+        "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
+      );
+      const data = await res.json();
 
       setProjects(data);
-      /*const imageUrls = data.map(x => x.image);
-      await Promise.all(imageUrls.map(url => loadImage(url)))*/
-
       setLoading(false);
+    };
 
-    }
     getProjects();
-  })
+  }, []);
+
   return (
     <>
+      {/* Title Section */}
       <motion.div variants={textVariant}>
         <p className={`${styles.sectionSubText} text-center`}>
-          Archive Of My  ( Personal / Collaborative ) Work
+          Archive Of My (Personal / Collaborative) Work
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
-      <div className="flex flex-col gap-6 p-6 max-w-5xl mx-auto w-full">
-        {loading && <Loading />}
-        {!loading && projects.map((project, index) => (
-          <div
-            className="bg-tertiary rounded-xl border-border border-1px border-solid"
-            style={{
-              border: "1px solid #414141ff",      // border
-            }}
-          >
-            <div
-              key={project.name}
-              className="flex flex-col sm:flex-row gap-4 shadow-lg p-4 cursor-pointer transition-all duration-300 hover:bg-white/10 hover:text-white hover:opacity-80 rounded-lg"
-            >
 
-              <div className="justify-end">
+      {/* Grid */}
+      <div className="p-6 max-w-6xl mx-auto w-full">
+        {loading && <Loading />}
+
+        {!loading && (
+          <div className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            gap-6
+          ">
+            {projects.map((project) => (
+              <Link
+                to={`/sagiv-reuben/projects/${project.id}`}
+                key={project.id}
+                className="
+                  bg-tertiary 
+                  border border-border 
+                  rounded-xl 
+                  overflow-hidden 
+                  p-4 
+                  flex flex-col
+                  transition-all 
+                  duration-300 
+                  hover:opacity-80 
+                  hover:bg-white/10
+                "
+              >
+                {/* Image */}
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <LImage
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
                 {/* Title */}
-                <h3 className="text-white text-xl font-bold mt-3">{project.name}</h3>
+                <h3 className="text-white text-lg font-bold">{project.name}</h3>
 
                 {/* Description */}
-                <p className="text-white-100 text-sm mt-2 line-clamp-3">
-                  {expanded === index ? project.description : project.description}
+                <p className="text-secondary text-sm mt-2 line-clamp-3">
+                  {project.description}
                 </p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-3">
                   {project.tags.map((tag) => (
-                    <span key={tag.name} className={`${tag.color} text-xs font-medium`}>
+                    <span
+                      key={tag.name}
+                      className={`${tag.color} text-xs font-medium`}
+                    >
                       #{tag.name}
                     </span>
                   ))}
                 </div>
-                <Link to={`/sagiv-reuben/projects/${project.id}`}>
-                  <button className="text-secondary underline">View More →</button>
-                </Link>
-              </div>
-              {/* Image */}
-              <div className="max-w-80 mx-auto w-full">
-                <LImage src={project.image} alt={project.name} className={"w-full h-40 object-cover rounded-lg "} />
-                {/*<img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-40 object-cover rounded-lg "
-                />*/}
-              </div>
 
-            </div>
-            {/* Expanded section */}
-            <AnimatePresence>
-              {/*expanded === index && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: "easeInOut" }}
-                  className="mt-4 p-3 rounded-lg overflow-hidden"
-                >
-
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ delay: 0.35, duration: 0.2 }}
-                    className="text-white text-sm mb-3"
-                  >
-                    <p className="text-white text-sm mb-3">{project.description}</p>
-                    {project.source_code_link && (
-                      <a
-                        href={project.source_code_link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary underline text-sm font-medium"
-                      >
-                        View Project ↗
-                      </a>
-                    )}
-                  </motion.p>
-                </motion.div>
-              )*/}
-            </AnimatePresence>
+                {/* View More Button */}
+                <button className="mt-auto text-secondary underline pt-4 text-left">
+                  View More →
+                </button>
+              </Link>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </>
   );
 };
-
 
 export default SectionWrapper(Projects, "projects");

@@ -54,11 +54,11 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "experience",
+    id: "/sagiv-reuben/experience",
     title: "Experience",
   },
   {
-    id: "projects",
+    id: "/sagiv-reuben/projects",
     title: "Projects",
   },
 ];

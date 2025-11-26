@@ -81,7 +81,7 @@ const Navbar = () => {
         </motion.a>
       </li>
 
-      <li className={`text-${isSecondary ? 'secondary' : 'white'} hover:text-white text-[15px] font-medium cursor-pointer`}>
+      {/*<li className={`text-${isSecondary ? 'secondary' : 'white'} hover:text-white text-[15px] font-medium cursor-pointer`}>
         <motion.button
           onClick={toggleResume}
           className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
@@ -90,7 +90,7 @@ const Navbar = () => {
         >
           Resume
         </motion.button>
-      </li>
+      </li>*/}
     </ul>
   );
 
