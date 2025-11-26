@@ -54,7 +54,6 @@ const Projects = () => {
             <div
               key={project.name}
               className="flex flex-col sm:flex-row gap-4 shadow-lg p-4 cursor-pointer transition-all duration-300 hover:bg-white/10 hover:text-white hover:opacity-80 rounded-lg"
-              onClick={() => toggleExpand(index)}
             >
 
               <div className="justify-end">
@@ -74,10 +73,13 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                <Link to={`/sagiv-reuben/projects/${project.id}`}>
+                  <button className="text-secondary underline">View More →</button>
+                </Link>
               </div>
               {/* Image */}
               <div className="max-w-80 mx-auto w-full">
-                <LImage src={project.image} alt={project.name} className={"w-full h-40 object-cover rounded-lg "}/>
+                <LImage src={project.image} alt={project.name} className={"w-full h-40 object-cover rounded-lg "} />
                 {/*<img
                   src={project.image}
                   alt={project.name}
@@ -88,7 +90,7 @@ const Projects = () => {
             </div>
             {/* Expanded section */}
             <AnimatePresence>
-              {expanded === index && (
+              {/*expanded === index && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
@@ -96,7 +98,7 @@ const Projects = () => {
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   className="mt-4 p-3 rounded-lg overflow-hidden"
                 >
-                  {/* Delayed text animation */}
+
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -117,7 +119,7 @@ const Projects = () => {
                     )}
                   </motion.p>
                 </motion.div>
-              )}
+              )*/}
             </AnimatePresence>
           </div>
         ))}
