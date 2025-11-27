@@ -24,15 +24,10 @@ const App = () => {
         {/* Page content below navbar */}
         <div className="pt-20">  {/* Adjust to match navbar height */}
           <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <About />
-              </>
-            }/>
-            
-            <Route path="/experience" element={<Experience />}/>
-            <Route path="/projects" element={<Projects />}/>
+            <Route path="/" element={<Hero />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetails />} />
           </Routes>
 

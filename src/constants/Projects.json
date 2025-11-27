@@ -1,31 +1,6 @@
 [
   {
-    "id":"roboshift",
-    "name": "Roboshift",
-    "description": "Co-developed a first-person tower defense game with asymmetric level design. Designed dynamic AI, resource management systems, and fortifications like traps and turrets. Focused on story-driven gameplay and player",
-    "tags": [
-      {
-        "name": "C#",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "Unity",
-        "color": "green-text-gradient"
-      },
-      {
-        "name": "Blender 3D",
-        "color": "pink-text-gradient"
-      },
-      {
-        "name": "Photoshop",
-        "color": "yellow-text-gradient"
-      }
-    ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/roboShift.png?raw=true",
-    "source_code_link": "https://www.youtube.com/watch?v=MKdnPXl3_ng"
-  },
-  {
-    "id":"fish-season",
+    "id": "fish-season",
     "name": "Fish Season",
     "description": "A mobile game for those who love fishing and blowing up boats while riding the bus. Sail the seas, find your fortune, and oh, don’t forget the fish! 🎣🛥️",
     "tags": [
@@ -47,10 +22,57 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
-    "source_code_link": "https://store.steampowered.com/app/3602600/Fish_Season/"
+    "details": {
+      "body": "A small casual fishing game where every round is bite-sized, and the competition is fierce for every fish. On the dock, you can use the fish you've collected to buy upgrades and repair your damaged vessel. And in desperate times, you can even fire your fish at your rivals. Good luck !",
+      "videos": [
+        "https://www.youtube.com/watch?v=-1cAULuj4NA"
+      ],
+      "images": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3602600/b73238e5bc311cb6ca5aa065da485c0796eab5f0/ss_b73238e5bc311cb6ca5aa065da485c0796eab5f0.1920x1080.jpg?t=1750506186",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3602600/9e74cf748357ab6ec1fc5cf6cf43f3c893c19121/ss_9e74cf748357ab6ec1fc5cf6cf43f3c893c19121.1920x1080.jpg?t=1750506186"
+      ],
+      "likes": [
+        {
+          "name": "Steam Page",
+          "url": "https://store.steampowered.com/app/3602600/Fish_Season/"
+        }
+      ]
+    }
   },
   {
-        "id":"rts-game",
+    "id": "roboshift",
+    "name": "Roboshift",
+    "description": "Co-developed a first-person tower defense game with asymmetric level design. Designed dynamic AI, resource management systems, and fortifications like traps and turrets. Focused on story-driven gameplay and player",
+    "tags": [
+      {
+        "name": "C#",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Unity",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "Blender 3D",
+        "color": "pink-text-gradient"
+      },
+      {
+        "name": "Photoshop",
+        "color": "yellow-text-gradient"
+      }
+    ],
+    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/roboShift.png?raw=true",
+    "details": {
+      "body": "Roboshift is a small indie game I’ve been working on with for the passed 1 years with my good friend Mor Dahan. A first person tower defense. Where the goal is to destroy the enemies base before they while do the same to yours.",
+      "videos": [
+        "https://www.youtube.com/watch?v=MKdnPXl3_ng"
+      ],
+      "images": [],
+      "likes": []
+    }
+  },
+  {
+    "id": "rts-game",
     "name": "RTS Game",
     "description": "A hobby project used to experiment with multi-layer AI using a Minimax-based decision system and AI-driven unit behavior. On the challenges was to create a general interface so that both AI and Player can control the units.",
     "tags": [
@@ -64,10 +86,33 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/rts_TumeNaile.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/Unity_Strategy"
+    "details": {
+      "body": "As a way to learn about video game AI, I made an RTS (Real-Time Strategy) game where the player controls a small army with the goal of destroying the enemy's main army building. The core of the game consists of individual units with their own AI, allowing them to make some decisions, and a larger army manager that organizes and sorts them as it passes down orders from the player or the AI. The enemy AI is a simple Minimax algorithm that translates the battlefield into a tree of possible choices, each assigned a value. This system gives the AI the flexibility to plan ahead and respond to the player's behavior, all while being very performance efficient. To implement many of these systems, I relied on many features of .NET and C#, such as events and delegates, to allow units to subscribe and unsubscribe to receive orders from the manager as they are being selected.",
+      "videos": [
+        "https://www.youtube.com/watch?v=5TpPYrwQT54"
+      ],
+      "images": [
+        "https://github.com/Sagiv440/Unity_Strategy/raw/main/Screenshot%20from%202024-05-14%2013-18-30.png?raw=true",
+        "https://github.com/Sagiv440/Unity_Strategy/raw/main/SpaceMarines.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Unity_Strategy"
+        },
+        {
+          "name": "Download Sample AI VS AI",
+          "url": "https://github.com/Sagiv440/Unity_Strategy/releases/download/Test_build/Strategy.AI.vs.AI.rar"
+        },
+        {
+          "name": "Download Sample Player VS AI",
+          "url": "https://github.com/Sagiv440/Unity_Strategy/releases/download/Test_build/Strategy.Player.vs.AI.rar"
+        }
+      ]
+    }
   },
   {
-        "id":"minecract",
+    "id": "minecract",
     "name": "Minecraft World Generator",
     "description": "A prototype built to explore 3D engines and rendering pipelines. build a custom C++ game engine with OpenGL for terrain generation and rendering. Implements Perlin noise for procedural terrain creation.",
     "tags": [
@@ -85,10 +130,23 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/mincraft.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/Minecraft-World-Generator"
+    "details": {
+      "body": "This is were you write a and expend on the project what is dase, what was it's perpos and what have you learned form it",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-06-53.png?raw=true",
+        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-04-45.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Minecraft-World-Generator"
+        }
+      ]
+    }
   },
   {
-        "id":"nes-emulator",
+    "id": "nes-emulator",
     "name": "NES_emulator",
     "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
     "tags": [
@@ -106,10 +164,23 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/nes_emulator.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/NES_emulator"
+    "details": {
+      "body": "This is were you write a and expend on the project what is dase, what was it's perpos and what have you learned form it",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-13.png?raw=true",
+        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-21.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/NES_emulator"
+        }
+      ]
+    }
   },
   {
-        "id":"tetris",
+    "id": "tetris",
     "name": "Tetris",
     "description": "This project is was made to as a way to learn the basics of making games And the princibls of games developments and framework. This project use the OLC Pixel Game Engine to render the game on to the screen.",
     "tags": [
@@ -119,10 +190,20 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/tetris.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/Tetris"
+    "details": {
+      "body": "This is were you write a and expend on the project what is dase, what was it's perpos and what have you learned form it",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Tetris"
+        }
+      ]
+    }
   },
   {
-        "id":"bubble-bi-babble-boo",
+    "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
     "description": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
     "tags": [
@@ -136,10 +217,34 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/bubbleTitle.png?raw=true",
+    "details": {
+      "body": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
+      "videos": [
+        "https://www.youtube.com/watch?v=i6BW5FDoW-8"
+      ],
+      "images": [
+        "https://github.com/Sagiv440/GlobalGameJam2025/raw/master/Screenshots/GameScreenShot2.PNG?raw=true",
+        "https://github.com/Sagiv440/GlobalGameJam2025/raw/master/Screenshots/GameScreenShot1.PNG?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/GlobalGameJam2025"
+        },
+        {
+          "name": "Global Game Jam",
+          "url": "https://globalgamejam.org/games/2025/bubble-bi-bubble-boo-9"
+        },
+        {
+          "name": "Itch.io",
+          "url": "https://sagiv440.itch.io/bubble-bi-bubble-boo"
+        }
+      ]
+    },
     "source_code_link": "https://github.com/Sagiv440/GlobalGameJam2025"
   },
   {
-        "id":"grempa-and-me",
+    "id": "grempa-and-me",
     "name": "Grampa And Me (GlobalGameJam2024)",
     "description": "The game is about a kid who was sent to spend the weekend with his Old Grumpy Grampa. You, as the player, need to cheer the kid up by planting various pranks around the house to prank the grandpa in order to make the kid laugh. Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)",
     "tags": [
@@ -153,10 +258,32 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/grampaAndMeTitle.png?raw=true",
-    "source_code_link": "https://github.com/TechArtGeorgi/GGJ-2024-Haifa"
+    "details": {
+      "body": "The game is about a kid who was sent to spend the weekend with his Old Grumpy Grampa. You, as the player, need to cheer the kid up by planting various pranks around the house to prank the grandpa in order to make the kid laugh. Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)",
+      "videos": [],
+      "images": [
+        "https://github.com/TechArtGeorgi/GGJ-2024-Haifa/raw/Master/GrampaAndMe.PNG?raw=true",
+        "https://github.com/TechArtGeorgi/GGJ-2024-Haifa/raw/Master/GrampaAndMeGame.PNG?raw=true",
+        "https://github.com/TechArtGeorgi/GGJ-2024-Haifa/raw/Master/GrampaAndMeCredits.PNG?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/TechArtGeorgi/GGJ-2024-Haifa"
+        },
+        {
+          "name": "Global Game Jam",
+          "url": "https://globalgamejam.org/games/2024/grampa-and-me-4"
+        },
+        {
+          "name": "Download Game",
+          "url": "https://ggjv4.s3.us-west-1.amazonaws.com/files/games/2024/700906/exec/GrampaAndMe_1.zip?VersionId=1YU3JJd4Ynp7.ft.dDQwH66U7NDq93GV"
+        }
+      ]
+    }
   },
   {
-        "id":"database-management",
+    "id": "database-management",
     "name": "Database Management Webpage",
     "description": "Developed a simple yet effective web interface for managing data on a web server, built with React and utilizing Axios for HTTP communication.",
     "tags": [
@@ -170,10 +297,27 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/midProject.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/ReactMidProject"
+    "details": {
+      "body": "This is were you write a and expend on the project what is dase, what was it's perpos and what have you learned form it",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/ReactMidProject/raw/master/media/UserMenu_Explaned.PNG?raw=true",
+        "https://github.com/Sagiv440/ReactMidProject/raw/master/media/Search%20User.PNG?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/ReactMidProject"
+        },
+        {
+          "name": "Deployed Example",
+          "url": "https://sagiv440.github.io/ReactMidProject/"
+        }
+      ]
+    }
   },
   {
-     "id":"e-commerce",
+    "id": "e-commerce",
     "name": "E-Commerce",
     "description": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development.",
     "tags": [
@@ -187,10 +331,27 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/eCommers.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/ReactFinalProject"
+    "details": {
+      "body": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development. linke to working example",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/ReactFinalProject/raw/master/Images/OrderLog.PNG?raw=true",
+        "https://github.com/Sagiv440/ReactFinalProject/raw/master/Images/AdminProduct.PNG?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/ReactFinalProject"
+        },
+        {
+          "name": "Working Example",
+          "url": "https://sagiv440.github.io/ReactFinalProject/"
+        }
+      ]
+    }
   },
   {
-        "id":"factory-employee-management-system",
+    "id": "factory-employee-management-system",
     "name": "Factory Employee Management System",
     "description": "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",
     "tags": [
@@ -204,6 +365,16 @@
       }
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/midProject.png?raw=true",
-    "source_code_link": "https://github.com/Sagiv440/NodeJSProject"
+    "details": {
+      "body": "A simple node.js web server managing employees in a factory. used to learn more abut web services, https, and Data Management(Json, MongoDB.)",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/NodeJSProject"
+        }
+      ]
+    }
   }
 ]

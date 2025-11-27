@@ -48,7 +48,7 @@ const Projects = () => {
 
               <a
                 className="cursor-pointer"
-                href="#/projects/fish-season"
+                href={`#/projects/${project.id}`}
               >
                 <LImage
                   src={project.image}

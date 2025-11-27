@@ -50,8 +50,8 @@ export const subjectLinks = [
 
 export const navLinks = [
   {
-    id: "/sagiv-reuben/",
-    title: "Home",
+    id: "/sagiv-reuben/#/about",
+    title: "About",
   },
   {
     id: "/sagiv-reuben/#/experience",
