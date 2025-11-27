@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import projectsData from "../constants/Projects.json"; // adjust path if needed
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
+import HtmlRenderer from "./canvas/htmlReader";
 
 const useWindowSize = () => {
     const [size, setSize] = useState({
@@ -39,7 +40,7 @@ const ProjectDetails = () => {
                 "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
             );
             const data = await res.json();
-            const d = data.find(p => p.id === projectId);
+            const d = projectsData.find(p => p.id === projectId);
             setProject(d);
             setLoading(false);
             window.scrollTo(0, 0);
@@ -67,13 +68,13 @@ const ProjectDetails = () => {
             {loading && <Loading />}
             {!loading &&
                 <div className="max-w-8xl mx-auto px-6 py-10 text-white">
-                                            {/* BACK BUTTON */}
-                        <a
-                            href="#/projects"
-                            className="inline-block mb-8 text-secondary hover:text-white underline text-lg transition-colors"
-                        >
-                            ← Back to Projects
-                        </a>
+                    {/* BACK BUTTON */}
+                    <a
+                        href="#/projects"
+                        className="inline-block mb-8 text-secondary hover:text-white underline text-lg transition-colors"
+                    >
+                        ← Back to Projects
+                    </a>
                     <div className="max-w-8xl mx-auto p-10 text-white bg-tertiary rounded-xl border border-border overflow-hidden">
 
 
@@ -88,10 +89,9 @@ const ProjectDetails = () => {
                                 <div>
                                     {/* Title */}
                                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-
                                     {/* Description */}
-                                    <p className="text-white-200 text-lg leading-relaxed mb-10">
-                                        {project.details?.body}
+                                    <p className="text-lg leading-relaxed mb-10">
+                                        <HtmlRenderer body={project.details?.body} />
                                     </p>
                                 </div>
 

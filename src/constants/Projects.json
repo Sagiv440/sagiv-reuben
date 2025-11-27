@@ -23,7 +23,7 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
     "details": {
-      "body": "A small casual fishing game where every round is bite-sized, and the competition is fierce for every fish. On the dock, you can use the fish you've collected to buy upgrades and repair your damaged vessel. And in desperate times, you can even fire your fish at your rivals. Good luck !",
+      "body": "A small casual fishing game where every round is bite-sized, and the competition is fierce for every fish. On the dock, you can use the fish you've collected to buy upgrades and repair your damaged vessel.<br/><br/> And in desperate times, you can even fire your fish at your rivals. Good luck !",
       "videos": [
         "https://www.youtube.com/watch?v=-1cAULuj4NA"
       ],
@@ -218,8 +218,8 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/bubbleTitle.png?raw=true",
     "details": {
-      "body": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
-      "videos": [
+      "body": "<p><br>The ultimate underwater bubble adventure!<br><br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!<br><br/><br/></p><p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>", 
+           "videos": [
         "https://www.youtube.com/watch?v=i6BW5FDoW-8"
       ],
       "images": [
