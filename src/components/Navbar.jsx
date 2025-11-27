@@ -98,15 +98,15 @@ const Navbar = () => {
     <>
 
       <nav
-        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-tertiary border-b border-border`}
+        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 bg-tertiary border-b border-border`}
       >
         <div className="w-full flex justify-between items-center">
 
-          {/* LEFT: Profile */}
+          {/* LEFT — LOGO */}
           <motion.a
             href="/sagiv-reuben/"
             className="flex items-center gap-2"
-            onClick={() => setActive('')}
+            onClick={() => setActive("")}
           >
             <img
               src={Profile}
@@ -118,31 +118,41 @@ const Navbar = () => {
             </p>
           </motion.a>
 
-          {/* RIGHT: Socials + Nav */}
-          <div className="flex flex-col items-end gap-2">
+          {/* RIGHT — Desktop Nav + Socials */}
+          <div className="hidden sm:flex flex-col items-end gap-2">
 
             {/* SOCIAL ICONS */}
             <div className="flex flex-row gap-3">
-              <a href="https://github.com/Sagiv440" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-white hover:text-secondary text-xl transition" />
-              </a>
-              <a href="https://www.linkedin.com/in/sagiv-reuben-1264341b9/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-white hover:text-secondary text-xl transition" />
-              </a>
-              <a href="https://sagiv440.itch.io/" target="_blank" rel="noopener noreferrer">
-                <FaItchIo className="text-white hover:text-secondary text-xl transition" />
-              </a>
-              <a href="https://www.facebook.com/sagiv.reuben" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-white hover:text-secondary text-xl transition" />
-              </a>
+              <a href="https://github.com/Sagiv440" target="_blank"><FaGithub className="text-white hover:text-secondary text-xl" /></a>
+              <a href="https://www.linkedin.com/in/sagiv-reuben-1264341b9/" target="_blank"><FaLinkedin className="text-white hover:text-secondary text-xl" /></a>
+              <a href="https://sagiv440.itch.io/" target="_blank"><FaItchIo className="text-white hover:text-secondary text-xl" /></a>
+              <a href="https://www.facebook.com/sagiv.reuben" target="_blank"><FaFacebook className="text-white hover:text-secondary text-xl" /></a>
             </div>
 
-            {/* NAV BUTTONS */}
+            {/* DESKTOP NAV */}
             {renderNavLinks(false)}
+          </div>
 
+          {/* MOBILE MENU BUTTON */}
+          <div className="sm:hidden flex justify-end items-center">
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className="w-7 h-7 object-contain cursor-pointer"
+              onClick={() => setToggle(!toggle)}
+            />
           </div>
         </div>
+
+        {/* MOBILE DROPDOWN */}
+        <div
+          className={`${toggle ? "flex" : "hidden"
+            } sm:hidden absolute top-[68px] right-0 mx-4 my-2 min-w-[200px] bg-tertiary rounded-xl p-4 shadow-xl border border-border`}
+        >
+          {renderNavLinks(true)}
+        </div>
       </nav>
+
 
 
     </>

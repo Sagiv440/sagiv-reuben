@@ -1,20 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
-import { Link } from "react-router-dom";
+import  Projvolt  from "../constants/Projects.json";
+import { SEARCH_TEMP } from "../constants";
+import SearchBar from "./canvas/SearchBar";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
-  const [expanded, setExpanded] = useState(null);
   const [projects, setProjects] = useState([]);
+  const [search, setSearch] = useState({ ...SEARCH_TEMP,name:"",category:"", tag:"" });
 
-  const toggleExpand = (index) => {
-    setExpanded(expanded === index ? null : index);
-  };
+
+const filteredProjects = projects.filter((proj) => {
+  
+  // Filter by name
+  const matchesName =
+    proj.name?.toLowerCase().includes(search.name.toLowerCase());
+
+  // Filter by tag
+  const matchesTag =
+    search.tag.trim() === "" ||
+    proj.tags?.some(tag =>
+      tag.name.toLowerCase().includes(search.tag.toLowerCase())
+    );
+
+  // Filter by category (if needed)
+  const matchesCategory =
+    search.category.trim() === "" ||
+    proj.category?.toLowerCase().includes(search.category.toLowerCase());
+
+  return matchesName && matchesTag && matchesCategory;
+});
+
 
   useEffect(() => {
     const getProjects = async () => {
@@ -36,11 +57,11 @@ const Projects = () => {
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
-
+      <SearchBar search={search} setSearch={setSearch} projects={projects}/>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto w-full">
         {loading && <Loading />}
         {!loading &&
-          projects.map((project, index) => (
+          filteredProjects.map((project, index) => (
             <div
               key={project.id}
               className="bg-tertiary rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300"
@@ -57,11 +78,6 @@ const Projects = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-white text-xl font-bold">{project.name}</h3>
-                  <p className="text-white-100 text-sm mt-2 line-clamp-3">
-                    {expanded === index
-                      ? project.description
-                      : project.description.slice(0, 100) + "..."}
-                  </p>
                   <div className="flex flex-wrap gap-2 mt-3">
                     {project.tags.map((tag) => (
                       <span

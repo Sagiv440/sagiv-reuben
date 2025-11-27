@@ -63,6 +63,13 @@ export const navLinks = [
   },
 ];
 
+export const SEARCH_TEMP = 
+{
+    name: "",
+    category: "",
+    tag: "",
+}
+
 export const services = [
   { title: "C", icon: c },
   { title: "C++", icon: cpp },
