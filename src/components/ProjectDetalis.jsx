@@ -40,7 +40,7 @@ const ProjectDetails = () => {
                 "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
             );
             const data = await res.json();
-            const d = projectsData.find(p => p.id === projectId);
+            const d = data.find(p => p.id === projectId);
             setProject(d);
             setLoading(false);
             window.scrollTo(0, 0);
