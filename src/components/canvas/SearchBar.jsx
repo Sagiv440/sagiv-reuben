@@ -29,13 +29,13 @@ const SearchBar = ({ search, setSearch, projects }) => {
 
     return (
         <motion.div
-            className="w-full bg-tertiary p-4 rounded-xl shadow-md mt-6 mb-6 flex flex-wrap space-x-2 items-end max-w-4xl mx-auto border border-border"
+            className="w-full bg-tertiary p-4 rounded-xl shadow-md mt-6 mb-6 flex flex-wrap space-x-2 items-center max-w-4xl mx-auto border border-border"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
         >
+            <label className="text-white text-sm">Category:</label>
             {/* CATEGORY DROPDOWN */}
             <div className="flex flex-col min-w-[150px]">
-                <label className="text-white text-sm">Category</label>
                 <select
                     value={search.category}
                     onChange={(e) => setSearch(prev => ({ ...prev, category: e.target.value }))}
@@ -47,10 +47,10 @@ const SearchBar = ({ search, setSearch, projects }) => {
                     ))}
                 </select>
             </div>
-
+            <label className="text-white text-sm">Tags:</label>
             {/* TAG DROPDOWN */}
             <div className="flex flex-col min-w-[150px]">
-                <label className="text-white text-sm">Tag</label>
+
                 <select
                     value={search.tag}
                     onChange={(e) => setSearch(prev => ({ ...prev, tag: e.target.value }))}
@@ -62,9 +62,10 @@ const SearchBar = ({ search, setSearch, projects }) => {
                     ))}
                 </select>
             </div>
+            <label className="text-white text-sm">Name:</label>
             {/* TEXT SEARCH */}
             <div className="flex flex-col flex-1 min-w-[150px]">
-                <label className="text-white text-sm">Search by Name</label>
+
                 <input
                     type="text"
                     value={search.name}
