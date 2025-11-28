@@ -1,5 +1,7 @@
 [
   {
+    "category": "Software Development",
+    "profession": "Independet",
     "title": "Game Developer",
     "company_name": "Independent",
     "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
@@ -15,6 +17,8 @@
     ]
   },
   {
+    "category": "Electronics",
+    "profession": "Layout Designer",
     "title": "Layout Designer",
     "company_name": "Qualcomm",
     "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/Qualcomm.png?raw=true",
@@ -30,6 +34,8 @@
     ]
   },
   {
+    "category": "Electronics",
+    "profession": "Student",
     "title": "Electronics Practical Engineer",
     "company_name": "Technion Institute",
     "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/technion.png?raw=true",
@@ -42,6 +48,7 @@
     ]
   },
   {
+    "profession": "Army",
     "title": "Artillery Gun Crewman",
     "company_name": "Artillery Corps IDF",
     "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/idf.png?raw=true",

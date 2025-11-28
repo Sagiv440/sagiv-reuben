@@ -14,6 +14,9 @@ import { textVariant } from "../utils/motion";
 import { getAll, loadImage } from "../utils/utils";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
+import SearchBarTimeline from "./canvas/SearchBarTimeline";
+import { SEARCH_TEMP_TIMELINE } from "../constants";
+import expLocal from "../constants/Experiance.json"
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
   <VerticalTimelineElement
@@ -87,6 +90,26 @@ const Experience = () => {
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
   const [experiences, setExperiences] = useState([]);
+  const [search, setSearch] = useState({ ...SEARCH_TEMP_TIMELINE ,title:"",category:"", profession:"" });
+
+  const filteredTimeline = experiences.filter((event) => {
+  
+  // Filter by name
+  const matchesName =
+    event.title?.toLowerCase().includes(search.title.toLowerCase());
+
+  // Filter by category (if needed)
+  const matchesProfession =
+    search.profession.trim() === "" ||
+    event.profession?.toLowerCase().includes(search.profession.toLowerCase());
+
+  // Filter by category (if needed)
+  const matchesCategory =
+    search.category.trim() === "" ||
+    event.category?.toLowerCase().includes(search.category.toLowerCase());
+
+  return matchesName && matchesProfession && matchesCategory;
+});
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
@@ -112,13 +135,13 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience</h2>
+        <h2 className={`${styles.sectionHeadText} text-center`}>My Time Line</h2>
       </motion.div>
-
+      <SearchBarTimeline search={search} setSearch={setSearch} timeline={experiences}/>
       <div className="mt-20 flex flex-col">
         {loading && <Loading />}
         {!loading && <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {filteredTimeline.map((experience, index) => (
             <ExperienceCard key={`experience-${index}`} experience={experience} index={index} expanded={expanded} setExpanded={toggleExpand} />
           ))}
         </VerticalTimeline>}

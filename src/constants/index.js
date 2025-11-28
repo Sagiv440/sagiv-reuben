@@ -55,7 +55,7 @@ export const navLinks = [
   },
   {
     id: "/sagiv-reuben/#/experience",
-    title: "Experience",
+    title: "Timeline",
   },
   {
     id: "/sagiv-reuben/#/projects",
@@ -68,6 +68,12 @@ export const SEARCH_TEMP =
     name: "",
     category: "",
     tag: "",
+}
+export const SEARCH_TEMP_TIMELINE = 
+{
+    title: "",
+    category: "",
+    profession: "",
 }
 
 export const services = [
