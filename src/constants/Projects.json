@@ -90,7 +90,7 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/rts_TumeNaile.png?raw=true",
     "details": {
-      "body": "As a way to learn about video game AI, I made an RTS (Real-Time Strategy) game where the player controls a small army with the goal of destroying the enemy's main army building. The core of the game consists of individual units with their own AI, allowing them to make some decisions, and a larger army manager that organizes and sorts them as it passes down orders from the player or the AI. The enemy AI is a simple Minimax algorithm that translates the battlefield into a tree of possible choices, each assigned a value. This system gives the AI the flexibility to plan ahead and respond to the player's behavior, all while being very performance efficient. To implement many of these systems, I relied on many features of .NET and C#, such as events and delegates, to allow units to subscribe and unsubscribe to receive orders from the manager as they are being selected.",
+      "body": "<p>A Strategy game made using <code>Unity 2018.2.12f1 (64-bit)</code> where the player controls an army of troops and the goal is to destroy the enemy base while defending yours.</p><br/><h3>Project Ghoul</h3><p>As a way to learn about video game AI, I made an RTS (Real-Time Strategy) game where the player controls a small army with the goal of destroying the enemy's main army building. The core of the game consists of individual units with their own AI, allowing them to make decisions, and a larger army manager that organizes and sorts them as it passes down orders from the player or the AI. The enemy AI uses a simple minimax algorithm that translates the battlefield into a tree of possible choices, each assigned a value. This system gives the AI the flexibility to plan ahead and respond to the player's behavior while remaining performance efficient. To implement many of these systems, I relied on features of .NET and C#, such as events and delegates, to allow units to subscribe and unsubscribe to receive orders from the manager as they are being selected.</p><br/><p><strong>Link to the video demo:</strong> <a href='https://youtu.be/5TpPYrwQT54' target='_blank' rel='noopener noreferrer'>here</a></p><br/><h3>How To Play</h3><br/><ol><li>-1. Use the <code>right mouse</code> button to select the troop you want to move and the <code>left mouse</code> button to click where you want it to move.</li><li>-2. Hold <code>left shift</code> while clicking the <code>right mouse</code> button on troops to control multiple troops at the same time.</li><li>-3. Click on the base to buy more units.</li><li>Capture resource points to secure more resources for your army.</li><li>-4. Move the mouse cursor to the edges of the screen to move the camera.</li></ol>",
       "videos": [
         "https://www.youtube.com/watch?v=5TpPYrwQT54"
       ],
@@ -150,7 +150,7 @@
     }
   },
   {
-        "category": "Low Level",
+    "category": "Low Level",
     "id": "nes-emulator",
     "name": "NES_emulator",
     "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
@@ -225,8 +225,8 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/bubbleTitle.png?raw=true",
     "details": {
-      "body": "<p><br>The ultimate underwater bubble adventure!<br><br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!<br><br/><br/></p><p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>", 
-           "videos": [
+      "body": "<p><br>The ultimate underwater bubble adventure!<br><br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!<br><br/><br/></p><p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
+      "videos": [
         "https://www.youtube.com/watch?v=i6BW5FDoW-8"
       ],
       "images": [
@@ -326,7 +326,7 @@
     }
   },
   {
-        "category": "Frontend",
+    "category": "Frontend",
     "id": "e-commerce",
     "name": "E-Commerce",
     "description": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development.",
@@ -361,7 +361,7 @@
     }
   },
   {
-        "category": "Backend",
+    "category": "Backend",
     "id": "factory-employee-management-system",
     "name": "Factory Employee Management System",
     "description": "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",
