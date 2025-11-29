@@ -116,7 +116,150 @@
       ]
     }
   },
-    {
+  {
+    "category": "Electronics",
+    "id": "tetris-esp32",
+    "name": "Tetris_ESP32",
+    "description": "My University Graduation Project: Tetris that runs a python interpretor that run on a an ESP32 micro controller. with a PS2 controller to boot.",
+    "tags": [
+      {
+        "name": "Python",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "SPI",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "UART",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Wi-Fi",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "html",
+        "color": "green-text-gradient"
+      }
+    ],
+    "image": "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Tetris-ESP32-Logo.png?raw=true",
+    "details": {
+      "body": "<p class='font-bold text-2xl'>Description</p><p>Tetris ESP32 is my university final project. It’s a custom-built Tetris machine powered by an ESP-32 microcontroller and controlled using a PS2 game controller. Under the hood, the controller runs a MicroPython interpreter that reads, decodes, and executes Python scripts in real time, allowing us to modify, add, or remove code as needed.</p><br/><p class='font-bold text-2xl'>PS2 Controller</p><p>The PlayStation 2 controller uses the SPI protocol for communication, which the ESP32 supports. This allows us to read — and occasionally write — data to the controller.</p><br/><p class='font-bold text-2xl'>Wi-Fi</p><p>For an extra challenge, I decided that in order to view high scores from all players, the ESP32 should connect to Wi-Fi and display them through a browser interface. In the game's options menu, there is a “Network” option that lets the ESP32 connect to any nearby Wi-Fi network.</p><br/><p class='font-bold text-2xl'>Tetris</p><p>There isn’t much to say — it’s Tetris, or at least a close version of it. The game itself was originally an older project of mine written in C++. Feeling confident that I could adapt it, and knowing that squares are the easiest thing to draw on the screen, it was the perfect fit for our project.</p>\n\n",
+      "videos": [
+        "https://www.youtube.com/watch?v=B0UTAnWJAis"
+      ],
+      "images": [
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Photos/Game1.jpg?raw=true",
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-06-58.png?raw=true",
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Photos/Home_screen_DSC0371.jpg?raw=true",
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-02-12.png?raw=true",
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-01-14.png?raw=true",
+        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-03-31.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Tetris_ESP32/tree/main"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Low Level",
+    "id": "minecract",
+    "name": "Minecraft World Generator",
+    "description": "A prototype built to explore 3D engines and rendering pipelines. build a custom C++ game engine with OpenGL for terrain generation and rendering. Implements Perlin noise for procedural terrain creation.",
+    "tags": [
+      {
+        "name": "C++",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "OpenGL",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "Custom Engine",
+        "color": "pink-text-gradient"
+      }
+    ],
+    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/mincraft.png?raw=true",
+    "details": {
+      "body": "<p>This is a prototype I made to learn about 3D engines and the rendering pipeline. It is a small application that procedurally generates terrain similar to the terrain in the game Minecraft.</p><br/><h3 class='font-bold text-2xl'>Built Points</h3><ul><li>● Terrain is divided into small chunks of 100x100x256 blocks that are stored in memory using a key-value pair (key: chunk position, value: memory address).</li><li>● World rendering is done using the OpenGL rendering API and shader scripts that dictate the flow of data to and from the GPU.</li><li>● Custom game engine handles data sorting and provides simple first-person controls to explore the generated terrain.</li><li>● The application uses a Perlin noise algorithm to generate the continuous terrain.</li></ul><br/><h3 class='font-bold text-2xl'>Dependencies</h3><p>To compile the project, you will need to link the following libraries:</p><ul>●GLFW, GLEW for OpenGL</li><li>● libnoise for the Randomizer</li><li> ● SOIL2 for handling images</li></ul>",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-06-53.png?raw=true",
+        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-04-45.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Minecraft-World-Generator"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Low Level",
+    "id": "nes-emulator",
+    "name": "NES_emulator",
+    "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
+    "tags": [
+      {
+        "name": "C++",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "6502_Assembly",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "SFML",
+        "color": "pink-text-gradient"
+      }
+    ],
+    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/nes_emulator.png?raw=true",
+    "details": {
+      "body": "<p><strong>NES Emulator Project</strong></p><p>This project is a full software recreation of the Nintendo Entertainment System, built to understand how classic hardware works from the ground up. It replicates the internal behavior of the console through cycle-accurate emulation, allowing NES games to run as they would on the original system.<br/><br/>The emulator simulates key components of the NES:</p><p><strong>CPU Emulation:</strong><br/>Implements the 6502 processor, handling opcodes, addressing modes, registers, stack operations, interrupts, and clock timing. The CPU executes instructions cycle by cycle, ensuring accurate synchronization with the rest of the system.<br/><br/><strong>PPU (Picture Processing Unit):</strong><br/>Replicates the NES graphics hardware, including background rendering, sprite evaluation, palette handling, scroll registers, and the full 262-scanline pipeline. This enables correct drawing of tiles, sprites, and frame updates.<br/><br/><strong>APU (Audio Processing Unit):</strong><br/>Simulates the system’s audio channels—pulse, triangle, noise, and DMC. Although simplified, it mimics the logic that generates NES-style sound output.<br/><br/><strong>Cartridge & Mapper System:</strong><br/>Supports loading NES ROMs and interpreting their metadata. Implements mapper logic to handle bank switching, memory mirroring, and game-specific hardware behavior.<br/><br/><strong>Memory Bus & Timing:</strong><br/>Coordinates communication between CPU, PPU, cartridge, and RAM. Ensures accurate cycle-level timing so instructions and rendering stay synchronized.<br/><br/><strong>Debugging & Display Tools:</strong><br/>Includes optional visualization components such as CPU state monitoring, tile viewer prototypes, and test ROM compatibility for diagnosing accuracy.<br/><br/></p><p>This emulator was created as a hands-on learning experience—an exploration into how low-level hardware, assembly execution, and real-time rendering work together in a classic game console.</p>",
+      "videos": [],
+      "images": [
+        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-13.png?raw=true",
+        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-21.png?raw=true"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/NES_emulator"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Games",
+    "id": "tetris",
+    "name": "Tetris",
+    "description": "This project is was made to as a way to learn the basics of making games And the princibls of games developments and framework. This project use the OLC Pixel Game Engine to render the game on to the screen.",
+    "tags": [
+      {
+        "name": "C++",
+        "color": "blue-text-gradient"
+      }
+    ],
+    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/tetris.png?raw=true",
+    "details": {
+      "body": "This project was my first attempt at creating a complete, fully functional application from scratch.<br/>It brought together skills from multiple disciplines, including core game-development principles and object-oriented programming.<br/><br/>The project was built using C++ on a Windows machine. As a low-level language with direct access to memory, C++ provides high performance and precise control over how data is managed—at the cost of increased complexity, which in this case was a welcome challenge.<br/><br/>Throughout development, I learned how to structure real-time systems, manage game loops, handle input efficiently, and design reusable classes for gameplay logic. Implementing Tetris mechanics helped deepen my understanding of collision handling, grid management, timing control, and rendering optimizations.<br/><br/>Overall, this project served as a foundational learning experience that strengthened my confidence in building more advanced systems and understanding how games work internally.  <br/><br/><br/>PS: I know about the 'Tatrice' on top of the image. I was yong back then :)",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/Tetris"
+        }
+      ]
+    }
+  },
+  {
     "category": "Games",
     "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
@@ -293,100 +436,6 @@
         {
           "name": "itch.io",
           "url": "https://sagiv440.itch.io/game-of-throunse"
-        }
-      ]
-    }
-  },
-  {
-    "category": "Low Level",
-    "id": "minecract",
-    "name": "Minecraft World Generator",
-    "description": "A prototype built to explore 3D engines and rendering pipelines. build a custom C++ game engine with OpenGL for terrain generation and rendering. Implements Perlin noise for procedural terrain creation.",
-    "tags": [
-      {
-        "name": "C++",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "OpenGL",
-        "color": "green-text-gradient"
-      },
-      {
-        "name": "Custom Engine",
-        "color": "pink-text-gradient"
-      }
-    ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/mincraft.png?raw=true",
-    "details": {
-      "body": "<p>This is a prototype I made to learn about 3D engines and the rendering pipeline. It is a small application that procedurally generates terrain similar to the terrain in the game Minecraft.</p><br/><h3 class='font-bold text-2xl'>Built Points</h3><ul><li>● Terrain is divided into small chunks of 100x100x256 blocks that are stored in memory using a key-value pair (key: chunk position, value: memory address).</li><li>● World rendering is done using the OpenGL rendering API and shader scripts that dictate the flow of data to and from the GPU.</li><li>● Custom game engine handles data sorting and provides simple first-person controls to explore the generated terrain.</li><li>● The application uses a Perlin noise algorithm to generate the continuous terrain.</li></ul><br/><h3 class='font-bold text-2xl'>Dependencies</h3><p>To compile the project, you will need to link the following libraries:</p><ul>●GLFW, GLEW for OpenGL</li><li>● libnoise for the Randomizer</li><li> ● SOIL2 for handling images</li></ul>",
-      "videos": [],
-      "images": [
-        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-06-53.png?raw=true",
-        "https://github.com/Sagiv440/Minecraft-World-Generator/raw/main/screenshot/Screenshot%20from%202024-04-11%2013-04-45.png?raw=true"
-      ],
-      "likes": [
-        {
-          "name": "Link to source code",
-          "url": "https://github.com/Sagiv440/Minecraft-World-Generator"
-        }
-      ]
-    }
-  },
-  {
-    "category": "Low Level",
-    "id": "nes-emulator",
-    "name": "NES_emulator",
-    "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
-    "tags": [
-      {
-        "name": "C++",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "6502_Assembly",
-        "color": "green-text-gradient"
-      },
-      {
-        "name": "SFML",
-        "color": "pink-text-gradient"
-      }
-    ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/nes_emulator.png?raw=true",
-    "details": {
-      "body": "<p><strong>NES Emulator Project</strong></p><p>This project is a full software recreation of the Nintendo Entertainment System, built to understand how classic hardware works from the ground up. It replicates the internal behavior of the console through cycle-accurate emulation, allowing NES games to run as they would on the original system.<br/><br/>The emulator simulates key components of the NES:</p><p><strong>CPU Emulation:</strong><br/>Implements the 6502 processor, handling opcodes, addressing modes, registers, stack operations, interrupts, and clock timing. The CPU executes instructions cycle by cycle, ensuring accurate synchronization with the rest of the system.<br/><br/><strong>PPU (Picture Processing Unit):</strong><br/>Replicates the NES graphics hardware, including background rendering, sprite evaluation, palette handling, scroll registers, and the full 262-scanline pipeline. This enables correct drawing of tiles, sprites, and frame updates.<br/><br/><strong>APU (Audio Processing Unit):</strong><br/>Simulates the system’s audio channels—pulse, triangle, noise, and DMC. Although simplified, it mimics the logic that generates NES-style sound output.<br/><br/><strong>Cartridge & Mapper System:</strong><br/>Supports loading NES ROMs and interpreting their metadata. Implements mapper logic to handle bank switching, memory mirroring, and game-specific hardware behavior.<br/><br/><strong>Memory Bus & Timing:</strong><br/>Coordinates communication between CPU, PPU, cartridge, and RAM. Ensures accurate cycle-level timing so instructions and rendering stay synchronized.<br/><br/><strong>Debugging & Display Tools:</strong><br/>Includes optional visualization components such as CPU state monitoring, tile viewer prototypes, and test ROM compatibility for diagnosing accuracy.<br/><br/></p><p>This emulator was created as a hands-on learning experience—an exploration into how low-level hardware, assembly execution, and real-time rendering work together in a classic game console.</p>",
-      "videos": [],
-      "images": [
-        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-13.png?raw=true",
-        "https://github.com/Sagiv440/NES_emulator/raw/master/ScreenShots/Screenshot%20from%202023-01-29%2021-32-21.png?raw=true"
-      ],
-      "likes": [
-        {
-          "name": "Link to source code",
-          "url": "https://github.com/Sagiv440/NES_emulator"
-        }
-      ]
-    }
-  },
-  {
-    "category": "Games",
-    "id": "tetris",
-    "name": "Tetris",
-    "description": "This project is was made to as a way to learn the basics of making games And the princibls of games developments and framework. This project use the OLC Pixel Game Engine to render the game on to the screen.",
-    "tags": [
-      {
-        "name": "C++",
-        "color": "blue-text-gradient"
-      }
-    ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/tetris.png?raw=true",
-    "details": {
-      "body": "This project was my first attempt at creating a complete, fully functional application from scratch.<br/>It brought together skills from multiple disciplines, including core game-development principles and object-oriented programming.<br/><br/>The project was built using C++ on a Windows machine. As a low-level language with direct access to memory, C++ provides high performance and precise control over how data is managed—at the cost of increased complexity, which in this case was a welcome challenge.<br/><br/>Throughout development, I learned how to structure real-time systems, manage game loops, handle input efficiently, and design reusable classes for gameplay logic. Implementing Tetris mechanics helped deepen my understanding of collision handling, grid management, timing control, and rendering optimizations.<br/><br/>Overall, this project served as a foundational learning experience that strengthened my confidence in building more advanced systems and understanding how games work internally.  <br/><br/><br/>PS: I know about the 'Tatrice' on top of the image. I was yong back then :)",
-      "videos": [],
-      "images": [],
-      "likes": [
-        {
-          "name": "Link to source code",
-          "url": "https://github.com/Sagiv440/Tetris"
         }
       ]
     }
