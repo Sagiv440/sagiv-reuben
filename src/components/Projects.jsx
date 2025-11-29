@@ -15,26 +15,28 @@ const Projects = () => {
   const [search, setSearch] = useState({ ...SEARCH_TEMP,name:"",category:"", tag:"" });
 
 
-const filteredProjects = projects.filter((proj) => {
-  
-  // Filter by name
-  const matchesName =
-    proj.name?.toLowerCase().includes(search.name.toLowerCase());
+const filteredProjects = useMemo(() => {
+  return projects.filter((proj) => {
 
-  // Filter by tag
-  const matchesTag =
-    search.tag.trim() === "" ||
-    proj.tags?.some(tag =>
-      tag.name.toLowerCase().includes(search.tag.toLowerCase())
-    );
+    // Filter by name
+    const matchesName =
+      proj.name?.toLowerCase().includes(search.name.toLowerCase());
 
-  // Filter by category (if needed)
-  const matchesCategory =
-    search.category.trim() === "" ||
-    proj.category?.toLowerCase().includes(search.category.toLowerCase());
+    // Filter by tag
+    const matchesTag =
+      search.tag.trim() === "" ||
+      proj.tags?.some(tag =>
+        tag.name.toLowerCase().includes(search.tag.toLowerCase())
+      );
 
-  return matchesName && matchesTag && matchesCategory;
-});
+    // Filter by category
+    const matchesCategory =
+      search.category.trim() === "" ||
+      proj.category?.toLowerCase().includes(search.category.toLowerCase());
+
+    return matchesName && matchesTag && matchesCategory;
+  });
+}, [projects, search.name, search.tag, search.category]);
 
 
   useEffect(() => {

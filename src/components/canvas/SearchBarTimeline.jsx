@@ -27,54 +27,58 @@ const SearchBarTimeline = ({ search, setSearch, timeline }) => {
     }, [timeline]);
 
     return (
-        <motion.div
-            className="w-full bg-tertiary p-4 rounded-xl shadow-md mt-6 mb-6 flex flex-wrap space-x-2 items-center max-w-4xl mx-auto border border-border"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
+<motion.div
+    className="w-full bg-tertiary p-4 rounded-xl shadow-md mt-6 mb-6 
+               max-w-4xl mx-auto border border-border 
+               flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4"
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+>
+
+    {/* CATEGORY */}
+    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <label className="text-white text-sm whitespace-nowrap">Category:</label>
+        <select
+            value={search.category}
+            onChange={(e) => setSearch(prev => ({ ...prev, category: e.target.value }))}
+            className="p-2 rounded-lg bg-primary text-white border border-border min-w-[150px]"
         >
-            <label className="text-white text-sm">Category:</label>
-            {/* CATEGORY DROPDOWN */}
-            <div className="flex flex-col min-w-[150px]">
-                <select
-                    value={search.category}
-                    onChange={(e) => setSearch(prev => ({ ...prev, category: e.target.value }))}
-                    className="mt-1 p-2 rounded-lg bg-primary text-white border border-border max-w-[150px]"
-                >
-                    <option value="">All</option>
-                    {categories.map(cat => (
-                        <option key={cat} value={cat}>{cat}</option>
-                    ))}
-                </select>
-            </div>
-            <label className="text-white text-sm">Profession:</label>
-            {/* PROFEESION DROPDOWN */}
-            <div className="flex flex-col min-w-[150px]">
+            <option value="">All</option>
+            {categories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+            ))}
+        </select>
+    </div>
 
-                <select
-                    value={search.tag}
-                    onChange={(e) => setSearch(prev => ({ ...prev, profession: e.target.value }))}
-                    className="mt-1 p-2 rounded-lg bg-primary text-white border border-border max-w-[150px]"
-                >
-                    <option value="">All</option>
-                    {professions.map(tag => (
-                        <option key={tag} value={tag}>{tag}</option>
-                    ))}
-                </select>
-            </div>
-            <label className="text-white text-sm">Title:</label>
-            {/* TEXT SEARCH */}
-            <div className="flex flex-col flex-1 min-w-[150px]">
+    {/* PROFESSION */}
+    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <label className="text-white text-sm whitespace-nowrap">Profession:</label>
+        <select
+            value={search.profession}
+            onChange={(e) => setSearch(prev => ({ ...prev, profession: e.target.value }))}
+            className="p-2 rounded-lg bg-primary text-white border border-border min-w-[150px]"
+        >
+            <option value="">All</option>
+            {professions.map(tag => (
+                <option key={tag} value={tag}>{tag}</option>
+            ))}
+        </select>
+    </div>
 
-                <input
-                    type="text"
-                    value={search.title}
-                    onChange={(e) => setSearch(prev => ({ ...prev, title: e.target.value }))}
-                    placeholder="Search Title..."
-                    className="mt-1 p-2 rounded-lg bg-primary text-white border border-border focus:outline-none"
-                />
-            </div>
+    {/* TITLE SEARCH */}
+    <div className="flex flex-col sm:flex-row sm:items-center gap-2 flex-1">
+        <label className="text-white text-sm whitespace-nowrap">Title:</label>
+        <input
+            type="text"
+            value={search.title}
+            onChange={(e) => setSearch(prev => ({ ...prev, title: e.target.value }))}
+            placeholder="Search Title..."
+            className="p-2 rounded-lg bg-primary text-white border border-border focus:outline-none w-full"
+        />
+    </div>
 
-        </motion.div>
+</motion.div>
+
     );
 };
 

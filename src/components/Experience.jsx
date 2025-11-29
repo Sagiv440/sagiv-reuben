@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -29,7 +29,7 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <LImage src={experience.icon} alt={experience.company_name} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true}/>
+        <LImage src={experience.icon} alt={experience.company_name} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true} />
 
       </div>
     }
@@ -90,26 +90,28 @@ const Experience = () => {
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
   const [experiences, setExperiences] = useState([]);
-  const [search, setSearch] = useState({ ...SEARCH_TEMP_TIMELINE ,title:"",category:"", profession:"" });
+  const [search, setSearch] = useState({ ...SEARCH_TEMP_TIMELINE, title: "", category: "", profession: "" });
 
-  const filteredTimeline = experiences.filter((event) => {
-  
-  // Filter by name
-  const matchesName =
-    event.title?.toLowerCase().includes(search.title.toLowerCase());
+  const filteredTimeline = useMemo(() => {
+    return experiences.filter((event) => {
 
-  // Filter by category (if needed)
-  const matchesProfession =
-    search.profession.trim() === "" ||
-    event.profession?.toLowerCase().includes(search.profession.toLowerCase());
+      // Filter by name
+      const matchesName =
+        event.title?.toLowerCase().includes(search.title.toLowerCase());
 
-  // Filter by category (if needed)
-  const matchesCategory =
-    search.category.trim() === "" ||
-    event.category?.toLowerCase().includes(search.category.toLowerCase());
+      // Filter by category (if needed)
+      const matchesProfession =
+        search.profession.trim() === "" ||
+        event.profession?.toLowerCase().includes(search.profession.toLowerCase());
 
-  return matchesName && matchesProfession && matchesCategory;
-});
+      // Filter by category (if needed)
+      const matchesCategory =
+        search.category.trim() === "" ||
+        event.category?.toLowerCase().includes(search.category.toLowerCase());
+
+      return matchesName && matchesProfession && matchesCategory;
+    });
+  },[search.title, search.profession, search.category])
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
@@ -137,7 +139,7 @@ const Experience = () => {
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>My Time Line</h2>
       </motion.div>
-      <SearchBarTimeline search={search} setSearch={setSearch} timeline={experiences}/>
+      <SearchBarTimeline search={search} setSearch={setSearch} timeline={experiences} />
       <div className="mt-20 flex flex-col">
         {loading && <Loading />}
         {!loading && <VerticalTimeline>
