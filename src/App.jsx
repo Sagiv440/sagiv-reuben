@@ -1,10 +1,12 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { About, Contact, Experience, Navbar, StarsCanvas, Tech, Works } from './components';
+import Navbar from './components/Navbar';
 import Hero from './components/hero_component';
-import Showreal from './components/Showreal';
+import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetalis';
+import Contact from './components/Contact'
 
 const App = () => {
   return (

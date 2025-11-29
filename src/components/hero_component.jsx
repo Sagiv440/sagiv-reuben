@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { About } from ".";
 
 // Sci-Fi Gradient Nebula Hero
 export default function Hero() {

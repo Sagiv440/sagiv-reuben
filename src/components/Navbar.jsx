@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { close, logo, menu } from '../assets';
-import { navLinks, subjectLinks } from '../constants';
+import { useEffect, useState } from 'react';
+import { close, menu } from '../assets';
+import { navLinks } from '../constants';
 import { styles } from '../styles';
 import { Profile } from '../assets';
 import { motion } from "framer-motion";
@@ -80,17 +79,6 @@ const Navbar = () => {
           Contact
         </motion.a>
       </li>
-
-      {/*<li className={`text-${isSecondary ? 'secondary' : 'white'} hover:text-white text-[15px] font-medium cursor-pointer`}>
-        <motion.button
-          onClick={toggleResume}
-          className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.85 }}
-        >
-          Resume
-        </motion.button>
-      </li>*/}
     </ul>
   );
 
