@@ -82,6 +82,14 @@ const ProjectDetails = () => {
                         {/* CONTENT WRAPPER */}
                         <div className="flex flex-col md:flex-row gap-10">
 
+                            {/* MOBILE TOP IMAGE */}
+                            <div className="md:hidden mb-6">
+                                <LImage
+                                    src={project.image}
+                                    alt={project.name}
+                                    className="w-full rounded-xl shadow-lg"
+                                />
+                            </div>
 
                             {/* LEFT COLUMN – TEXT + TAGS + LINKS */}
                             <div className="md:w-1/2 flex flex-col justify-between">
@@ -137,11 +145,13 @@ const ProjectDetails = () => {
                             <div className="md:w-1/2">
 
                                 {/* Main image */}
-                                <LImage
-                                    src={project.image}
-                                    alt={project.name}
-                                    className="w-full rounded-xl mb-10 shadow-lg"
-                                />
+                                <div className="hidden md:block">
+                                    <LImage
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="w-full rounded-xl mb-10 shadow-lg"
+                                    />
+                                </div>
                                 <div className="max-w-6xl mx-auto p-10 text-white">
                                     {/* Videos */}
                                     {project.details?.videos && project.details.videos.length > 0 && (
