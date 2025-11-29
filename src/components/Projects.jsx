@@ -5,38 +5,38 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
-import  Projvolt  from "../constants/Projects.json";
+import Projvolt from "../constants/Projects.json";
 import { SEARCH_TEMP } from "../constants";
 import SearchBar from "./canvas/SearchBar";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
-  const [search, setSearch] = useState({ ...SEARCH_TEMP,name:"",category:"", tag:"" });
+  const [search, setSearch] = useState({ ...SEARCH_TEMP, name: "", category: "", tag: "" });
 
 
-const filteredProjects = useMemo(() => {
-  return projects.filter((proj) => {
+  const filteredProjects = useMemo(() => {
+    return projects.filter((proj) => {
 
-    // Filter by name
-    const matchesName =
-      proj.name?.toLowerCase().includes(search.name.toLowerCase());
+      // Filter by name
+      const matchesName =
+        proj.name?.toLowerCase().includes(search.name.toLowerCase());
 
-    // Filter by tag
-    const matchesTag =
-      search.tag.trim() === "" ||
-      proj.tags?.some(tag =>
-        tag.name.toLowerCase().includes(search.tag.toLowerCase())
-      );
+      // Filter by tag
+      const matchesTag =
+        search.tag.trim() === "" ||
+        proj.tags?.some(tag =>
+          tag.name.toLowerCase().includes(search.tag.toLowerCase())
+        );
 
-    // Filter by category
-    const matchesCategory =
-      search.category.trim() === "" ||
-      proj.category?.toLowerCase().includes(search.category.toLowerCase());
+      // Filter by category
+      const matchesCategory =
+        search.category.trim() === "" ||
+        proj.category?.toLowerCase().includes(search.category.toLowerCase());
 
-    return matchesName && matchesTag && matchesCategory;
-  });
-}, [projects, search.name, search.tag, search.category]);
+      return matchesName && matchesTag && matchesCategory;
+    });
+  }, [projects, search.name, search.tag, search.category]);
 
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const filteredProjects = useMemo(() => {
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
-      <SearchBar search={search} setSearch={setSearch} projects={projects}/>
+      <SearchBar search={search} setSearch={setSearch} projects={projects} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto w-full">
         {loading && <Loading />}
         {!loading &&

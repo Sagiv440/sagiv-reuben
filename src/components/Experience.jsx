@@ -99,19 +99,19 @@ const Experience = () => {
       const matchesName =
         event.title?.toLowerCase().includes(search.title.toLowerCase());
 
-      // Filter by category (if needed)
+      // Filter by profession
       const matchesProfession =
         search.profession.trim() === "" ||
         event.profession?.toLowerCase().includes(search.profession.toLowerCase());
 
-      // Filter by category (if needed)
+      // Filter by category
       const matchesCategory =
         search.category.trim() === "" ||
         event.category?.toLowerCase().includes(search.category.toLowerCase());
 
       return matchesName && matchesProfession && matchesCategory;
     });
-  },[search.title, search.profession, search.category])
+  }, [experiences, search.title, search.profession, search.category]);
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
