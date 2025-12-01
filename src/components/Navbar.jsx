@@ -6,6 +6,7 @@ import { Profile } from '../assets';
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaItchIo, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { useSearch } from '../utils/SearchContext';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -14,6 +15,8 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [categories, setCategories] = useState([]);
   const { search, setSearch } = useSearch();
+
+  const navigate = useNavigate();
 
   const toggleResume = () => {
     const resumeUrl = '/sagiv-reuben/Resume.pdf';
@@ -94,10 +97,30 @@ const Navbar = () => {
         </li>
       ))}
       {/* Dropdown Button */}
-      <li className="relative text-white text-[15px] font-medium cursor-pointer">
+
+      <li className="relative text-white text-[15px] font-medium cursor-pointer ">
+        {/*Mobile Select Menu */}
+        <select
+          value={"Projects"}
+          onChange={(e) => {
+            setSearch(prev => ({ ...prev, category: e.target.value }))
+            SetSubject(e.target.value)
+            setDropdownOpen(false)
+            navigate("/projects")
+          }}
+          className="p-2 rounded-lg bg-primary text-white  md:hidden "
+        >
+          <option value="" hidden={true}>Projects</option>
+          <option value="">All</option>
+          {categories.map(cat => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
+
+        {/*Desktop Select Menu */}
         <motion.button
           onClick={() => setDropdownOpen(!dropdownOpen)}
-          className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
+          className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg hidden md:block"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.85 }}
         >
