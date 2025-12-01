@@ -475,6 +475,10 @@
     "description": "Developed a simple yet effective web interface for managing data on a web server, built with React and utilizing Axios for HTTP communication.",
     "tags": [
       {
+        "name": "Frontend",
+        "color": "blue-text-gradient"
+      },
+      {
         "name": "JavaScript",
         "color": "blue-text-gradient"
       },
@@ -509,6 +513,10 @@
     "name": "E-Commerce",
     "description": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development.",
     "tags": [
+      {
+        "name": "Frontend",
+        "color": "blue-text-gradient"
+      },
       {
         "name": "JavaScript",
         "color": "blue-text-gradient"
@@ -545,11 +553,15 @@
     "description": "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",
     "tags": [
       {
+        "name": "Backend",
+        "color": "blue-text-gradient"
+      },
+      {
         "name": "JavaScript",
         "color": "blue-text-gradient"
       },
       {
-        "name": "React",
+        "name": "Node.js",
         "color": "green-text-gradient"
       }
     ],
