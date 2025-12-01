@@ -13,18 +13,31 @@ const SearchBarTimeline = ({ search, setSearch, timeline }) => {
 
         timeline.forEach(event => {
             // Collect categories
+
             if (event.category) {
-                foundCategories.add(event.category);
+                if (search.profession === "") {
+                    foundCategories.add(event.category);
+                } else {
+                    if (search.profession === event.profession) {
+                        foundCategories.add(event.category)
+                    }
+                }
             }
 
             if (event.profession) {
-                foundProfessions.add(event.profession);
+                if (search.category === "") {
+                    foundProfessions.add(event.category);
+                } else {
+                    if (search.category === event.category) {
+                        foundProfessions.add(event.profession)
+                    }
+                }
             }
         });
 
         setProfessions([...foundProfessions]);
         setCategories([...foundCategories]);
-    }, [timeline]);
+    }, [timeline, search.category, search.profession]);
 
     return (
         <motion.div

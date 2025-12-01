@@ -127,20 +127,16 @@
         "color": "blue-text-gradient"
       },
       {
+        "name": "ESP-32",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "MicroPython",
+        "color": "blue-text-gradient"
+      },
+      {
         "name": "SPI",
         "color": "blue-text-gradient"
-      },
-      {
-        "name": "UART",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "Wi-Fi",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "html",
-        "color": "green-text-gradient"
       }
     ],
     "image": "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Tetris-ESP32-Logo.png?raw=true",
