@@ -246,7 +246,9 @@
     "details": {
       "body": "This project was my first attempt at creating a complete, fully functional application from scratch.<br/>It brought together skills from multiple disciplines, including core game-development principles and object-oriented programming.<br/><br/>The project was built using C++ on a Windows machine. As a low-level language with direct access to memory, C++ provides high performance and precise control over how data is managed—at the cost of increased complexity, which in this case was a welcome challenge.<br/><br/>Throughout development, I learned how to structure real-time systems, manage game loops, handle input efficiently, and design reusable classes for gameplay logic. Implementing Tetris mechanics helped deepen my understanding of collision handling, grid management, timing control, and rendering optimizations.<br/><br/>Overall, this project served as a foundational learning experience that strengthened my confidence in building more advanced systems and understanding how games work internally.  <br/><br/><br/>PS: I know about the 'Tatrice' on top of the image. I was yong back then :)",
       "videos": [],
-      "images": [],
+      "images": [
+        "https://github.com/Sagiv440/Tetris/raw/master/screenshots/Screenshot%20from%202024-05-16%2016-36-05.png?raw=true"
+      ],
       "likes": [
         {
           "name": "Link to source code",
