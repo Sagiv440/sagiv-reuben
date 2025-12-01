@@ -441,6 +441,38 @@
     }
   },
   {
+    "category": "Games",
+    "id": "the-assaulters",
+    "name": "The Assaulters",
+    "description": "A simple tower defence game inspired by the world war 2 media. made from scratch using Blender 2.49",
+    "tags": [
+      {
+        "name": "Blender 3D",
+        "color": "blue-text-gradient"
+      }
+    ],
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/MainMeun.png",
+    "details": {
+      "body": "<h3 class='font-bold text-2xl'>Description</h3>\n<p>\nThis is the first game I ever created — a small tower-defense experience inspired by the opening scene of the movie <em>Saving Private Ryan</em>.\nYou play as the defenders holding the beach against incoming waves of enemies.\nThe longer you survive, the tougher and more varied the enemy forces become.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>All in One</h3>\n<p>\nAll models, rigs, scripting, and animations were made in Blender. As a kid, this was incredibly handy — everything existed in one place, making the workflow very easy. I could create models in one scene and immediately use them in the game in another.\nThis is also where I first learned about key concepts like frame-time optimization and basic event systems.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>Programming</h3>\n<p>\nOnce all the assets were created, I needed a way to control their logic. Fortunately, Blender had the solution built in. Back then, Blender included a node-based logic editor. It was rough, mostly good for simple logic, while the finer adjustments were handled through Python scripts.\nFor me, it was perfect — all game events and inputs were managed through this system, from menu logic to the level manager to the player controller.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>How to Play</h3>\n<ol>\n<li>● Use the mouse to aim the machine gun.</li>\n<li>● Right-click to fire the machine gun.</li>\n<li>● Left-click to call in artillery support (has a cooldown, so use it wisely).</li>\n<li>● Press <strong>TAB</strong> to pause the game.</li>\n</ol>\n\n",
+      "": "",
+      "videos": [
+        "https://www.youtube.com/watch?v=_iqxz8Oibu8"
+      ],
+      "images": [
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-04.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/InfoScreen.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-02.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-06.png"
+      ],
+      "likes": [
+        {
+          "name": "Download The Game",
+          "url": "https://www.mediafire.com/download/why7m1k54qmyy1y/The+Assaulters.7z"
+        }
+      ]
+    }
+  },
+  {
     "category": "Frontend",
     "id": "database-management",
     "name": "Database Management Webpage",
