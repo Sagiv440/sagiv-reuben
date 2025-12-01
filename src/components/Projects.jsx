@@ -8,16 +8,16 @@ import LImage from "./canvas/Image";
 import Projvolt from "../constants/Projects.json";
 import { SEARCH_TEMP } from "../constants";
 import SearchBar from "./canvas/SearchBar";
+import { useSearch } from "../utils/SearchContext";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
-  const [search, setSearch] = useState({ ...SEARCH_TEMP, name: "", category: "", tag: "" });
+  const { search, setSearch } = useSearch();
 
 
   const filteredProjects = useMemo(() => {
     return projects.filter((proj) => {
-
       // Filter by name
       const matchesName =
         proj.name?.toLowerCase().includes(search.name.toLowerCase());

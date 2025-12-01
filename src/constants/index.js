@@ -23,10 +23,6 @@ export const navLinks = [
     id: "/sagiv-reuben/#/experience",
     title: "Timeline",
   },
-  {
-    id: "/sagiv-reuben/#/projects",
-    title: "Projects",
-  },
 ];
 
 export const SEARCH_TEMP = 

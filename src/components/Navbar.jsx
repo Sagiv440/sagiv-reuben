@@ -5,17 +5,47 @@ import { styles } from '../styles';
 import { Profile } from '../assets';
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaItchIo, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { useSearch } from '../utils/SearchContext';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [subject, SetSubject] = useState('');
   const [toggle, setToggle] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const { search, setSearch } = useSearch();
 
   const toggleResume = () => {
     const resumeUrl = '/sagiv-reuben/Resume.pdf';
     window.open(resumeUrl);
   };
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const res = await fetch(
+        "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
+      );
+      const data = await res.json();
+      getCategories(data);
+    };
+
+    const getCategories = (projects) => {
+      if (!projects) return;
+
+      const foundCategories = new Set();
+
+      projects.forEach(proj => {
+        // Collect categories
+        if (proj.category) {
+          foundCategories.add(proj.category);
+        }
+      });
+
+      setCategories([...foundCategories]);
+    }
+    getProjects();
+  }, []);
+
 
   useEffect(() => {
     if (toggle) {
@@ -43,6 +73,7 @@ const Navbar = () => {
 
   const renderNavLinks = (isSecondary) => (
     <ul className={`list-none ${isSecondary ? 'flex flex-col justify-center sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+
       {navLinks.map((link) => (
         <li
           key={link.id}
@@ -62,7 +93,65 @@ const Navbar = () => {
           </motion.a>
         </li>
       ))}
+      {/* Dropdown Button */}
+      <li className="relative text-white text-[15px] font-medium cursor-pointer">
+        <motion.button
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+          className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.85 }}
+        >
+          Projects
+          <span
+            className={`inline-block transition-transform duration-300 ${dropdownOpen ? "rotate-180" : "rotate-0"
+              }`}
+          >
+            ▼
+          </span>
+        </motion.button>
 
+
+        {dropdownOpen && (
+          <ul className="absolute mt-2 right-0 bg-tertiary p-3 rounded-xl shadow-lg flex flex-col gap-2 z-50 border border-white/15">
+            <li
+              className={`${subject === "" ? "text-secondary" : "text-wight"} hover:text-secondary cursor-pointer whitespace-nowrap`}
+            >
+              <motion.a
+                href="/sagiv-reuben/#/projects"
+                onClick={() => {
+                  SetSubject("")
+                  setDropdownOpen(false)
+                  setSearch({ ...search, category: "" })
+                }}
+                className="flex gap-0 duration-200"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.85 }}
+              >
+                All
+              </motion.a>
+            </li>
+            {categories.map((sub) => (
+              <li
+                className={`${subject === sub ? "text-secondary" : "text-wight"} hover:text-secondary cursor-pointer whitespace-nowrap`}
+              >
+                <motion.a
+                  href="/sagiv-reuben/#/projects"
+                  onClick={() => {
+                    SetSubject(sub)
+                    setDropdownOpen(false)
+                    setSearch({ ...search, category: sub })
+                  }}
+                  className="flex gap-0 duration-200"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.85 }}
+                >
+                  {sub}
+                </motion.a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
       <li
         className={`text-white hover:text-white text-[15px] font-medium cursor-pointer`}
         onClick={() => {
