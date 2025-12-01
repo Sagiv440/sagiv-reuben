@@ -28,8 +28,8 @@ export default function Hero() {
       {/* Hero Content */}
       <motion.div
         className="relative z-10 max-w-3xl text-center px-6"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: -80 }}
         transition={{ duration: 1 }}
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-4 whitespace-nowrap">
