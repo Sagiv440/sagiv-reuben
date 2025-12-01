@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
 import Projvolt from "../constants/Projects.json";
-import { SEARCH_TEMP } from "../constants";
+import { PROJECTS_FILE_URL, SEARCH_TEMP } from "../constants";
 import SearchBar from "./canvas/SearchBar";
 import { useSearch } from "../utils/SearchContext";
 
@@ -42,7 +42,7 @@ const Projects = () => {
   useEffect(() => {
     const getProjects = async () => {
       const res = await fetch(
-        "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
+        PROJECTS_FILE_URL
       );
       const data = await res.json();
       setProjects(data);

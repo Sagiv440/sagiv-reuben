@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { close, menu } from '../assets';
-import { navLinks } from '../constants';
+import { navLinks, PROJECTS_FILE_URL } from '../constants';
 import { styles } from '../styles';
 import { Profile } from '../assets';
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ const Navbar = () => {
   useEffect(() => {
     const getProjects = async () => {
       const res = await fetch(
-        "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
+        PROJECTS_FILE_URL
       );
       const data = await res.json();
       getCategories(data);

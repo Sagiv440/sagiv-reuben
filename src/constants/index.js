@@ -38,3 +38,6 @@ export const SEARCH_TEMP_TIMELINE =
     profession: "",
 }
 
+export const PROJECTS_FILE_URL = "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json";
+export const TIMELINE_FILE_URL = "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json";
+

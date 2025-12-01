@@ -473,7 +473,7 @@
     }
   },
   {
-    "category": "Frontend",
+    "category": "Fullstack",
     "id": "database-management",
     "name": "Database Management Webpage",
     "description": "Developed a simple yet effective web interface for managing data on a web server, built with React and utilizing Axios for HTTP communication.",
@@ -508,7 +508,7 @@
     }
   },
   {
-    "category": "Frontend",
+    "category": "Fullstack",
     "id": "e-commerce",
     "name": "E-Commerce",
     "description": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development.",
@@ -543,7 +543,7 @@
     }
   },
   {
-    "category": "Backend",
+    "category": "Fullstack",
     "id": "factory-employee-management-system",
     "name": "Factory Employee Management System",
     "description": "Developed an HTTPS-based web server for managing employees in a factory, built using the Node.js framework with an Express server architecture. ",

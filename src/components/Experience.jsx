@@ -15,7 +15,7 @@ import { getAll, loadImage } from "../utils/utils";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
 import SearchBarTimeline from "./canvas/SearchBarTimeline";
-import { SEARCH_TEMP_TIMELINE } from "../constants";
+import { SEARCH_TEMP_TIMELINE, TIMELINE_FILE_URL } from "../constants";
 import expLocal from "../constants/Experiance.json"
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
@@ -119,7 +119,7 @@ const Experience = () => {
 
   useEffect(() => {
     const getExperiences = async () => {
-      const res = await fetch("https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Experiance.json")
+      const res = await fetch(TIMELINE_FILE_URL)
       const data = await res.json()
       setExperiences(data);
 
