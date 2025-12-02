@@ -24,7 +24,7 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
     "details": {
-      "body": "A small casual fishing game where every round is bite-sized, and the competition is fierce for every fish. On the dock, you can use the fish you've collected to buy upgrades and repair your damaged vessel.<br/><br/> And in desperate times, you can even fire your fish at your rivals. Good luck !",
+      "body": "<h3 class=\"font-bold text-2xl\">Prologue</h3>\n<p>\nFish Season I is the first project that my team of three and I carried from initial concept, through prototyping and full production, all the way to publishing on Steam. \nIt marks not only my first completed commercial release, but also the first project where I led a team from start to finish. \n<br/><br/>\nAlthough the game was ultimately a commercial failure, the experience and skills gained along the way proved invaluable and continue to shape my future projects.\n</p>\n<br/>\n\n<h3 class=\"font-bold text-2xl\">Description</h3>\n<p>\nFish Season is a hyper-casual game where you control a small fishing boat and sail across the pond collecting fish. \nAs time passes, more boats appear—competing to grab the fish first and sometimes even trying to sink your boat.\n<br/><br/>\nMeanwhile, the waters grow increasingly treacherous. \nStay sharp, move fast, and fight to become the champion of this year's <strong>FISH SEASON</strong>!\n</p>\n<br/>\n\n<h3 class=\"font-bold text-2xl\">Features</h3>\n<ul class=\"list-disc ml-6\">\n  <li><strong>Controller Support</strong> – Play comfortably with full gamepad support.</li>\n  <li><strong>Localization</strong> – Multiple language options for wider accessibility.</li>\n  <li><strong>Leaderboards</strong> – Compete against players worldwide for the highest score.</li>\n  <li><strong>Achievements</strong> – Unlock milestones as you progress through the game.</li>\n  <li><strong>Cloud Saves</strong> – Your progress is backed up and available across devices.</li>\n  <li><strong>Windows, Linux, and Mac Support</strong> – Fully playable across all major desktop platforms.</li>\n</ul>\n<br/>\n<a href='https://store.steampowered.com/app/3602600/Fish_Season/'><h3 class='font-bold text-secondary'>Link To The Steam Page</h3></a>\n",
       "videos": [
         "https://www.youtube.com/watch?v=-1cAULuj4NA"
       ],
@@ -65,7 +65,7 @@
     ],
     "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/roboShift.png?raw=true",
     "details": {
-      "body": "Roboshift is a small indie game I’ve been working on with for the passed 1 years with my good friend Mor Dahan. A first person tower defense. Where the goal is to destroy the enemies base before they while do the same to yours.",
+      "body": "<p>\nRoboShift is a first-person base-defense brawler where the player must defeat the level’s boss while also protecting their base from waves of enemies.\nAfter waking up from a coma, you find yourself abandoned on a remote planet. Due to complications with the AI responsible for the terraforming effort, the colony was abruptly evacuated. \nNow stranded and equipped with a bionic arm capable of crafting advanced contraptions, you must uncover what happened and find a way back to civilization.\n<br/><br/>\n\nThis project is a joint effort between me and a guy named More.<br/>\nWe spent the last two years building the world, refining the mechanics, and getting the project off the ground.<br/>\nUnfortunately, due to external factors, we decided to pause development on RoboShift for the time being. No updates or new insights are planned for now.\n<br/><br/>\n\nIf the project ultimately goes nowhere, it will be released publicly — and you are welcome to use it however you wish.\nThe link to the repository will be published here.\n</p>\n\n",
       "videos": [
         "https://www.youtube.com/watch?v=MKdnPXl3_ng",
         "https://www.youtube.com/watch?v=lz61cXWy43I",
@@ -259,6 +259,38 @@
   },
   {
     "category": "Games",
+    "id": "the-assaulters",
+    "name": "The Assaulters",
+    "description": "A simple tower defence game inspired by the world war 2 media. made from scratch using Blender 2.49",
+    "tags": [
+      {
+        "name": "Blender 3D",
+        "color": "blue-text-gradient"
+      }
+    ],
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/MainMeun.png",
+    "details": {
+      "body": "<h3 class='font-bold text-2xl'>Description</h3>\n<p>\nThis is the first game I ever created — a small tower-defense experience inspired by the opening scene of the movie <em>Saving Private Ryan</em>.\nYou play as the defenders holding the beach against incoming waves of enemies.\nThe longer you survive, the tougher and more varied the enemy forces become.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>All in One</h3>\n<p>\nAll models, rigs, scripting, and animations were made in Blender. As a kid, this was incredibly handy — everything existed in one place, making the workflow very easy. I could create models in one scene and immediately use them in the game in another.\nThis is also where I first learned about key concepts like frame-time optimization and basic event systems.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>Programming</h3>\n<p>\nOnce all the assets were created, I needed a way to control their logic. Fortunately, Blender had the solution built in. Back then, Blender included a node-based logic editor. It was rough, mostly good for simple logic, while the finer adjustments were handled through Python scripts.\nFor me, it was perfect — all game events and inputs were managed through this system, from menu logic to the level manager to the player controller.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>How to Play</h3>\n<ol>\n<li>● Use the mouse to aim the machine gun.</li>\n<li>● Right-click to fire the machine gun.</li>\n<li>● Left-click to call in artillery support (has a cooldown, so use it wisely).</li>\n<li>● Press <strong>TAB</strong> to pause the game.</li>\n</ol>\n\n",
+      "": "",
+      "videos": [
+        "https://www.youtube.com/watch?v=_iqxz8Oibu8"
+      ],
+      "images": [
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-04.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/InfoScreen.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-02.png",
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-06.png"
+      ],
+      "likes": [
+        {
+          "name": "Download The Game",
+          "url": "https://www.mediafire.com/download/why7m1k54qmyy1y/The+Assaulters.7z"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Games",
     "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
     "description": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
@@ -438,38 +470,7 @@
       ]
     }
   },
-  {
-    "category": "Games",
-    "id": "the-assaulters",
-    "name": "The Assaulters",
-    "description": "A simple tower defence game inspired by the world war 2 media. made from scratch using Blender 2.49",
-    "tags": [
-      {
-        "name": "Blender 3D",
-        "color": "blue-text-gradient"
-      }
-    ],
-    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/MainMeun.png",
-    "details": {
-      "body": "<h3 class='font-bold text-2xl'>Description</h3>\n<p>\nThis is the first game I ever created — a small tower-defense experience inspired by the opening scene of the movie <em>Saving Private Ryan</em>.\nYou play as the defenders holding the beach against incoming waves of enemies.\nThe longer you survive, the tougher and more varied the enemy forces become.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>All in One</h3>\n<p>\nAll models, rigs, scripting, and animations were made in Blender. As a kid, this was incredibly handy — everything existed in one place, making the workflow very easy. I could create models in one scene and immediately use them in the game in another.\nThis is also where I first learned about key concepts like frame-time optimization and basic event systems.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>Programming</h3>\n<p>\nOnce all the assets were created, I needed a way to control their logic. Fortunately, Blender had the solution built in. Back then, Blender included a node-based logic editor. It was rough, mostly good for simple logic, while the finer adjustments were handled through Python scripts.\nFor me, it was perfect — all game events and inputs were managed through this system, from menu logic to the level manager to the player controller.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>How to Play</h3>\n<ol>\n<li>● Use the mouse to aim the machine gun.</li>\n<li>● Right-click to fire the machine gun.</li>\n<li>● Left-click to call in artillery support (has a cooldown, so use it wisely).</li>\n<li>● Press <strong>TAB</strong> to pause the game.</li>\n</ol>\n\n",
-      "": "",
-      "videos": [
-        "https://www.youtube.com/watch?v=_iqxz8Oibu8"
-      ],
-      "images": [
-        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-04.png",
-        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/InfoScreen.png",
-        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-02.png",
-        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/The%20Assaulters/Gameplay-06.png"
-      ],
-      "likes": [
-        {
-          "name": "Download The Game",
-          "url": "https://www.mediafire.com/download/why7m1k54qmyy1y/The+Assaulters.7z"
-        }
-      ]
-    }
-  },
+  
   {
     "category": "Systems",
     "id": "linux-utility-scripts",
