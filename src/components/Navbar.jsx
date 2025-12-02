@@ -75,7 +75,7 @@ const Navbar = () => {
   );
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex justify-center sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+    <ul className={`list-none ${isSecondary ? 'flex flex-col justify-center sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
 
       {navLinks.map((link) => (
         <li
