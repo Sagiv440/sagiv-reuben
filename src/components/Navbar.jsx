@@ -75,7 +75,7 @@ const Navbar = () => {
   );
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex flex-col justify-center sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+    <ul className={`list-none ${isSecondary ? 'flex justify-center sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
 
       {navLinks.map((link) => (
         <li
@@ -101,11 +101,15 @@ const Navbar = () => {
       <li className="relative text-white text-[15px] font-medium cursor-pointer ">
         {/*Mobile Select Menu */}
         <select
+          name={"Projects"}
           value={"Projects"}
           onChange={(e) => {
             setSearch(prev => ({ ...prev, category: e.target.value }))
             SetSubject(e.target.value)
             setDropdownOpen(false)
+            if (isSecondary) {
+              setToggle(false);
+            }
             navigate("/projects")
           }}
           className="p-2 rounded-lg bg-primary text-white  md:hidden "
@@ -145,6 +149,9 @@ const Navbar = () => {
                   SetSubject("")
                   setDropdownOpen(false)
                   setSearch({ ...search, category: "" })
+                  if (isSecondary) {
+                    setToggle(false);
+                  }
                 }}
                 className="flex gap-0 duration-200"
                 whileHover={{ scale: 1.1 }}
@@ -163,6 +170,9 @@ const Navbar = () => {
                     SetSubject(sub)
                     setDropdownOpen(false)
                     setSearch({ ...search, category: sub })
+                    if (isSecondary) {
+                      setToggle(false);
+                    }
                   }}
                   className="flex gap-0 duration-200"
                   whileHover={{ scale: 1.1 }}
