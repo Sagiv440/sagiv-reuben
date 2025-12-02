@@ -471,6 +471,36 @@
     }
   },
   {
+    "category": "Systems",
+    "id": "linux-utility-scripts",
+    "name": "Linux Utility Scripts",
+    "description": "A collection of shell scripts for every day linux use. install, uninstal apps, select gpu type ext...",
+    "tags": [
+      {
+        "name": "Shell",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Linux",
+        "color": "blue-text-gradient"
+      }
+    ],
+    "image": "https://media.githubusercontent.com/media/Sagiv440/linux-utility-scripts/master/assets/Bash_%20Banner%20.png",
+    "details": {
+      "body": "<h3 class='font-bold text-2xl'>Description</h3>\n<p>\nThis repository is a collection of shell scripts I've created over time for everyday use on my Linux machines.\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>auto-install.sh</h3>\n<p>\nAuto-install is a script that takes binary application files and installs them on the machine.\n<br/>\nIt does this by copying the binary file into <code>/opt/[name-of-the-program]</code>\nand creating an alias for ease of use in the terminal.\n<br/><br/>\n\n<h3 class='font-bold'>Usage:</h3>\n<code>./install_app.sh [source_file_or_folder] [app_name] [-f] [-d]</code>\n<br/><br/>\n\n<h3 class='font-bold'>Examples:</h3>\n<code>./install_app.sh ~/Downloads/Etcher.AppImage etcher<br/>\n./install_app.sh ~/Downloads/balenaEtcher-linux-x64 balena-etcher -f -d</code>\n<br/><br/>\n\n<h3 class='font-bold'>Flags:</h3>\n<code>-f</code> &nbsp;Force reinstall (delete old files before installing)<br/>\n<code>-d</code> &nbsp;Copy the entire folder (including dependencies)<br/>\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>uninstall.sh</h3>\n<p>\nRemoves any program that was installed using <code>auto-install.sh</code>.\n<br/><br/>\n\n<h3 class='font-bold'>Usage:</h3>\n<code>./uninstall_app.sh [app_name] [-f]</code>\n<br/><br/>\n\n<h3 class='font-bold'>Examples:</h3>\n<code>./uninstall_app.sh balena-etcher<br/>\n./uninstall_app.sh etcher -f</code>\n<br/><br/>\n\n<h3 class='font-bold'>Removes:</h3>\n<code>- /opt/[app_name] (folder or single file)<br/>\n- /usr/local/bin/[app_name] (symlink)</code>\n<br/><br/>\n\n<h3 class='font-bold'>Flags:</h3>\n<code>-f</code> &nbsp;Skip confirmation.<br/>\n</p>\n\n<br/><br/>\n\n<h3 class='font-bold text-2xl'>run_nvidia.sh / run_intel.sh</h3>\n<p>\nForce programs to run using a specific GPU.\n<br/><br/>\n\n<h3 class='font-bold'>Usage:</h3>\nNvidia: <code>./run_nvidia.sh [app_name]</code><br/>\nIntel: <code>./run_intel.sh [app_name]</code><br/>\n</p>\n\n",
+      " (copy)": "",
+      "": "",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "Link to repository",
+          "url": "https://github.com/Sagiv440/linux-utility-scripts"
+        }
+      ]
+    }
+  },
+  {
     "category": "Fullstack",
     "id": "database-management",
     "name": "Database Management Webpage",
