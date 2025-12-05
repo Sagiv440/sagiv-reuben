@@ -470,7 +470,6 @@
       ]
     }
   },
-  
   {
     "category": "Systems",
     "id": "linux-utility-scripts",
@@ -497,6 +496,41 @@
         {
           "name": "Link to repository",
           "url": "https://github.com/Sagiv440/linux-utility-scripts"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Fullstack",
+    "id": "protfolio-website-template",
+    "name": "Portfolio Website Template",
+    "description": "Template Website that can be easly changed and adopted to sute the need of the user",
+    "tags": [
+      {
+        "name": "Frontend",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "JavaScript",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Json",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "React",
+        "color": "green-text-gradient"
+      }
+    ],
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/My-Website.png",
+    "details": {
+      "body": "<h3 class=\"font-bold text-2xl\">Description</h3>\n<p>\n  This project is a fully featured portfolio website template built in React.\n  It is designed to help anyone quickly create and publish their own personal\n  website with minimal setup. The template provides a clean structure, a modern\n  layout, and easy customization so users can focus on presenting their work\n  and identity.\n</p>\n\n<br/><br/>\n\n<h3 class=\"font-bold text-2xl\">Goals and Purpose</h3>\n<p>\n  - Provide an accessible starting point for people with little or no frontend experience.<br/>\n  - Offer a modern, responsive design that works across all devices.<br/>\n  - Allow users to customize their personal website by editing simple data files or React components.<br/>\n  - Demonstrate how to structure a professional personal website using React.\n</p>\n\n<br/><br/>\n\n<h3 class=\"font-bold text-2xl\">Features</h3>\n<p>\n  <strong>Modern and Responsive UI</strong><br/>\n  Clean and minimal design that works seamlessly on mobile, tablet, and desktop.\n  <br/><br/>\n\n  <strong>Built with React</strong><br/>\n  Component-based architecture with reusable, modular code that is easy to extend.\n  <br/><br/>\n\n  <strong>Dynamic Project Viewer</strong><br/>\n  Loads projects from JSON or local files, includes built-in filtering and search,\n  and supports detailed project pages with images, videos, and descriptions.\n  <br/><br/>\n\n  <strong>Smooth Animations</strong><br/>\n  Uses Framer Motion to create fluid section transitions and animated UI elements.\n  <br/><br/>\n\n  <strong>Easy Content Editing</strong><br/>\n  Sections such as About Me, Projects, and Skills can be edited without any backend setup.\n  <br/><br/>\n\n  <strong>Hash-Based Routing</strong><br/>\n  Fully compatible with static hosting platforms like GitHub Pages.\n  <br/><br/>\n\n  <strong>Lightweight and Fast</strong><br/>\n  Optimized build, efficient asset loading, and minimal dependencies.\n</p>\n\n<br/><br/>\n\n<h3 class=\"font-bold text-2xl\">My Role</h3>\n<p>\n  I developed the entire frontend from the ground up, including UI and layout design,\n  component structure, navigation and routing, mobile-first design, animation setup,\n  performance optimizations, and deployment configuration. This project strengthened\n  my understanding of reusable component patterns, UI design, and modern frontend workflows.\n</p>\n\n",
+      "videos": [],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/sagiv-reuben/tree/master"
         }
       ]
     }
