@@ -1,5 +1,28 @@
 [
   {
+    "type": "Educational",
+    "profession": "Fullstack",
+    "title": "Fullstack Web Developer ",
+    "organization": "Yaniv Arad Traning Labs",
+    "date": "Jan 2024",
+    "description": "Took a specialization course as a way to broaden my field of understanding and expertise in web development.",
+    "metadata": {
+      "icon": "https://www.yaniv-arad.com/wp-content/uploads/2020/11/Yaniv-New.png",
+      "iconBg": "#191919"
+    },
+    "details": {
+      "body": "",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "Yaniv Arad",
+          "url": "https://www.yaniv-arad.com/"
+        }
+      ]
+    }
+  },
+  {
     "type": "Profesional",
     "profession": "Game Developer",
     "title": "Indi Game Developer",

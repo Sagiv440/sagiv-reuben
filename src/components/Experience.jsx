@@ -124,7 +124,7 @@ const Experience = () => {
     const getExperiences = async () => {
       const res = await fetch(TIMELINE_FILE_URL)
       const data = await res.json()
-      setExperiences(expLocal);
+      setExperiences(data);
 
       /*const imageUrls = data.map(x => x.icon);
       await Promise.all(imageUrls.map(url => loadImage(url)))*/
