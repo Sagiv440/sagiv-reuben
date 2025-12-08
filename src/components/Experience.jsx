@@ -14,7 +14,7 @@ import { textVariant } from "../utils/motion";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
 import SearchBarTimeline from "./canvas/SearchBarTimeline";
-import { SEARCH_TEMP_TIMELINE, TIMELINE_FILE_URL } from "../constants";
+import { SEARCH_TEMP_TIMELINE, TIMELINE_FILE_URL, WEB_LOGO } from "../constants";
 import expLocal from "../constants/Experiance.json"
 import HtmlRenderer from "./canvas/htmlReader";
 import { useSearch } from "../utils/SearchContext";
@@ -30,7 +30,7 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
     iconStyle={{ background: experience.metadata.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <LImage src={experience.metadata.icon} alt={experience.organization} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true} />
+        <LImage src={experience.metadata.icon !=  "" ? experience.metadata.icon : WEB_LOGO} alt={experience.organization} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true} />
 
       </div>
     }
