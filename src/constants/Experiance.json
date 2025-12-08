@@ -1,63 +1,94 @@
 [
   {
-    "category": "Software Development",
-    "profession": "Independet",
-    "title": "Game Developer",
-    "company_name": "Independent",
-    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
-    "iconBg": "#191919",
+    "type": "Profesional",
+    "profession": "Game Developer",
+    "title": "Indi Game Developer",
+    "organization": "Independent",
     "date": "Jan 2023 - Jan 2024",
-    "about": "Lead Game Developer – “Fish Season” Video Game ",
-    "summery": "Lead Game Developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. The role required me to:",
-    "points": [
-      "Lead meetings and manage the team to align expectations and divide tasks",
-      "Learn and apply new technologies and skills throughout the development process",
-      "Manage time and resources to maximize efficiency and reduce confusion",
-      "Find creative solutions to limitations that arose during development"
-    ]
+    "description": "Lead Game Developer – “Fish Season” Video Game ",
+    "metadata": {
+      "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
+      "iconBg": "#191919"
+    },
+    "details": {
+      "body": "<p>Lead Game Developer in an independent team, I had to develop a wide range of skills related to organization, team management, meeting deadlines, and setting goals. In addition, I was required to improve my programming skills, with an emphasis on writing clear, efficient, and modular code. <br/>\nThe role required me to:</p><br/>\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n      <li>Lead meetings and manage the team to align expectations and divide tasks</li>\n      <li>Learn and apply new technologies and skills throughout the development process</li>\n      <li>Manage time and resources to maximize efficiency and reduce confusion</li>\n      <li>Find creative solutions to limitations that arose during development</li>\n</ul>",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "",
+          "url": ""
+        }
+      ]
+    }
   },
   {
-    "category": "Electronics",
-    "profession": "Layout Designer",
+    "type": "Profesional",
+    "profession": "Electronics",
     "title": "Layout Designer",
-    "company_name": "Qualcomm",
-    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/Qualcomm.png?raw=true",
-    "iconBg": "#191919",
+    "organization": "Qualcomm",
     "date": "Jan 2021 - Jan 2023",
-    "about": "industry leader in micro-processors and RF communication chips.",
-    "summery": "In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues. The position required me to:",
-    "points": [
-      "Lead my team’s presentations in meetings with management.",
-      "Mentor colleagues and debug their code before final submission.",
-      "Find innovative and creative solutions to complicated tasks with strict constraints.",
-      "Explore efficiency boosters to increase my team’s and my own productivity."
-    ]
+    "description": "industry leader in micro-processors and RF communication chips.",
+    "metadata": {
+      "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/Qualcomm.png?raw=true",
+      "iconBg": "#191919"
+    },
+    "details": {
+      "body": "<p>In my role as a Layout Designer, I had to became proficient in Python and Skill (In house language) programming languages all while working with in a Linux Terminal interface. I also had to develop and demonstrate organizational and communication skills such as team work, meeting strict deadlines, and presenting findings and analysis to colleagues.<br/>\n The position required me to:</p><br/>\n\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n       <li>Lead my team’s presentations in meetings with management.</li>\n       <li>Mentor colleagues and debug their code before final submission.</li>\n       <li>Find innovative and creative solutions to complicated tasks with strict constraints.</li>\n       <li>Explore efficiency boosters to increase my team’s and my own productivity.</li>\n</ul>",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "",
+          "url": ""
+        }
+      ]
+    }
   },
   {
-    "category": "Electronics",
-    "profession": "Student",
+    "type": "Educational",
+    "profession": "Electronics",
     "title": "Electronics Practical Engineer",
-    "company_name": "Technion Institute",
-    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/technion.png?raw=true",
-    "iconBg": "#191919",
+    "organization": "Technion Institute",
     "date": "Jan 2018 - Jan 2020",
-    "about": "Electronics Practical Engineer | Technion Institute GPA: 96.1",
-    "summery": "",
-    "points": [
-      "Awarded a High preformence student with a GPA: 96.1"
-    ]
+    "description": "Electronics Practical Engineer | Technion Institute GPA: 96.1",
+    "metadata": {
+      "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/technion.png?raw=true",
+      "iconBg": "#191919"
+    },
+    "details": {
+      "body": "",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "",
+          "url": ""
+        }
+      ]
+    }
   },
   {
+    "type": "Profesional",
     "profession": "Army",
     "title": "Artillery Gun Crewman",
-    "company_name": "Artillery Corps IDF",
-    "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/idf.png?raw=true",
-    "iconBg": "#191919",
+    "organization": "Qualcomm",
     "date": "Nov 2013 - Nov 2016",
-    "about": "Manditory Service",
-    "summery": "",
-    "points": [
-      "Awarded for outstanding performance by the regiment officer."
-    ]
+    "description": "Manditory Service",
+    "metadata": {
+      "icon": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/company/idf.png?raw=true",
+      "iconBg": "#191919"
+    },
+    "details": {
+      "body": "",
+      "videos": [],
+      "images": [],
+      "likes": [
+        {
+          "name": "",
+          "url": ""
+        }
+      ]
+    }
   }
 ]

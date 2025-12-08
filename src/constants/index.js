@@ -34,7 +34,7 @@ export const SEARCH_TEMP =
 export const SEARCH_TEMP_TIMELINE = 
 {
     title: "",
-    category: "",
+    type: "",
     profession: "",
 }
 

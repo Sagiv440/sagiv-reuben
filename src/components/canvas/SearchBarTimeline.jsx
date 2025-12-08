@@ -14,21 +14,21 @@ const SearchBarTimeline = ({ search, setSearch, timeline }) => {
         timeline.forEach(event => {
             // Collect categories
 
-            if (event.category) {
+            if (event.type) {
                 if (search.profession === "") {
-                    foundCategories.add(event.category);
+                    foundCategories.add(event.type);
                 } else {
                     if (search.profession === event.profession) {
-                        foundCategories.add(event.category)
+                        foundCategories.add(event.type)
                     }
                 }
             }
 
             if (event.profession) {
-                if (search.category === "") {
-                    foundProfessions.add(event.category);
+                if (search.type === "") {
+                    foundProfessions.add(event.profession);
                 } else {
-                    if (search.category === event.category) {
+                    if (search.type === event.type) {
                         foundProfessions.add(event.profession)
                     }
                 }
@@ -37,7 +37,7 @@ const SearchBarTimeline = ({ search, setSearch, timeline }) => {
 
         setProfessions([...foundProfessions]);
         setCategories([...foundCategories]);
-    }, [timeline, search.category, search.profession]);
+    }, [timeline, search.type, search.profession]);
 
     return (
         <motion.div
@@ -50,10 +50,10 @@ const SearchBarTimeline = ({ search, setSearch, timeline }) => {
 
             {/* CATEGORY */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                <label className="text-white text-sm whitespace-nowrap">Category:</label>
+                <label className="text-white text-sm whitespace-nowrap">Experiance:</label>
                 <select
-                    value={search.category}
-                    onChange={(e) => setSearch(prev => ({ ...prev, category: e.target.value }))}
+                    value={search.type}
+                    onChange={(e) => setSearch(prev => ({ ...prev, type: e.target.value }))}
                     className="p-2 rounded-lg bg-primary text-white border border-border min-w-[150px]"
                 >
                     <option value="">All</option>

@@ -11,12 +11,13 @@ import { styles } from "../styles";
 
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { getAll, loadImage } from "../utils/utils";
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
 import SearchBarTimeline from "./canvas/SearchBarTimeline";
 import { SEARCH_TEMP_TIMELINE, TIMELINE_FILE_URL } from "../constants";
 import expLocal from "../constants/Experiance.json"
+import HtmlRenderer from "./canvas/htmlReader";
+import { useSearch } from "../utils/SearchContext";
 
 const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
   <VerticalTimelineElement
@@ -26,10 +27,10 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
     }}
     contentArrowStyle={{ borderRight: "7px solid #696969ff" }}
     date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    iconStyle={{ background: experience.metadata.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <LImage src={experience.icon} alt={experience.company_name} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true} />
+        <LImage src={experience.metadata.icon} alt={experience.organization} className={"w-[80%] h-[80%] object-contain rounded-full"} hide_text={true} />
 
       </div>
     }
@@ -40,13 +41,13 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
-          {experience.company_name}
+          {experience.organization}
         </p>
       </div>
       <div
         className="text-white-100 text-[14px] tracking-wider"
       >
-        {experience.about}
+        {experience.description}
       </div>
       <AnimatePresence>
         {expanded === index && (
@@ -65,8 +66,10 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
               transition={{ delay: 0.35, duration: 0.2 }}
               className="text-white text-sm mb-3"
             >
-              {experience.summery}
-              <ul className="mt-5 list-disc ml-5 space-y-2">
+              <p className="text-lg leading-relaxed mb-10">
+                <HtmlRenderer body={experience.details?.body} />
+              </p>
+              {/*<ul className="mt-5 list-disc ml-5 space-y-2">
                 {experience.points.map((point, index) => (
                   <li
                     key={`experience-point-${index}`}
@@ -75,7 +78,7 @@ const ExperienceCard = ({ experience, index, expanded, setExpanded }) => (
                     {point}
                   </li>
                 ))}
-              </ul>
+              </ul>*/}
 
             </motion.p>
           </motion.div>
@@ -90,7 +93,7 @@ const Experience = () => {
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
   const [experiences, setExperiences] = useState([]);
-  const [search, setSearch] = useState({ ...SEARCH_TEMP_TIMELINE, title: "", category: "", profession: "" });
+  const [search, setSearch] = useState({ ...SEARCH_TEMP_TIMELINE, title: "", type: "", profession: "" });
 
   const filteredTimeline = useMemo(() => {
     return experiences.filter((event) => {
@@ -106,12 +109,12 @@ const Experience = () => {
 
       // Filter by category
       const matchesCategory =
-        search.category.trim() === "" ||
-        event.category?.toLowerCase().includes(search.category.toLowerCase());
+        search.type.trim() === "" ||
+        event.type?.toLowerCase().includes(search.type.toLowerCase());
 
       return matchesName && matchesProfession && matchesCategory;
     });
-  }, [experiences, search.title, search.profession, search.category]);
+  }, [experiences, search.title, search.profession, search.type]);
 
   const toggleExpand = (index) => {
     setExpanded(expanded === index ? null : index);
@@ -121,7 +124,7 @@ const Experience = () => {
     const getExperiences = async () => {
       const res = await fetch(TIMELINE_FILE_URL)
       const data = await res.json()
-      setExperiences(data);
+      setExperiences(expLocal);
 
       /*const imageUrls = data.map(x => x.icon);
       await Promise.all(imageUrls.map(url => loadImage(url)))*/
