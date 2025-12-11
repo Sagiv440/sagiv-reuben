@@ -22,7 +22,7 @@
         "color": "yellow-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/fish_Season.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/fish_Season.png",
     "details": {
       "body": "<h3 class=\"font-bold text-2xl\">Prologue</h3>\n<p>\nFish Season I is the first project that my team of three and I carried from initial concept, through prototyping and full production, all the way to publishing on Steam. \nIt marks not only my first completed commercial release, but also the first project where I led a team from start to finish. \n<br/><br/>\nAlthough the game was ultimately a commercial failure, the experience and skills gained along the way proved invaluable and continue to shape my future projects.\n</p>\n<br/>\n\n<h3 class=\"font-bold text-2xl\">Description</h3>\n<p>\nFish Season is a hyper-casual game where you control a small fishing boat and sail across the pond collecting fish. \nAs time passes, more boats appear—competing to grab the fish first and sometimes even trying to sink your boat.\n<br/><br/>\nMeanwhile, the waters grow increasingly treacherous. \nStay sharp, move fast, and fight to become the champion of this year's <strong>FISH SEASON</strong>!\n</p>\n<br/>\n\n<h3 class=\"font-bold text-2xl\">Features</h3>\n<ul class=\"list-disc ml-6\">\n  <li><strong>Controller Support</strong> – Play comfortably with full gamepad support.</li>\n  <li><strong>Localization</strong> – Multiple language options for wider accessibility.</li>\n  <li><strong>Leaderboards</strong> – Compete against players worldwide for the highest score.</li>\n  <li><strong>Achievements</strong> – Unlock milestones as you progress through the game.</li>\n  <li><strong>Cloud Saves</strong> – Your progress is backed up and available across devices.</li>\n  <li><strong>Windows, Linux, and Mac Support</strong> – Fully playable across all major desktop platforms.</li>\n</ul>\n<br/>\n<a href='https://store.steampowered.com/app/3602600/Fish_Season/'><h3 class='font-bold text-secondary'>Link To The Steam Page</h3></a>\n",
       "videos": [
@@ -63,7 +63,7 @@
         "color": "yellow-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/roboShift.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/roboShift.png",
     "details": {
       "body": "<p>\nRoboShift is a first-person base-defense brawler where the player must defeat the level’s boss while also protecting their base from waves of enemies.\nAfter waking up from a coma, you find yourself abandoned on a remote planet. Due to complications with the AI responsible for the terraforming effort, the colony was abruptly evacuated. \nNow stranded and equipped with a bionic arm capable of crafting advanced contraptions, you must uncover what happened and find a way back to civilization.\n<br/><br/>\n\nThis project is a joint effort between me and a guy named More.<br/>\nWe spent the last two years building the world, refining the mechanics, and getting the project off the ground.<br/>\nUnfortunately, due to external factors, we decided to pause development on RoboShift for the time being. No updates or new insights are planned for now.\n<br/><br/>\n\nIf the project ultimately goes nowhere, it will be released publicly — and you are welcome to use it however you wish.\nThe link to the repository will be published here.\n</p>\n\n",
       "videos": [
@@ -90,7 +90,7 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/rts_TumeNaile.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/rts_TumeNaile.png?raw=true",
     "details": {
       "body": "<p>A Strategy game made using <code>Unity 2018.2.12f1 (64-bit)</code> where the player controls an army of troops and the goal is to destroy the enemy base while defending yours.</p><br/><h3 class='font-bold text-2xl'>Project Ghoul</h3><p>As a way to learn about video game AI, I made an RTS (Real-Time Strategy) game where the player controls a small army with the goal of destroying the enemy's main army building. The core of the game consists of individual units with their own AI, allowing them to make decisions, and a larger army manager that organizes and sorts them as it passes down orders from the player or the AI. The enemy AI uses a simple minimax algorithm that translates the battlefield into a tree of possible choices, each assigned a value. This system gives the AI the flexibility to plan ahead and respond to the player's behavior while remaining performance efficient. To implement many of these systems, I relied on features of .NET and C#, such as events and delegates, to allow units to subscribe and unsubscribe to receive orders from the manager as they are being selected.</p><br/><p><strong>Link to the video demo:</strong> <a href='https://youtu.be/5TpPYrwQT54' target='_blank' rel='noopener noreferrer' class='text-secondary' >here</a></p><br/><h3 class='font-bold text-2xl'>How To Play</h3><ol><li>● 1. Use the <code>right mouse</code> button to select the troop you want to move and the <code>left mouse</code> button to click where you want it to move.</li><li>● 2. Hold <code>left shift</code> while clicking the <code>right mouse</code> button on troops to control multiple troops at the same time.</li><li>● 3. Click on the base to buy more units.</li><li> ● 4.Capture resource points to secure more resources for your army.</li><li>● 5. Move the mouse cursor to the edges of the screen to move the camera.</li></ol>",
       "videos": [
@@ -139,19 +139,19 @@
         "color": "blue-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Tetris-ESP32-Logo.png?raw=true",
+    "image": "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Tetris-ESP32-Logo.png",
     "details": {
       "body": "<p class='font-bold text-2xl'>Description</p><p>Tetris ESP32 is my university final project. It’s a custom-built Tetris machine powered by an ESP-32 microcontroller and controlled using a PS2 game controller. Under the hood, the controller runs a MicroPython interpreter that reads, decodes, and executes Python scripts in real time, allowing us to modify, add, or remove code as needed.</p><br/><p class='font-bold text-2xl'>PS2 Controller</p><p>The PlayStation 2 controller uses the SPI protocol for communication, which the ESP32 supports. This allows us to read — and occasionally write — data to the controller.</p><br/><p class='font-bold text-2xl'>Wi-Fi</p><p>For an extra challenge, I decided that in order to view high scores from all players, the ESP32 should connect to Wi-Fi and display them through a browser interface. In the game's options menu, there is a “Network” option that lets the ESP32 connect to any nearby Wi-Fi network.</p><br/><p class='font-bold text-2xl'>Tetris</p><p>There isn’t much to say — it’s Tetris, or at least a close version of it. The game itself was originally an older project of mine written in C++. Feeling confident that I could adapt it, and knowing that squares are the easiest thing to draw on the screen, it was the perfect fit for our project.</p>\n\n",
       "videos": [
         "https://www.youtube.com/watch?v=B0UTAnWJAis"
       ],
       "images": [
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Photos/Game1.jpg?raw=true",
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-06-58.png?raw=true",
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Photos/Home_screen_DSC0371.jpg?raw=true",
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-02-12.png?raw=true",
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-01-14.png?raw=true",
-        "https://github.com/Sagiv440/Tetris_ESP32/blob/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-03-31.png?raw=true"
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Photos/Game1.jpg?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-06-58.png?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Photos/Home_screen_DSC0371.jpg?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-02-12.png?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-01-14.png?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/Tetris_ESP32/refs/heads/main/Assets/Screenshots/Screenshot%20from%202025-11-29%2010-03-31.png?raw=true"
       ],
       "likes": [
         {
@@ -180,7 +180,7 @@
         "color": "pink-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/mincraft.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/mincraft.png?raw=true",
     "details": {
       "body": "<p>This is a prototype I made to learn about 3D engines and the rendering pipeline. It is a small application that procedurally generates terrain similar to the terrain in the game Minecraft.</p><br/><h3 class='font-bold text-2xl'>Built Points</h3><ul><li>● Terrain is divided into small chunks of 100x100x256 blocks that are stored in memory using a key-value pair (key: chunk position, value: memory address).</li><li>● World rendering is done using the OpenGL rendering API and shader scripts that dictate the flow of data to and from the GPU.</li><li>● Custom game engine handles data sorting and provides simple first-person controls to explore the generated terrain.</li><li>● The application uses a Perlin noise algorithm to generate the continuous terrain.</li></ul><br/><h3 class='font-bold text-2xl'>Dependencies</h3><p>To compile the project, you will need to link the following libraries:</p><ul>●GLFW, GLEW for OpenGL</li><li>● libnoise for the Randomizer</li><li> ● SOIL2 for handling images</li></ul>",
       "videos": [],
@@ -215,7 +215,7 @@
         "color": "pink-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/nes_emulator.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/nes_emulator.png?raw=true",
     "details": {
       "body": "<p><strong>NES Emulator Project</strong></p><p>This project is a full software recreation of the Nintendo Entertainment System, built to understand how classic hardware works from the ground up. It replicates the internal behavior of the console through cycle-accurate emulation, allowing NES games to run as they would on the original system.<br/><br/>The emulator simulates key components of the NES:</p><p><strong>CPU Emulation:</strong><br/>Implements the 6502 processor, handling opcodes, addressing modes, registers, stack operations, interrupts, and clock timing. The CPU executes instructions cycle by cycle, ensuring accurate synchronization with the rest of the system.<br/><br/><strong>PPU (Picture Processing Unit):</strong><br/>Replicates the NES graphics hardware, including background rendering, sprite evaluation, palette handling, scroll registers, and the full 262-scanline pipeline. This enables correct drawing of tiles, sprites, and frame updates.<br/><br/><strong>APU (Audio Processing Unit):</strong><br/>Simulates the system’s audio channels—pulse, triangle, noise, and DMC. Although simplified, it mimics the logic that generates NES-style sound output.<br/><br/><strong>Cartridge & Mapper System:</strong><br/>Supports loading NES ROMs and interpreting their metadata. Implements mapper logic to handle bank switching, memory mirroring, and game-specific hardware behavior.<br/><br/><strong>Memory Bus & Timing:</strong><br/>Coordinates communication between CPU, PPU, cartridge, and RAM. Ensures accurate cycle-level timing so instructions and rendering stay synchronized.<br/><br/><strong>Debugging & Display Tools:</strong><br/>Includes optional visualization components such as CPU state monitoring, tile viewer prototypes, and test ROM compatibility for diagnosing accuracy.<br/><br/></p><p>This emulator was created as a hands-on learning experience—an exploration into how low-level hardware, assembly execution, and real-time rendering work together in a classic game console.</p>",
       "videos": [],
@@ -242,7 +242,7 @@
         "color": "blue-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/tetris.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/tetris.png?raw=true",
     "details": {
       "body": "This project was my first attempt at creating a complete, fully functional application from scratch.<br/>It brought together skills from multiple disciplines, including core game-development principles and object-oriented programming.<br/><br/>The project was built using C++ on a Windows machine. As a low-level language with direct access to memory, C++ provides high performance and precise control over how data is managed—at the cost of increased complexity, which in this case was a welcome challenge.<br/><br/>Throughout development, I learned how to structure real-time systems, manage game loops, handle input efficiently, and design reusable classes for gameplay logic. Implementing Tetris mechanics helped deepen my understanding of collision handling, grid management, timing control, and rendering optimizations.<br/><br/>Overall, this project served as a foundational learning experience that strengthened my confidence in building more advanced systems and understanding how games work internally.  <br/><br/><br/>PS: I know about the 'Tatrice' on top of the image. I was yong back then :)",
       "videos": [],
@@ -304,7 +304,7 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/bubbleTitle.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/bubbleTitle.png?raw=true",
     "details": {
       "body": "<p><br>The ultimate underwater bubble adventure!<br><br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!<br><br/><br/></p><p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
       "videos": [
@@ -345,7 +345,7 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/grampaAndMeTitle.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/grampaAndMeTitle.png?raw=true",
     "details": {
       "body": "The game is about a kid who was sent to spend the weekend with his Old Grumpy Grampa. You, as the player, need to cheer the kid up by planting various pranks around the house to prank the grandpa in order to make the kid laugh. Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)",
       "videos": [],
@@ -385,14 +385,14 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/GlobalGameJam2023/blob/main/GGJ_Site_Upload/Screenshot%20from%202025-11-28%2021-29-06.png?raw=true",
+    "image": "https://raw.githubusercontent.com/Sagiv440/GlobalGameJam2023/refs/heads/main/GGJ_Site_Upload/Screenshot%20from%202025-11-28%2021-29-06.png",
     "details": {
       "body": "<span class='font-bold text-2xl'>Global Game Jam 2023 Project:</span><br/><br/> A fast-paced prototype created during Global Game Jam 2023, focusing on rapid-prototyping, core gameplay programming, and tight-scope design; built under extreme time constraints, showcasing essential mechanics, player interaction, and teamwork-driven development while serving primarily as a learning experience in game design, iteration, and engine workflow.",
       "videos": [],
       "images": [
-        "https://github.com/Sagiv440/GlobalGameJam2023/blob/main/GGJ_Site_Upload/Screenshot1.png?raw=true",
-        "https://github.com/Sagiv440/GlobalGameJam2023/blob/main/GGJ_Site_Upload/Screenshot2.png?raw=true",
-        "https://github.com/Sagiv440/GlobalGameJam2023/blob/main/GGJ_Site_Upload/credits.png?raw=true"
+        "https://raw.githubusercontent.com/Sagiv440/GlobalGameJam2023/refs/heads/main/GGJ_Site_Upload/Screenshot1.png?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/GlobalGameJam2023/refs/heads/main/GGJ_Site_Upload/Screenshot2.png?raw=true",
+        "https://raw.githubusercontent.com/Sagiv440/GlobalGameJam2023/refs/heads/main/GGJ_Site_Upload/credits.png?raw=true"
       ],
       "likes": [
         {
@@ -554,7 +554,7 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/midProject.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/midProject.png?raw=true",
     "details": {
       "body": "<h1 class=\"font-bold text-2xl\">Discription</h1>\n<p>My react mid course project desigen to surrmerize what I've learn so far in frontend developemnt at Yanive Arad Traning Labs. I't is a simple database management system that load data form an external server and display it in a readable and user fandly formant. incorparating https api request to read and write and update the data base. a simple ui interface with css effect for better user experiance. </p>\n<br/><br/>\n<h1 class=\"font-bold text-2xl\">Libraries And Hooks Used</h1>\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n<li><strong>axios</strong> - For getting and sending data to the server. For this project, <a href=\"https://jsonplaceholder.typicode.com/\" target=\"_blank\" rel=\"noopener\">jsonplaceholder</a> is used as the server.</li>\n<li><strong>useState</strong> - For saving the state of components.</li>\n<li><strong>useEffect</strong> - For running code during changes in the component lifecycle.</li>\n<li><strong>useMemo</strong> - For reducing render load on the browser.</li>\n</ul>\n<br/><br/>\n\n<h2>Application Components Structure</h2>\n<pre><code>App.jsx\n|\n|-->AddNewUser.jsx\n|\n|-->User.jsx\n| |\n| |-->OtherData.jsx\n|\n|--> Tasks.jsx\n| |-->TasksView.jsx\n| |-->TaskAdd.jsx\n|\n|--> Posts.jsx\n|-->PostsView.jsx\n</code></pre>",
       "videos": [],
@@ -593,7 +593,7 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://github.com/Sagiv440/sagiv-reuben/blob/master/src/assets/projects/eCommers.png?raw=true",
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/eCommers.png?raw=true",
     "details": {
       "body": "A E-Commerce Store Template made in vite React. Thin project is deigned to show skils and knolage in react an front end development. linke to working example",
       "videos": [],
