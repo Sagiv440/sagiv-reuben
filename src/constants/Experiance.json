@@ -11,7 +11,7 @@
       "iconBg": "#191919"
     },
     "details": {
-      "body": "",
+      "body": "<p>\nCompleted a full course by Yaniv Arad. The course is based on the Extreme 70 model and is designed to take existing programmers and teach them the development process of a Full-Stack Engineer through hands-on coding and project development. This approach allows programmers to integrate into a team in a short period of time, with focused yet crucial practical experience.</p>\n<br/><br/>\n<h3 class=\"font-bold\">Note:</h3>\n<p>This website was built entirely using the skills and knowledge gained during the course.\n</p>\n\n",
       "videos": [],
       "images": [],
       "likes": [
@@ -80,7 +80,7 @@
       "iconBg": "#191919"
     },
     "details": {
-      "body": "",
+      "body": "<p>Graduated from the Technion Trade School for Practical Engineering.<br/> During my studies, I gained experience across several disciplines in the field of electronics, including embedded programming, computer microarchitecture, and FPGA design.\n\n</p>",
       "videos": [],
       "images": [],
       "likes": [
@@ -95,7 +95,7 @@
     "type": "Profesional",
     "profession": "Army",
     "title": "Artillery Gun Crewman",
-    "organization": "Qualcomm",
+    "organization": "IDF",
     "date": "Nov 2013 - Nov 2016",
     "description": "Manditory Service",
     "metadata": {
@@ -103,7 +103,7 @@
       "iconBg": "#191919"
     },
     "details": {
-      "body": "",
+      "body": "<p>\nDuring my mandatory service in the Israel Defense Forces (IDF), I served as a Gun Crewman in the Artillery Corps. Throughout my service, I participated in multiple operations and received several awards for outstanding performance in the field.\n</p><br/>\n<p>Received an award from the regiment officer for outstanding performance, recognized\n<br/><br/>\n\n<h3 class=\"font-bold\">Operations</h3>\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n  <li>\n    2014 – Operation <strong>Protective Edge:</strong> Served under Southern Command, providing fire support to maneuvering units.\n  </li>\n  <li>\n    2023 (Reserve Duty) – Operation <strong>Iron Swords (October 7):</strong> Defended Israel’s northern border against imminent Hezbollah threats.\n  </li>\n</ul>\n\n",
       "videos": [],
       "images": [],
       "likes": [
