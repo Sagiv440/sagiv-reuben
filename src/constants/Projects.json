@@ -554,11 +554,12 @@
         "color": "green-text-gradient"
       }
     ],
-    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/midProject.png?raw=true",
+    "image": "https://github.com/Sagiv440/ReactMidProject/blob/master/media/ServerManagement.png?raw=true",
     "details": {
       "body": "<h1 class=\"font-bold text-2xl\">Discription</h1>\n<p>My react mid course project desigen to surrmerize what I've learn so far in frontend developemnt at Yanive Arad Traning Labs. I't is a simple database management system that load data form an external server and display it in a readable and user fandly formant. incorparating https api request to read and write and update the data base. a simple ui interface with css effect for better user experiance. </p>\n<br/><br/>\n<h1 class=\"font-bold text-2xl\">Libraries And Hooks Used</h1>\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n<li><strong>axios</strong> - For getting and sending data to the server. For this project, <a href=\"https://jsonplaceholder.typicode.com/\" target=\"_blank\" rel=\"noopener\">jsonplaceholder</a> is used as the server.</li>\n<li><strong>useState</strong> - For saving the state of components.</li>\n<li><strong>useEffect</strong> - For running code during changes in the component lifecycle.</li>\n<li><strong>useMemo</strong> - For reducing render load on the browser.</li>\n</ul>\n<br/><br/>\n\n<h2>Application Components Structure</h2>\n<pre><code>App.jsx\n|\n|-->AddNewUser.jsx\n|\n|-->User.jsx\n| |\n| |-->OtherData.jsx\n|\n|--> Tasks.jsx\n| |-->TasksView.jsx\n| |-->TaskAdd.jsx\n|\n|--> Posts.jsx\n|-->PostsView.jsx\n</code></pre>",
       "videos": [],
       "images": [
+        "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/midProject.png?raw=true",
         "https://github.com/Sagiv440/ReactMidProject/raw/master/media/UserMenu_Explaned.PNG?raw=true",
         "https://github.com/Sagiv440/ReactMidProject/raw/master/media/Search%20User.PNG?raw=true"
       ],
