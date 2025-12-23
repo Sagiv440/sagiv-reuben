@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Loading from "./loading";
 import { loadImage } from "../../utils/utils";
-import { WEB_LOGO } from "../../constants";
+import { web_logo } from "../../assets";
 
 const LImage = ({ src, alt, className, hide_text }) => {
     const [loading, setLoading] = useState(true);
@@ -22,7 +22,7 @@ const LImage = ({ src, alt, className, hide_text }) => {
                 alt={alt}
                 className={className}
                 onError={(e) => {
-                    e.target.src = WEB_LOGO;
+                    e.target.src = web_logo;
                 }}
             />}
         </>

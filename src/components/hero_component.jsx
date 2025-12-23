@@ -1,5 +1,5 @@
-import { easeInOut, motion } from "framer-motion";
-import { WEB_LOGO } from "../constants";
+import { motion } from "framer-motion";
+import { web_logo } from "../assets";
 
 // Sci-Fi Gradient Nebula Hero
 export default function Hero() {
@@ -54,14 +54,14 @@ export default function Hero() {
         {/* HERO IMAGE */}
         <motion.a
           href="/sagiv-reuben/#/projects"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.07}}
           transition={{
             duration: 0.5,
             ease: "easeInOut"
           }}
         >
           <motion.img
-            src={WEB_LOGO}
+            src={web_logo}
             alt="Website logo"
             className="
             mt-6
