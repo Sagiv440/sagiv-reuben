@@ -291,6 +291,49 @@
   },
   {
     "category": "Games",
+    "id": "rough-shinobi",
+    "name": "Rough Shinobi (GlobalGameJam2026)",
+    "description": "Imagine a world where every person is a ninja, bound to the power of a mask. You stand alone, driven by hatred. Explore the world, fight rival ninjas, claim their masks, and master their abilities to win it all.",
+    "tags": [
+      {
+        "name": "C#",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Unity",
+        "color": "green-text-gradient"
+      }
+    ],
+    "image": "https://img.itch.zone/aW1nLzI1MzUzNjY2LnBuZw==/315x250%23c/6LOx%2Bn.png",
+    "details": {
+      "body": "<p><br>Imagine a world where every person is a ninja, bound to the power of a mask. You stand alone, driven by hatred. Explore the world, fight rival ninjas, claim their masks, and master their abilities to win it all.<br>\n<br/><br/></p>\n\n<p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
+      "videos": [
+        "https://www.youtube.com/watch?v=wpGdCdVK-pc"
+      ],
+      "images": [
+        "https://img.itch.zone/aW1hZ2UvNDI1NTc1NC8yNTM1MzkyNS5wbmc=/original/enu%2Bb9.png",
+        "https://img.itch.zone/aW1hZ2UvNDI1NTc1NC8yNTM1MzkyNy5wbmc=/original/92K0jR.png",
+        "https://img.itch.zone/aW1hZ2UvNDI1NTc1NC8yNTM1MzkyNi5wbmc=/original/zgcgp1.png",
+        "https://img.itch.zone/aW1hZ2UvNDI1NTc1NC8yNTM1MzkyNC5wbmc=/original/ILqVPb.png"
+      ],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/GlobalGameJam2025"
+        },
+        {
+          "name": "Global Game Jam",
+          "url": "https://globalgamejam.org/games/2025/bubble-bi-bubble-boo-9"
+        },
+        {
+          "name": "Itch.io",
+          "url": "https://sagiv440.itch.io/bubble-bi-bubble-boo"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Games",
     "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
     "description": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
