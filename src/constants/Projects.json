@@ -306,7 +306,7 @@
     ],
     "image": "https://img.itch.zone/aW1nLzI1MzUzNjY2LnBuZw==/315x250%23c/6LOx%2Bn.png",
     "details": {
-      "body": "<p><br>Imagine a world where every person is a ninja, bound to the power of a mask. You stand alone, driven by hatred. Explore the world, fight rival ninjas, claim their masks, and master their abilities to win it all.<br>\n<br/><br/></p>\n\n<p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
+      "body": "<p><br>As part of the Global Game Jam 2026 competition, me and a couple of friends from the industry came together to make this game.<br/>\n\nThis year the theme for the competition was \"Masks\". <br/>\n<br/>\nRough Shinobi is a 2D platformer centered around a ninja that fights other ninjas. The main goal of the game is to reach the end of the level. This is accomplished by using power masks. Each enemy carries a mask that gives them power; by killing them, you can pick up the mask and wear it, gaining its power. <br/>\n\nWith a full set of 2D controls, a simple system, and an extra slot for holding an additional mask, it offers a full and challenging experience.<br/>\n<br/>\nIn this project I took the role of general programmer and game developer, handling all the technical tasks: code structure, implementing core game mechanics, and bug fixes. <br/>\n\nMy team’s responsibility was mainly creating art, VFX, and animation, with AI supplementing the rest, such as placeholders and audio.<br/>\n<br/></p>\n\n<p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p>\n\n<p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p>\n\n<p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p>\n\n",
       "videos": [
         "https://www.youtube.com/watch?v=wpGdCdVK-pc"
       ],
@@ -319,15 +319,15 @@
       "likes": [
         {
           "name": "Link to source code",
-          "url": "https://github.com/Sagiv440/GlobalGameJam2025"
+          "url": "https://github.com/DYC20/GGJ26"
         },
         {
           "name": "Global Game Jam",
-          "url": "https://globalgamejam.org/games/2025/bubble-bi-bubble-boo-9"
+          "url": "https://globalgamejam.org/games/2026/rouge-shinobi-3"
         },
         {
           "name": "Itch.io",
-          "url": "https://sagiv440.itch.io/bubble-bi-bubble-boo"
+          "url": "https://sagiv440.itch.io/rough-shinobi"
         }
       ]
     }
@@ -349,7 +349,7 @@
     ],
     "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/bubbleTitle.png?raw=true",
     "details": {
-      "body": "<p><br>The ultimate underwater bubble adventure!<br><br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!<br><br/><br/></p><p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
+      "body": "<p>\n<br>The ultimate underwater bubble adventure!\n<br>\n<br>Bubble Bi &amp; Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!\n<br>\n<br/>\n<br/>\n</p>\n<p classname='font-bold' >Special thanks to:&nbsp;<br/><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/danshomrony'>Dan Shomrony</a>: Artist, Game Designer\n</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/dekel-carolla'>Dekel Carolla</a>: VFX Art, Animations</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/sagiv440'>Sagiv Reuben</a>: Programmer, Game Developer</p><p><a class='text-secondary' lang='' title='View user profile.' href='https://globalgamejam.org/users/alon-kaplan'>Alon Kaplan</a>: Music<br></p>",
       "videos": [
         "https://www.youtube.com/watch?v=i6BW5FDoW-8"
       ],
