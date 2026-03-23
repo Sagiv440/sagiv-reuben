@@ -554,15 +554,7 @@
         "color": "blue-text-gradient"
       },
       {
-        "name": "JavaScript",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "Json",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "React",
+        "name": "Wix",
         "color": "green-text-gradient"
       }
     ],
@@ -572,8 +564,8 @@
       "videos": [],
       "likes": [
         {
-          "name": "Link to source code",
-          "url": "https://github.com/Sagiv440/sagiv-reuben/tree/master"
+          "name": "Link to Website",
+          "url": "https://www.idanstudioarad1.com/"
         }
       ]
     }
