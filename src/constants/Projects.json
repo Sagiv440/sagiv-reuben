@@ -545,6 +545,41 @@
   },
   {
     "category": "Fullstack",
+    "id": "idan-studio-arad",
+    "name": "Idan Arad Website",
+    "description": "A business website design to market the Indians new business and to connect him to new custemers.",
+    "tags": [
+      {
+        "name": "Frontend",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "JavaScript",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "Json",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "React",
+        "color": "green-text-gradient"
+      }
+    ],
+    "image": "https://media.githubusercontent.com/media/Sagiv440/sagiv-reuben/master/src/assets/projects/Idans-Website.png",
+    "details": {
+      "body": "<h3 class=\"font-bold text-2xl\">Description</h3>\n<p>\n\n\nThis is my first full-scale project, developed as a favor for a friend. The website was created as a platform for Idan to promote his new business in architectural home design.\n\n\n\n\nIt features a clean and intuitive scrolling experience, with each component thoughtfully layered to create a cohesive flow. In addition, dedicated pages such as About, Blog, and Portfolio were included to keep the main page focused and uncluttered while still providing access to more detailed content.\n\n</p>\n\n<br/><br/>\n\n<h3 class=\"font-bold text-2xl\">Goals and Purpose</h3>\n\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n<li>Establish a strong online presence for the architectural studio</li>\n<li>Showcase projects in a clean, visually focused environment</li>\n<li>Communicate the studio’s design philosophy and services</li>\n<li>Attract potential clients and generate inquiries</li>\n<li>Maintain a balance between aesthetics and usability</li>\n</ul>\n\n<br/><br/>\n\n<h3 class=\"font-bold text-2xl\">Key Features</h3>\n\n<ul class='mt-5 list-disc ml-5 space-y-2'>\n<li>Clean, modern UI with a minimalistic design approach</li>\n<li>Layered section layout for intuitive navigation</li>\n<li>Dedicated pages (About, Portfolio, Blog) for deeper exploration</li>\n<li>Strong visual emphasis on architectural projects and imagery</li>\n<li>Responsive design optimized for different screen sizes</li>\n<li>Clear content hierarchy to keep the main page uncluttered</li>\n</ul>\n\n<br/><br/>\n\n\n\n",
+      "videos": [],
+      "likes": [
+        {
+          "name": "Link to source code",
+          "url": "https://github.com/Sagiv440/sagiv-reuben/tree/master"
+        }
+      ]
+    }
+  },
+  {
+    "category": "Fullstack",
     "id": "protfolio-website-template",
     "name": "Portfolio Website Template",
     "description": "Template Website that can be easly changed and adopted to sute the need of the user",
