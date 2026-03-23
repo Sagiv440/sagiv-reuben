@@ -197,6 +197,51 @@
     }
   },
   {
+    "category": "Games",
+    "id": "sowrd-of-desteny",
+    "name": "Sowrds Of Desteny",
+    "description": "An online fighting game experience where players can test their skills against the toughest opponents. Improve your strength and refine your abilities as you progress, earn rewards, and rise through the ranks to become a champion.",
+    "tags": [
+      {
+        "name": "php",
+        "color": "blue-text-gradient"
+      },
+      {
+        "name": "JavaScript",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "css",
+        "color": "green-text-gradient"
+      },
+      {
+        "name": "Blender",
+        "color": "pink-text-gradient"
+      },
+      {
+        "name": "Unity",
+        "color": "pink-text-gradient"
+      }
+    ],
+    "image": "https://isgame.tempurl.co.il/assets/images/logo.png",
+    "details": {
+      "body": "<p>In partnership with another developer, this game was created out of passion to recreate the experience of classic free web-based games from the 1990s, while incorporating modern elements to appeal to contemporary audiences.</p><br/>\n\n<h3 class=\"font-bold text-2xl\">My Rolls And Resposeblityes</h3>\n\n<p>As this project is built in PHP—a language I am not very familiar with—my role focused on designing and implementing the UI/UX, as well as creating the various visual assets for the game.</p>\n<br/>\n<br/>\n<h3 class=\"font-bold text-2xl\">Tools and Work Space</h3>\n<p>As a novice 3D artist, I spend most of my time working in Blender. Every asset and image in the game is based on 3D objects that I created.\n<br/>\nFor larger scenes, I chose to use Unity HDRP. This approach offers better performance compared to traditional photorealistic rendering workflows, and more importantly, allows me to leverage a large library of assets I’ve accumulated over the years. This significantly speeds up production while still enabling a high level of visual detail. </p>\n\n",
+      "videos": [],
+      "images": [
+        "https://isgame.tempurl.co.il/assets/images/map.png",
+        "https://isgame.tempurl.co.il/assets/images/tavern.png",
+        "https://isgame.tempurl.co.il/assets/images/store.png",
+        "https://isgame.tempurl.co.il/assets/images/bank.png"
+      ],
+      "likes": [
+        {
+          "name": "Link To The Game",
+          "url": "https://isgame.tempurl.co.il/"
+        }
+      ]
+    }
+  },
+  {
     "category": "Low Level",
     "id": "nes-emulator",
     "name": "NES_emulator",
