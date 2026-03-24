@@ -244,7 +244,7 @@
     }
   },
   {
-    "highlight": true,
+    "highlight": false,
     "category": "Low Level",
     "id": "nes-emulator",
     "name": "NES_emulator",
@@ -381,6 +381,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Games",
     "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
@@ -592,6 +593,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Fullstack",
     "id": "idan-studio-arad",
     "name": "Idan Arad Website",
