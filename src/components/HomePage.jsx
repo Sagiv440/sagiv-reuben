@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import Hero from "./hero_component";
 import Experience from "./Experience";
 import About from './About';
+import HightLights from "./HighLights.jsx";
 
 
-const HomePage = ({id}) => {
+const HomePage = ({ id }) => {
     useEffect(() => {
         const scrollTo = (id) => {
             document.getElementById(id)?.scrollIntoView({
@@ -25,6 +26,9 @@ const HomePage = ({id}) => {
             </div>
             <div id="Timeline">
                 <Experience />
+            </div>
+            <div id="Highlights">
+                <HightLights />
             </div>
         </>
     );
