@@ -15,6 +15,10 @@ export const subjectLinks = [
 ];
 
 export const navLinks = [
+    {
+    id: "/sagiv-reuben/#/about",
+    title: "Home",
+  },
   {
     id: "/sagiv-reuben/#/about",
     title: "About",

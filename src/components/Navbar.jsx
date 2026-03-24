@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaItchIo, FaFacebook, FaWhatsapp } fro
 import { useSearch } from '../utils/SearchContext';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ ScrollPassthrough }) => {
   const [active, setActive] = useState('');
   const [subject, SetSubject] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -86,14 +86,26 @@ const Navbar = () => {
             if (isSecondary) setToggle(false);
           }}
         >
-          <motion.a
+          {/*<motion.a
             href={`${link.id}`}
             className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.85 }}
           >
             {link.title}
-          </motion.a>
+          </motion.a>*/}
+          <motion.button
+            className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.85 }}
+            onClick={() => {
+              navigate("/")
+              ScrollPassthrough(link.title)
+            }}
+          >
+            {link.title}
+          </motion.button>
+
         </li>
       ))}
       {/* Dropdown Button */}
