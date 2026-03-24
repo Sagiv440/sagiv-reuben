@@ -15,7 +15,7 @@ export const subjectLinks = [
 ];
 
 export const navLinks = [
-    {
+  {
     id: "/sagiv-reuben/#/about",
     title: "Home",
   },
@@ -25,25 +25,25 @@ export const navLinks = [
   },
   {
     id: "/sagiv-reuben/#/experience",
-    title: "Timeline",
-  },
-    {
-    id: "/sagiv-reuben/#/experience",
     title: "Highlights",
+  },
+  {
+    id: "/sagiv-reuben/#/experience",
+    title: "Timeline",
   },
 ];
 
-export const SEARCH_TEMP = 
+export const SEARCH_TEMP =
 {
-    name: "",
-    category: "",
-    tag: "",
+  name: "",
+  category: "",
+  tag: "",
 }
-export const SEARCH_TEMP_TIMELINE = 
+export const SEARCH_TEMP_TIMELINE =
 {
-    title: "",
-    type: "",
-    profession: "",
+  title: "",
+  type: "",
+  profession: "",
 }
 
 export const PROJECTS_FILE_URL = "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json";

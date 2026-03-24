@@ -22,13 +22,16 @@ const HomePage = ({ id }) => {
                 <Hero />
             </div>
             <div id="About">
+                <br />
                 <About />
             </div>
-            <div id="Timeline">
-                <Experience />
-            </div>
             <div id="Highlights">
+                <br />
                 <HightLights />
+            </div>
+            <div id="Timeline">
+                <br />
+                <Experience />
             </div>
         </>
     );
