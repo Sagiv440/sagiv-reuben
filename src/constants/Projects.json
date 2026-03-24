@@ -1,5 +1,6 @@
 [
   {
+    "highlight": true,
     "category": "Games",
     "id": "fish-season",
     "name": "Fish Season",
@@ -197,6 +198,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Games",
     "id": "sowrd-of-desteny",
     "name": "Sowrds Of Desteny",
@@ -242,6 +244,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Low Level",
     "id": "nes-emulator",
     "name": "NES_emulator",
