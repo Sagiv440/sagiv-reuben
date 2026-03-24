@@ -37,7 +37,7 @@ const HightLights = () => {
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center`}>HighLights</h2>
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 max-w-6xl mx-auto w-full">
                 {loading && <Loading />}
                 {!loading &&
                     highlights.map((project, index) => (
