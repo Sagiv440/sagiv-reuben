@@ -26,7 +26,7 @@ const HomePage = ({ id }) => {
                 <br />
                 <About />
             </div>
-            <div id="Highlights" className=" h-relative w-full h-screen">
+            <div id="Highlights" className="w-full h-auto lg:h-screen">
                 <br />
                 <br />
                 <br />
