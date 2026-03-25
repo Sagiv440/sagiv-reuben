@@ -244,7 +244,7 @@
     }
   },
   {
-    "highlight": false,
+    "highlight": true,
     "category": "Low Level",
     "id": "nes-emulator",
     "name": "NES_emulator",
@@ -306,6 +306,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Games",
     "id": "the-assaulters",
     "name": "The Assaulters",
@@ -338,6 +339,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Games",
     "id": "rough-shinobi",
     "name": "Rough Shinobi (GlobalGameJam2026)",
@@ -621,6 +623,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Fullstack",
     "id": "protfolio-website-template",
     "name": "Portfolio Website Template",

@@ -19,7 +19,7 @@ const HightLights = () => {
                 PROJECTS_FILE_URL
             );
             const data = await res.json();
-            setProjects(data);
+            setProjects(Projvolt);
             setLoading(false);
         };
         getProjects();
@@ -38,7 +38,7 @@ const HightLights = () => {
                 <h2 className={`${styles.sectionHeadText} text-center`}>HighLights</h2>
             </motion.div>
             <div className="w-full max-w-none">
-                <div className="grid gap-6 p-6 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
+                <div className="grid gap-8 p-6 md:grid-cols-4 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
                     {loading && <Loading />}
                     {!loading &&
                         highlights.map((project, index) => (
@@ -63,7 +63,7 @@ const HightLights = () => {
 
                                         {/* Overlay */}
                                         <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <p className="text-white text-lg font-bold text-center px-2">
+                                            <p className="text-white text-lg font-bold text-center px-2 [text-shadow:0_2px_3px_rgba(0,0,0,1)]">
                                                 {project.name}
                                             </p>
                                         </div>
