@@ -19,13 +19,18 @@ const HomePage = ({ id }) => {
     return (
         <>
             <div id="Home">
+                <br />
                 <Hero />
             </div>
             <div id="About">
                 <br />
                 <About />
             </div>
-            <div id="Highlights">
+            <div id="Highlights" className=" h-relative w-full h-screen">
+                <br />
+                <br />
+                <br />
+                <br />
                 <br />
                 <HightLights />
             </div>

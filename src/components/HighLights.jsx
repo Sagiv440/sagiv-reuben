@@ -37,40 +37,42 @@ const HightLights = () => {
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center`}>HighLights</h2>
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-6 max-w-6xl mx-auto w-full">
-                {loading && <Loading />}
-                {!loading &&
-                    highlights.map((project, index) => (
-                        <div
-                            key={project.id}
-                            className="relative overflow-hidden rounded-xl border border-border"
-                        >
-                            <a
-                                className="cursor-pointer block"
-                                href={`#/projects/${project.id}`}
+            <div className="w-full max-w-none">
+                <div className="grid gap-6 p-6 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
+                    {loading && <Loading />}
+                    {!loading &&
+                        highlights.map((project, index) => (
+                            <div
+                                key={project.id}
+                                className="relative overflow-hidden rounded-xl border border-border"
                             >
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className="relative w-full h-40 overflow-hidden"
+                                <a
+                                    className="cursor-pointer block"
+                                    href={`#/projects/${project.id}`}
                                 >
-                                    {/* Image */}
-                                    <LImage
-                                        src={project.image}
-                                        alt={project.name}
-                                        className="w-full h-full object-cover transition-transform duration-300"
-                                    />
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="relative w-full h-64 overflow-hidden"
+                                    >
+                                        {/* Image */}
+                                        <LImage
+                                            src={project.image}
+                                            alt={project.name}
+                                            className="w-full h-full object-cover transition-transform duration-300"
+                                        />
 
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <p className="text-white text-lg font-bold text-center px-2">
-                                            {project.name}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            </a>
-                        </div>
-                    ))
-                }
+                                        {/* Overlay */}
+                                        <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <p className="text-white text-lg font-bold text-center px-2">
+                                                {project.name}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                </a>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </>
     )
