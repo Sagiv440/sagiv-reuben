@@ -6,12 +6,15 @@ import LImage from "./canvas/Image";
 import { AnimatePresence, motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
+import { useSearch } from "../utils/SearchContext";
+import SearchBar from "./canvas/SearchBar";
 
 
 
 const HightLights = () => {
     const [loading, setLoading] = useState(true);
     const [projects, setProjects] = useState([]);
+    const { search, setSearch } = useSearch();
 
     useEffect(() => {
         const getProjects = async () => {
@@ -19,7 +22,7 @@ const HightLights = () => {
                 PROJECTS_FILE_URL
             );
             const data = await res.json();
-            setProjects(Projvolt);
+            setProjects(data);
             setLoading(false);
         };
         getProjects();
@@ -29,19 +32,43 @@ const HightLights = () => {
         return projects.filter((proj) => proj.highlight === true);
     }, [projects]);
 
+    const filteredProjects = useMemo(() => {
+        return highlights.filter((proj) => {
+            // Filter by name
+            const matchesName =
+                proj.name?.toLowerCase().includes(search.name.toLowerCase());
+
+            // Filter by tag
+            const matchesTag =
+                search.tag.trim() === "" ||
+                proj.tags?.some(tag =>
+                    tag.name.toLowerCase().includes(search.tag.toLowerCase())
+                );
+
+            // Filter by category
+            const matchesCategory =
+                search.category.trim() === "" ||
+                proj.category?.toLowerCase().includes(search.category.toLowerCase());
+
+            return matchesName && matchesTag && matchesCategory;
+        });
+    }, [highlights, search.name, search.tag, search.category]);
+
+
     return (
         <>
-            <motion.div variants={textVariant}>
+            <motion.div variants={textVariant()}>
                 <p className={`${styles.sectionSubText} text-center`}>
                     Personal Faivorits
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center`}>HighLights</h2>
             </motion.div>
+            <SearchBar search={search} setSearch={setSearch} projects={projects} />
             <div className="w-full max-w-none">
                 <div className="grid gap-8 p-6 md:grid-cols-4 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]">
                     {loading && <Loading />}
                     {!loading &&
-                        highlights.map((project, index) => (
+                        filteredProjects.map((project, index) => (
                             <div
                                 key={project.id}
                                 className="relative overflow-hidden rounded-xl border border-border"

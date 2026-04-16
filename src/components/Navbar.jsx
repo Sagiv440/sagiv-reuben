@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaItchIo, FaFacebook, FaWhatsapp } fro
 import { useSearch } from '../utils/SearchContext';
 import { useNavigate } from 'react-router-dom';
 
+
 const Navbar = ({ ScrollPassthrough }) => {
   const [active, setActive] = useState('');
   const [subject, SetSubject] = useState('');

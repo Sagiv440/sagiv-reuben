@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { web_logo } from "../assets";
+import SelectCategory from "./canvas/SelectCategory";
 
 // Sci-Fi Gradient Nebula Hero
 export default function Hero() {
@@ -50,11 +51,15 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
           This site serves as an archive of my various projects and accomplishments over the years. Feel free to look around!
         </p>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <label className="text-white md:text-xl whitespace-nowrap">Select Category:</label>
+          <SelectCategory />
+        </div>
 
         {/* HERO IMAGE */}
         <motion.a
           href="/sagiv-reuben/#/projects"
-          whileHover={{ scale: 1.07}}
+          whileHover={{ scale: 1.07 }}
           transition={{
             duration: 0.5,
             ease: "easeInOut"

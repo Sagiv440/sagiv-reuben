@@ -1,7 +1,7 @@
 [
   {
     "highlight": true,
-    "category": "Games",
+    "category": "Game Development",
     "id": "fish-season",
     "name": "Fish Season",
     "description": "A mobile game for those who love fishing and blowing up boats while riding the bus. Sail the seas, find your fortune, and oh, don’t forget the fish! 🎣🛥️",
@@ -42,7 +42,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "roboshift",
     "name": "Roboshift",
     "description": "Co-developed a first-person tower defense game with asymmetric level design. Designed dynamic AI, resource management systems, and fortifications like traps and turrets. Focused on story-driven gameplay and player",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "rts-game",
     "name": "RTS Game",
     "description": "A hobby project used to experiment with multi-layer AI using a Minimax-based decision system and AI-driven unit behavior. On the challenges was to create a general interface so that both AI and Player can control the units.",
@@ -118,6 +118,7 @@
     }
   },
   {
+    "highlight": true,
     "category": "Electronics",
     "id": "tetris-esp32",
     "name": "Tetris_ESP32",
@@ -163,7 +164,7 @@
     }
   },
   {
-    "category": "Low Level",
+    "category": "Electronics",
     "id": "minecract",
     "name": "Minecraft World Generator",
     "description": "A prototype built to explore 3D engines and rendering pipelines. build a custom C++ game engine with OpenGL for terrain generation and rendering. Implements Perlin noise for procedural terrain creation.",
@@ -199,7 +200,7 @@
   },
   {
     "highlight": true,
-    "category": "Games",
+    "category": "Game Development",
     "id": "sowrd-of-desteny",
     "name": "Sowrds Of Desteny",
     "description": "An online fighting game experience where players can test their skills against the toughest opponents. Improve your strength and refine your abilities as you progress, earn rewards, and rise through the ranks to become a champion.",
@@ -245,7 +246,7 @@
   },
   {
     "highlight": true,
-    "category": "Low Level",
+    "category": "Electronics",
     "id": "nes-emulator",
     "name": "NES_emulator",
     "description": "This Emulator is build using only standrd library. Sow you can use what ever graphics and input library you want",
@@ -280,7 +281,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "tetris",
     "name": "Tetris",
     "description": "This project is was made to as a way to learn the basics of making games And the princibls of games developments and framework. This project use the OLC Pixel Game Engine to render the game on to the screen.",
@@ -307,7 +308,7 @@
   },
   {
     "highlight": true,
-    "category": "Games",
+    "category": "Game Development",
     "id": "the-assaulters",
     "name": "The Assaulters",
     "description": "A simple tower defence game inspired by the world war 2 media. made from scratch using Blender 2.49",
@@ -340,7 +341,7 @@
   },
   {
     "highlight": true,
-    "category": "Games",
+    "category": "Game Development",
     "id": "rough-shinobi",
     "name": "Rough Shinobi (GlobalGameJam2026)",
     "description": "Imagine a world where every person is a ninja, bound to the power of a mask. You stand alone, driven by hatred. Explore the world, fight rival ninjas, claim their masks, and master their abilities to win it all.",
@@ -384,7 +385,7 @@
   },
   {
     "highlight": true,
-    "category": "Games",
+    "category": "Game Development",
     "id": "bubble-bi-babble-boo",
     "name": "Bubble Bi & Bubble Boo (GlobalGameJam2025)",
     "description": "The ultimate underwater bubble adventure! Bubble Bi & Bubble Boo is a two-player cooperative game that dives deep into teamwork and strategy. In this unique underwater challenge, players control two air bubbles striving to reach the water’s surface. But it’s not as simple as it sounds!",
@@ -425,7 +426,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "grempa-and-me",
     "name": "Grampa And Me (GlobalGameJam2024)",
     "description": "The game is about a kid who was sent to spend the weekend with his Old Grumpy Grampa. You, as the player, need to cheer the kid up by planting various pranks around the house to prank the grandpa in order to make the kid laugh. Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)",
@@ -465,7 +466,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "crusader-legacy",
     "name": "Crusader Legacy (GlobalGameJam2023)",
     "description": "It is a Tower Attack Game where your job as a commander is to get your soldiers through the Enemy fortifications.",
@@ -501,7 +502,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "warm-the-king",
     "name": "Warm The King (GameJam_Jerusalim_2022)",
     "description": "A small strategy game where you manage resources to keep the fire lite and the king warm",
@@ -533,7 +534,7 @@
     }
   },
   {
-    "category": "Games",
+    "category": "Game Development",
     "id": "game-of-thrones",
     "name": "Game Of Thrones (Hackaton2023)",
     "description": "A political card Game where you decided the fate of your political career and the Rest of the nation. This game was inspired by recent events in Israel political events. But doesn't have a political message. It is only designed to entertain the Ides behind politics",
@@ -565,7 +566,8 @@
     }
   },
   {
-    "category": "Systems",
+    "highlight": true,
+    "category": "Electronics",
     "id": "linux-utility-scripts",
     "name": "Linux Utility Scripts",
     "description": "A collection of shell scripts for every day linux use. install, uninstal apps, select gpu type ext...",
