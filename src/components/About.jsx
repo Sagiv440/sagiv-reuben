@@ -4,6 +4,7 @@ import { Tilt } from 'react-tilt';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
+import LImage from './canvas/Image';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -24,29 +25,51 @@ const ServiceCard = ({ index, title, icon }) => (
 
         <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
-    {/*</motion.div>*/}
+      {/*</motion.div>*/}
     </div>
   </Tilt>
 );
-
 const About = () => {
   return (
-    <section className="relative w-full h-screen">
-      <div>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+    <section className="relative w-full h-screen flex items-center justify-center">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-10 px-6">
 
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-      My name is Sagiv Reuben. From a young age, I was drawn to understanding how things work, taking apart mechanisms, studying their inner structures, and putting them back together. That curiosity naturally grew into a strong passion for computers, which I consider one of the most complex and fascinating machines ever created. On this website, you’ll find work from many disciplines within the world of computing from web and application development to systems, hardware, and more.
-      </motion.p>
+        {/* LEFT SIDE - IMAGE */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <LImage
+            src="./src/assets/MyImage.jpeg" // <-- replace with your image
+            alt="about"
+            className="max-w-[400px] w-full object-contain rounded-full object-cover border border-border"
+          />
+        </div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-      </div>
+        {/* RIGHT SIDE - TEXT */}
+        <div className="w-full md:w-1/2">
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>Introduction</p>
+            <h2 className={styles.sectionHeadText}>About Me</h2>
+          </motion.div>
+
+          <motion.p
+            variants={fadeIn('', '', 0.1, 1)}
+            className="mt-4 text-secondary text-[17px] leading-[30px]"
+          >
+            I’m Sagiv Reuben, a developer driven by curiosity and a passion for understanding how things work. Here you’ll find my projects across web, software, systems, and hardware.
+
+          </motion.p>
+          <br/>
+          <motion.a
+            href="/sagiv-reuben/#/about"
+            className="px-4 py-2 rounded-md text-white/80 hover:text-white 
+             border border-white/20 hover:border-white/40
+             transition-all duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            More
+          </motion.a>
+        </div>
+
       </div>
     </section>
   );

@@ -57,6 +57,7 @@ export default function Hero() {
         </div>
 
         {/* HERO IMAGE */}
+        {/*
         <motion.a
           href="/sagiv-reuben/#/projects"
           whileHover={{ scale: 1.07 }}
@@ -88,6 +89,7 @@ export default function Hero() {
             }}
           />
         </motion.a>
+              */}
       </motion.div>
       {/* Soft Glow Overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-primary to-transparent" />

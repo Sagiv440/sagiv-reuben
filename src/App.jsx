@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import ProjectDetails from './components/ProjectDetalis';
 import Contact from './components/Contact'
 import { SearchProvider } from './utils/SearchContext';
+import AboutMe from './components/AboutMe';
 
 
 const App = () => {
@@ -41,7 +42,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={
                 <HomePage id={scrollid}/>} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<AboutMe />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:projectId" element={<ProjectDetails />} />
