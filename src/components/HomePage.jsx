@@ -3,6 +3,7 @@ import Hero from "./hero_component";
 import Experience from "./Experience";
 import About from './About';
 import HightLights from "./HighLights.jsx";
+import Contact from "./Contact.jsx";
 
 
 const HomePage = ({ id }) => {
@@ -37,6 +38,10 @@ const HomePage = ({ id }) => {
             <div id="Timeline">
                 <br />
                 <Experience />
+            </div>
+            <div id="Contact">
+                <br />
+                <Contact />
             </div>
         </>
     );

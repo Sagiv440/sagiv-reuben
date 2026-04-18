@@ -205,14 +205,18 @@ const Navbar = ({ ScrollPassthrough }) => {
           if (isSecondary) setToggle(false);
         }}
       >
-        <motion.a
-          href={`#contect`}
+
+        <motion.button
           className="flex items-center gap-1 transition-all duration-100 px-3 py-2 rounded-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.85 }}
+          onClick={() => {
+            navigate("/")
+            ScrollPassthrough("Contact")
+          }}
         >
           Contact
-        </motion.a>
+        </motion.button>
       </li>
     </ul>
   );

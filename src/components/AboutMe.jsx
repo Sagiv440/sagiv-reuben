@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import LImage from "./canvas/Image";
+import { MyImage } from "../assets";
 
 const AboutMe = () => {
   return (
@@ -14,9 +15,9 @@ const AboutMe = () => {
           transition={{ duration: 0.6 }}
         >
           <LImage
-            src="./src/assets/MyImage.jpeg" // replace this
+            src={MyImage} // replace this
             alt="Sagiv"
-            className="w-[280px] md:w-[340px] object-contain rounded-xl"
+            className="max-w-[400px] w-full object-contain rounded-full object-cover border border-border"
           />
         </motion.div>
 

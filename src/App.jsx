@@ -48,7 +48,7 @@ const App = () => {
               <Route path="/projects/:projectId" element={<ProjectDetails />} />
             </Routes>
 
-            <Contact />
+            
           </div>
 
         </div>

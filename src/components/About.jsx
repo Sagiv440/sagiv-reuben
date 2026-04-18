@@ -5,6 +5,7 @@ import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import LImage from './canvas/Image';
+import { MyImage } from '../assets';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -37,7 +38,7 @@ const About = () => {
         {/* LEFT SIDE - IMAGE */}
         <div className="w-full md:w-1/2 flex justify-center">
           <LImage
-            src="./src/assets/MyImage.jpeg" // <-- replace with your image
+            src={MyImage} // <-- replace with your image
             alt="about"
             className="max-w-[400px] w-full object-contain rounded-full object-cover border border-border"
           />
@@ -54,8 +55,7 @@ const About = () => {
             variants={fadeIn('', '', 0.1, 1)}
             className="mt-4 text-secondary text-[17px] leading-[30px]"
           >
-            I’m Sagiv Reuben, a developer driven by curiosity and a passion for understanding how things work. Here you’ll find my projects across web, software, systems, and hardware.
-
+I’m Sagiv Reuben, a Practical Electronics Engineer with a broad, multidisciplinary skill set developed through hands-on experience, curiosity, and a strong passion for building and understanding systems.
           </motion.p>
           <br/>
           <motion.a

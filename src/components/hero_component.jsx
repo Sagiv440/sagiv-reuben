@@ -40,19 +40,32 @@ export default function Hero() {
         animate={{ opacity: 1, y: -80 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-6xl md:text-7xl font-bold mb-4 whitespace-nowrap">
-          Hi, I'm Sagiv
-        </h1>
+        <div className="max-w-6xl  flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hidden md:block">
-          Welcome to my Website
-        </h1>
+          {/* TEXT */}
+          <h1 className="text-5xl md:text-7xl font-bold text-center md:text-left">
+            Hi, I'm Sagiv
+          </h1>
 
+          {/* LOGO */}
+          <motion.img
+            src={web_logo}
+            alt="Website logo"
+            className="w-18 md:w-20 select-none hidden md:block"
+            initial={{ filter: "drop-shadow(0 0 10px rgba(0,200,255,0.3))" }}
+          />
+
+        </div>
+
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Electronics Engineer & Developer
+        </h2>
+        <br />
         <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-          This site serves as an archive of my various projects and accomplishments over the years. Feel free to look around!
+          Practical Electronics Engineer with a broad, multidisciplinary skill set across hardware, software, and systems.
         </p>
         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-white md:text-xl whitespace-nowrap">Select Category:</label>
+          <label className="text-white md:text-xl whitespace-nowrap">Select Skill Category:</label>
           <SelectCategory />
         </div>
 
