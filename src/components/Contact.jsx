@@ -1,90 +1,70 @@
-import { Mail, Linkedin, Facebook, Github, Phone, Gamepad, Twitter } from "lucide-react";
+import { Mail, Linkedin, Facebook, Github, Gamepad } from "lucide-react";
 import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
   const contacts = [
     {
-      name: "Email: sagiv440@gmail.com",
-      icon: <Mail size={22} />,
+      icon: <Mail size={18} />,
+      label: "Email",
       link: "mailto:sagiv440@gmail.com",
     },
     {
-      name: "LinkedIn",
-      icon: <Linkedin size={22} />,
+      icon: <Linkedin size={18} />,
+      label: "LinkedIn",
       link: "https://www.linkedin.com/in/sagiv-reuben-1264341b9/",
     },
     {
-      name: "Facebook",
-      icon: <Facebook size={22} />,
+      icon: <Facebook size={18} />,
+      label: "Facebook",
       link: "https://www.facebook.com/sagiv.reuben",
     },
     {
-      name: "Github",
-      icon: <Github size={22} />,
+      icon: <Github size={18} />,
+      label: "GitHub",
       link: "https://github.com/Sagiv440",
     },
     {
-      name: "Itch.io",
-      icon: <Gamepad size={22} />,
+      icon: <Gamepad size={18} />,
+      label: "Itch.io",
       link: "https://sagiv440.itch.io/",
     },
-    /*{
-      name: "Twitter (X)",
-      icon: <Twitter size={22} />,
-      link: "https://twitter.com/",
-    },*/
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-10 p-6 rounded-2xl bg-tertiary border-border"
-      style={{
-        border: "1px solid #414141ff",      // border
-      }}
-    >
-      <h2 className="text-3xl font-bold mb-6 text-center text-secondary "
-
-      >
-        Contact Me
+    <div className="w-full flex flex-col items-center justify-center py-20 text-center">
+      
+      {/* TITLE */}
+      <h2 className="text-2xl md:text-3xl font-semibold text-white mb-2">
+        Let’s connect
       </h2>
 
-      <div className="flex flex-col space-y-4">
+      <p className="text-white/50 text-sm md:text-base mb-10 max-w-md">
+        Feel free to reach out or explore my work across different platforms.
+      </p>
+
+      {/* LINKS ROW */}
+      <div className="flex flex-wrap items-center justify-center gap-6">
         {contacts.map((c, index) => (
           <a
             key={index}
             href={c.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between p-4 rounded-xl transition-all"
-            style={{
-              backgroundColor: "#191919",         // primary
-              border: "1px solid #414141ff",      // border
-            }}
+            className="flex items-center gap-2 text-white/60 hover:text-white 
+                       transition-colors duration-200"
           >
-            <div className="flex items-center space-x-3">
-              <div
-                className="transition text-white-100"
-              >
-                {c.icon}
-              </div>
-
-              <span
-                className="text-lg transition text-white-100"
-              >
-                {c.name}
-              </span>
-            </div>
-
-            <span
-              className="transition"
-              style={{ color: "#b1b1b1ff" }}
-            >
-              →
-            </span>
+            {c.icon}
+            <span className="text-sm">{c.label}</span>
           </a>
         ))}
       </div>
+
+      {/* SMALL FOOTER NOTE */}
+      <p className="text-white/30 text-xs mt-12">
+        © {new Date().getFullYear()} Sagiv Reuben
+      </p>
     </div>
   );
-}
+};
 
-export default SectionWrapper(Contact, "contect")
+export default SectionWrapper(Contact, "contact");
