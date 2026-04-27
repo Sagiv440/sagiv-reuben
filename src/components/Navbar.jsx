@@ -9,7 +9,7 @@ import { useSearch } from '../utils/SearchContext';
 import { useNavigate } from 'react-router-dom';
 
 
-const Navbar = ({ ScrollPassthrough }) => {
+const Navbar = ({ ScrollPassthrough, tick, TriggerTick }) => {
   const [active, setActive] = useState('');
   const [subject, SetSubject] = useState('');
   const [toggle, setToggle] = useState(false);
@@ -102,6 +102,7 @@ const Navbar = ({ ScrollPassthrough }) => {
             onClick={() => {
               navigate("/")
               ScrollPassthrough(link.title)
+              TriggerTick(!tick);
             }}
           >
             {link.title}

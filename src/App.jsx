@@ -15,6 +15,7 @@ import AboutMe from './components/AboutMe';
 const App = () => {
 
   const [scrollid, setScrollid] = useState('');
+  const [tick, setTick] = useState(false);
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -34,14 +35,14 @@ const App = () => {
 
           {/* Navbar (fixed) */}
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center fixed top-0 left-0 w-full z-50">
-            <Navbar ScrollPassthrough={setScrollid} />
+            <Navbar ScrollPassthrough={setScrollid} tick={tick} TriggerTick={setTick} />
           </div>
 
           {/* Page content below navbar */}
           <div className="pt-20">  {/* Adjust to match navbar height */}
             <Routes>
               <Route path="/" element={
-                <HomePage id={scrollid}/>} />
+                <HomePage id={scrollid} tick={tick}/>} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />

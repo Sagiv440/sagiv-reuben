@@ -6,8 +6,15 @@ import HightLights from "./HighLights.jsx";
 import Contact from "./Contact.jsx";
 
 
-const HomePage = ({ id }) => {
+const HomePage = ({ id , tick}) => {
     useEffect(() => {
+        if (id === "Home") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+            return;
+        }
         const scrollTo = (id) => {
             document.getElementById(id)?.scrollIntoView({
                 behavior: "smooth",
@@ -15,16 +22,14 @@ const HomePage = ({ id }) => {
             });
         };
         scrollTo(id)
-    }, [id]);
+    }, [id, tick]);
 
     return (
         <>
             <div id="Home">
-                <br />
                 <Hero />
             </div>
             <div id="About">
-                <br />
                 <About />
             </div>
             <div id="Highlights" className="w-full min-h-screen">
