@@ -4,6 +4,7 @@ import projectsData from "../constants/Projects.json"; // adjust path if needed
 import Loading from "./canvas/loading";
 import LImage from "./canvas/Image";
 import HtmlRenderer from "./canvas/htmlReader";
+import { PROJECTS_FILE_URL } from "../constants";
 
 const useWindowSize = () => {
     const [size, setSize] = useState({
@@ -37,7 +38,7 @@ const ProjectDetails = () => {
     useEffect(() => {
         const getProjects = async () => {
             const res = await fetch(
-                "https://raw.githubusercontent.com/Sagiv440/sagiv-reuben/refs/heads/master/src/constants/Projects.json"
+                PROJECTS_FILE_URL
             );
             const data = await res.json();
             const d = data.find(p => p.id === projectId);
