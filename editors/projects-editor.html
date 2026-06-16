@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Catalog Editor</title>
+<style>
+  /* ---- Amazon palette ---- */
+  :root {
+    --bg: #EAEDED;            /* page gray */
+    --nav-top: #131921;       /* dark top header */
+    --nav-belt: #232F3E;      /* secondary nav bar */
+    --panel: #FFFFFF;         /* white cards */
+    --panel-2: #F7F8F8;       /* faint gray fill */
+    --border: #D5D9D9;        /* light borders */
+    --border-dark: #888C8C;
+    --text: #0F1111;          /* near-black text */
+    --muted: #565959;         /* secondary gray text */
+    --link: #007185;          /* teal link */
+    --link-hover: #C7511F;    /* orange link hover */
+    --accent: #E77600;        /* orange focus */
+    --gold-1: #F7DFA5;        /* yellow button top */
+    --gold-2: #F0C14B;        /* yellow button bottom */
+    --gold-border: #A88734;
+    --danger: #B12704;        /* amazon price/alert red */
+    --radius: 8px;
+    --radius-sm: 3px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* ---- Header (Amazon nav) ---- */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    height: 60px;
+    background: var(--nav-top);
+    flex-shrink: 0;
+  }
+  .brand { display: flex; align-items: baseline; gap: 2px; margin-right: 8px; user-select: none; }
+  .brand .logo { color: #fff; font-size: 21px; font-weight: 700; letter-spacing: -.5px; }
+  .brand .logo b { color: var(--gold-2); }
+  .brand .smile { color: #FF9900; font-size: 22px; line-height: 1; }
+  header h1 { font-size: 15px; margin: 0; color: #fff; font-weight: 400; padding-left: 10px; border-left: 1px solid #3a4553; }
+  header .count { color: #ccc; font-size: 13px; margin-right: auto; }
+  /* nav-style header buttons: bordered-on-hover boxes */
+  header button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+  }
+  header button:hover { border-color: #fff; background: transparent; }
+  /* the gold Add button (.primary) keeps its gold styling from the base rule below */
+
+  /* ---- Buttons ---- */
+  button {
+    font-family: inherit;
+    font-size: 13px;
+    border: 1px solid #D5D9D9;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    background: #fff linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    color: var(--text);
+    padding: 7px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    transition: background .1s, border-color .1s;
+  }
+  button:hover { background: #e3e6e6 linear-gradient(to bottom, #eff1f3, #dadce0); }
+  button:focus-visible { outline: none; box-shadow: 0 0 0 3px #c8f3fa, 0 0 0 1px #007185; }
+  button.primary {
+    background: linear-gradient(to bottom, var(--gold-1), var(--gold-2));
+    border-color: var(--gold-border) #9c7e31 #846a29;
+    color: #0F1111;
+    font-weight: 500;
+  }
+  button.primary:hover { background: linear-gradient(to bottom, #f5d78e, #eeb933); }
+  button.danger { color: var(--danger); }
+  button.danger:hover { background: #Fef2f0 linear-gradient(to bottom,#fff5f3,#fbe4e0); border-color: var(--danger); }
+  button.ghost { background: #fff; }
+  button.small { padding: 4px 8px; font-size: 12px; border-radius: var(--radius-sm); }
+  .main { display: flex; flex: 1; min-height: 0; }
+  /* ---- Sidebar ---- */
+  .sidebar {
+    width: 290px;
+    flex-shrink: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 10px;
+  }
+  .proj-item {
+    padding: 9px 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-left: 3px solid transparent;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .proj-item:hover { background: var(--panel-2); }
+  .proj-item.active { background: #F0F8FA; border-color: #D5D9D9; border-left-color: var(--accent); }
+  .proj-item .star { font-size: 13px; width: 14px; flex-shrink: 0; color: #FF9900; }
+  .proj-item .pinfo { min-width: 0; flex: 1; }
+  .proj-item .pname { font-size: 13px; font-weight: 700; color: var(--link); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .proj-item:hover .pname { color: var(--link-hover); text-decoration: underline; }
+  .proj-item .pcat { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .proj-item .reorder { display: flex; flex-direction: column; gap: 1px; opacity: 0; }
+  .proj-item:hover .reorder { opacity: 1; }
+  .proj-item .reorder button { padding: 0 5px; line-height: 1.2; font-size: 10px; }
+  /* ---- Editor (A4 page) ---- */
+  .editor { flex: 1; overflow-y: auto; padding: 26px 26px 60px; }
+  .editor.empty { display: flex; align-items: center; justify-content: center; color: var(--muted); }
+  .sheet {
+    width: 794px;             /* A4 width @96dpi (210mm) */
+    max-width: 100%;
+    min-height: 1123px;       /* A4 height @96dpi (297mm) */
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    box-shadow: 0 2px 14px rgba(0,0,0,.18);
+    padding: 44px 52px;
+  }
+  /* ---- Image thumbnails ---- */
+  .img-thumb { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
+  .img-thumb img { max-height: 96px; max-width: 180px; object-fit: contain; background: #fff; border: 1px solid var(--border-dark); border-radius: 4px; padding: 2px; }
+  .img-thumb .ph { font-size: 12px; color: var(--muted); }
+  .img-thumb .ph.err { color: var(--danger); }
+  .mini-thumb { width: 44px; height: 44px; flex-shrink: 0; object-fit: cover; background: #fff; border: 1px solid var(--border-dark); border-radius: 4px; }
+  .mini-thumb.empty { background: var(--panel-2); }
+  .field { margin-bottom: 16px; }
+  .field > label { display: block; font-size: 13px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
+  .field input[type=text], .field input[type=url], .field textarea, .field select {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius);
+    color: var(--text);
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(15,17,17,.08) inset;
+  }
+  .field textarea { resize: vertical; min-height: 60px; line-height: 1.5; }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+  }
+  .row { display: flex; gap: 16px; }
+  .row > .field { flex: 1; }
+  .inline { display: flex; align-items: center; gap: 8px; }
+  .checkbox-field { display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; font-weight: 400; }
+  .checkbox-field input { width: 16px; height: 16px; accent-color: var(--accent); }
+  fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 18px;
+    background: var(--panel);
+  }
+  fieldset legend { padding: 0 8px; font-size: 14px; color: var(--text); font-weight: 700; }
+  .list-row { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
+  .list-row input { flex: 1; }
+  .list-row .grip { color: var(--muted); cursor: grab; font-size: 14px; }
+  .swatch { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; border: 1px solid rgba(0,0,0,.15); }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .id-warn { color: var(--danger); font-weight: 700; }
+  /* ---- WYSIWYG ---- */
+  .wysiwyg-toolbar { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; background: var(--panel-2); border: 1px solid var(--border-dark); border-bottom: none; border-radius: var(--radius) var(--radius) 0 0; }
+  .wysiwyg-toolbar button { padding: 5px 9px; font-size: 12px; }
+  .wysiwyg-toolbar button.toggled { background: linear-gradient(to bottom, var(--gold-1), var(--gold-2)); border-color: var(--gold-border); }
+  .wysiwyg-toolbar .sep { width: 1px; background: var(--border-dark); margin: 2px 3px; }
+  .wysiwyg {
+    min-height: 200px;
+    max-height: 480px;
+    overflow-y: auto;
+    background: #fff;
+    color: #0F1111;
+    padding: 14px 16px;
+    border: 1px solid var(--border-dark);
+    border-radius: 0 0 var(--radius) var(--radius);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .wysiwyg:focus { outline: none; box-shadow: 0 0 3px 2px rgba(228,121,17,.5); }
+  .wysiwyg h1, .wysiwyg h2, .wysiwyg h3 { line-height: 1.3; }
+  .wysiwyg .font-bold { font-weight: 700; }
+  .wysiwyg .text-2xl { font-size: 1.5em; }
+  .wysiwyg .text-4xl { font-size: 2.25em; }
+  .wysiwyg .text-secondary { color: var(--link); }
+  .wysiwyg img { max-width: 100%; height: auto; display: block; margin: 8px 0; border: 1px dashed #bbb; }
+  .wysiwyg a { color: var(--link); }
+  .wysiwyg code { background: #f0f2f2; padding: 1px 4px; border-radius: 3px; font-size: .9em; }
+  .wysiwyg pre { background: #f0f2f2; padding: 10px; border-radius: 4px; overflow-x: auto; }
+  .raw-area { width: 100%; min-height: 260px; background: #232F3E; color: #e8eaed; border: 1px solid var(--border-dark); border-radius: 0 0 var(--radius) var(--radius); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px; padding: 12px; line-height: 1.5; resize: vertical; }
+  /* ---- Modal ---- */
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: none; align-items: center; justify-content: center; z-index: 100; }
+  .modal-backdrop.show { display: flex; }
+  .modal { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 22px; width: 440px; max-width: 90vw; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+  .modal h3 { margin: 0 0 14px; font-size: 17px; font-weight: 700; }
+  .modal .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--nav-belt); color: #fff; padding: 11px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; opacity: 0; transition: opacity .25s; pointer-events: none; z-index: 200; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+  .toast.show { opacity: 1; }
+  .toast.err { background: var(--danger); }
+  input[type=file] { display: none; }
+  .empty-illustration { text-align: center; }
+  .empty-illustration .big { font-size: 40px; margin-bottom: 12px; }
+  /* ---- Theme toggle ---- */
+  .theme-toggle { display: flex; align-items: center; gap: 6px; }
+  /* ---- Dark mode ---- */
+  body.dark {
+    --bg: #191e24;
+    --nav-top: #0d1217;
+    --nav-belt: #1b222c;
+    --panel: #222932;
+    --panel-2: #2a323d;
+    --border: #3a434f;
+    --border-dark: #4d5765;
+    --text: #e6e8ec;
+    --muted: #9aa3b0;
+    --link: #46b4c4;
+    --link-hover: #ff9f6e;
+  }
+  body.dark button:not(.primary) {
+    background: #2d3640 linear-gradient(to bottom, #333d48, #283038);
+    border-color: #4d5765 #444d58 #3a424c;
+    color: var(--text);
+    box-shadow: none;
+  }
+  body.dark button:not(.primary):hover { background: #39434f linear-gradient(to bottom, #404b58, #333c47); }
+  body.dark button.ghost { background: var(--panel); }
+  /* every input / select / textarea goes dark */
+  body.dark input[type=text],
+  body.dark input[type=url],
+  body.dark textarea,
+  body.dark select {
+    background: #1a1f26; color: var(--text); border-color: var(--border-dark); box-shadow: none;
+  }
+  body.dark ::placeholder { color: #6b7480; }
+  body.dark .proj-item.active { background: #1c2630; }
+  body.dark .wysiwyg-toolbar { background: var(--panel-2); }
+  /* WYSIWYG content surface */
+  body.dark .wysiwyg { background: #1a1f26; color: var(--text); border-color: var(--border-dark); }
+  body.dark .wysiwyg a, body.dark .wysiwyg .text-secondary { color: var(--link); }
+  body.dark .wysiwyg code, body.dark .wysiwyg pre { background: #2a323d; color: #e6e8ec; }
+  body.dark .wysiwyg img { border-color: var(--border-dark); }
+  body.dark .toast { box-shadow: 0 4px 14px rgba(0,0,0,.5); }
+</style>
+</head>
+<body>
+<header>
+  <span class="brand" title="Project Catalog Editor">
+    <span class="logo">catalog<b>.editor</b></span>
+    <span class="smile">⌣</span>
+  </span>
+  <h1>Project Catalog Editor</h1>
+  <span class="count" id="count"></span>
+  <button id="btnTheme" class="theme-toggle" title="Toggle dark mode"><span id="themeIcon">🌙</span><span id="themeLabel">Dark</span></button>
+  <button id="btnImport">Load JSON</button>
+  <button id="btnExport">Export JSON</button>
+  <button id="btnPreviewJson" class="ghost">View JSON</button>
+  <button id="btnAdd" class="primary">+ Add Project</button>
+  <input type="file" id="fileInput" accept=".json,application/json">
+</header>
+
+<div class="main">
+  <div class="sidebar" id="sidebar"></div>
+  <div class="editor empty" id="editor">
+    <div class="empty-illustration">
+      <div class="big">📂</div>
+      <div>No project selected.</div>
+      <div style="margin-top:8px"><button class="primary" onclick="addProject()">+ Add your first project</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- JSON preview modal -->
+<div class="modal-backdrop" id="jsonModal">
+  <div class="modal" style="width:680px">
+    <h3>Catalog JSON</h3>
+    <textarea id="jsonView" class="raw-area" style="border-radius:8px;min-height:420px" readonly></textarea>
+    <div class="actions">
+      <button onclick="copyJson()">Copy</button>
+      <button class="primary" onclick="closeModal('jsonModal')">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ----------------------------- Data model ----------------------------- */
+const TAG_COLORS = [
+  { value: "blue-text-gradient",   label: "Blue",   color: "#5b8cff" },
+  { value: "green-text-gradient",  label: "Green",  color: "#34d399" },
+  { value: "pink-text-gradient",   label: "Pink",   color: "#f472b6" },
+  { value: "yellow-text-gradient", label: "Yellow", color: "#fbbf24" },
+];
+const CATEGORIES = ["Game Development", "Electronics", "Fullstack"];
+
+let projects = [];
+let selected = -1;
+
+function blankProject() {
+  return {
+    highlight: false,
+    category: CATEGORIES[0],
+    id: "",
+    name: "",
+    description: "",
+    tags: [],
+    image: "",
+    details: { body: "", videos: [], images: [], likes: [] },
+  };
+}
+
+/* Normalize a loaded project into our clean shape (drops junk keys). */
+function normalize(p) {
+  p = p || {};
+  const d = p.details || {};
+  return {
+    highlight: !!p.highlight,
+    category: p.category || "",
+    id: p.id || "",
+    name: p.name || "",
+    description: p.description || "",
+    tags: Array.isArray(p.tags) ? p.tags.map(t => ({ name: t.name || "", color: t.color || TAG_COLORS[0].value })) : [],
+    image: p.image || "",
+    details: {
+      body: typeof d.body === "string" ? d.body : "",
+      videos: Array.isArray(d.videos) ? d.videos.filter(v => typeof v === "string") : [],
+      images: Array.isArray(d.images) ? d.images.filter(v => typeof v === "string") : [],
+      likes: Array.isArray(d.likes) ? d.likes.map(l => ({ name: l.name || "", url: l.url || "" })) : [],
+    },
+  };
+}
+
+/* Build clean output object (only the canonical keys, in order). */
+function serializeProject(p) {
+  const out = {};
+  if (p.highlight) out.highlight = true;        // mirror source: only present when true
+  out.category = p.category;
+  out.id = p.id;
+  out.name = p.name;
+  out.description = p.description;
+  out.tags = p.tags.map(t => ({ name: t.name, color: t.color }));
+  out.image = p.image;
+  out.details = {
+    body: p.details.body,
+    videos: p.details.videos.slice(),
+    images: p.details.images.slice(),
+    likes: p.details.likes.map(l => ({ name: l.name, url: l.url })),
+  };
+  return out;
+}
+
+function buildJson() {
+  return JSON.stringify(projects.map(serializeProject), null, 2);
+}
+
+/* ----------------------------- Helpers ----------------------------- */
+function slugify(s) {
+  return (s || "").toLowerCase().trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+function el(tag, props = {}, ...children) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(props)) {
+    if (k === "class") e.className = v;
+    else if (k === "html") e.innerHTML = v;
+    else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else if (v !== null && v !== undefined) e.setAttribute(k, v);
+  }
+  for (const c of children) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+function toast(msg, isErr) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.className = "toast show" + (isErr ? " err" : "");
+  setTimeout(() => (t.className = "toast"), 1900);
+}
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+/* ----------------------------- Sidebar ----------------------------- */
+function renderSidebar() {
+  const sb = document.getElementById("sidebar");
+  sb.innerHTML = "";
+  document.getElementById("count").textContent =
+    projects.length + (projects.length === 1 ? " project" : " projects");
+
+  projects.forEach((p, i) => {
+    const item = el("div", { class: "proj-item" + (i === selected ? " active" : ""), onclick: () => select(i) },
+      el("span", { class: "star", title: p.highlight ? "Highlighted" : "" }, p.highlight ? "★" : ""),
+      el("div", { class: "pinfo" },
+        el("div", { class: "pname" }, p.name || "(untitled)"),
+        el("div", { class: "pcat" }, p.category || "—"),
+      ),
+      el("div", { class: "reorder" },
+        el("button", { class: "small", title: "Move up", onclick: (e) => { e.stopPropagation(); move(i, -1); } }, "▲"),
+        el("button", { class: "small", title: "Move down", onclick: (e) => { e.stopPropagation(); move(i, 1); } }, "▼"),
+      ),
+    );
+    sb.appendChild(item);
+  });
+}
+
+function move(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= projects.length) return;
+  [projects[i], projects[j]] = [projects[j], projects[i]];
+  if (selected === i) selected = j;
+  else if (selected === j) selected = i;
+  renderSidebar();
+}
+
+function select(i) {
+  flushBody();
+  selected = i;
+  renderSidebar();
+  renderEditor();
+}
+
+function addProject() {
+  projects.push(blankProject());
+  selected = projects.length - 1;
+  renderSidebar();
+  renderEditor();
+}
+
+function duplicateProject(i) {
+  const copy = normalize(serializeProject(projects[i]));
+  copy.name = projects[i].name + " (copy)";
+  copy.id = projects[i].id ? projects[i].id + "-copy" : "";
+  projects.splice(i + 1, 0, copy);
+  selected = i + 1;
+  renderSidebar();
+  renderEditor();
+}
+
+function deleteProject(i) {
+  if (!confirm("Delete \"" + (projects[i].name || "untitled") + "\"?")) return;
+  projects.splice(i, 1);
+  if (selected >= projects.length) selected = projects.length - 1;
+  renderSidebar();
+  renderEditor();
+}
+
+/* ----------------------------- Editor ----------------------------- */
+let bodyEditorEl = null;   // current contenteditable (or null if raw)
+let rawMode = false;
+
+function flushBody() {
+  // Persist whatever the body editor currently holds into the model.
+  if (selected < 0) return;
+  const p = projects[selected];
+  if (!p) return;
+  if (rawMode) {
+    const ta = document.getElementById("rawBody");
+    if (ta) p.details.body = ta.value;
+  } else if (bodyEditorEl) {
+    p.details.body = bodyEditorEl.innerHTML;
+  }
+}
+
+function renderEditor() {
+  const ed = document.getElementById("editor");
+  bodyEditorEl = null;
+  if (selected < 0 || !projects[selected]) {
+    ed.className = "editor empty";
+    ed.innerHTML = '<div class="empty-illustration"><div class="big">📂</div><div>No project selected.</div>' +
+      '<div style="margin-top:8px"><button class="primary" onclick="addProject()">+ Add a project</button></div></div>';
+    return;
+  }
+  ed.className = "editor";
+  ed.innerHTML = "";
+  const p = projects[selected];
+  const sheet = el("div", { class: "sheet" });
+
+  /* Top action bar */
+  sheet.appendChild(el("div", { class: "inline", style: "margin-bottom:18px;justify-content:flex-end;gap:8px" },
+    el("button", { class: "small", onclick: () => duplicateProject(selected) }, "Duplicate"),
+    el("button", { class: "small danger", onclick: () => deleteProject(selected) }, "Delete"),
+  ));
+
+  /* highlight + category */
+  sheet.appendChild(el("div", { class: "row" },
+    fieldWrap("",
+      el("label", { class: "checkbox-field" },
+        checkbox(p.highlight, v => { p.highlight = v; renderSidebar(); }),
+        el("span", {}, "Highlight (feature this project)"),
+      ),
+    ),
+    field("Category", () => {
+      const sel = el("input", { type: "text", list: "catList", value: p.category });
+      sel.addEventListener("input", () => { p.category = sel.value; renderSidebar(); });
+      return sel;
+    }),
+  ));
+
+  /* name + id */
+  const idInput = el("input", { type: "text", value: p.id, placeholder: "kebab-case-id" });
+  const idHint = el("div", { class: "hint" });
+  const refreshIdHint = () => {
+    const dup = projects.some((q, qi) => qi !== selected && q.id && q.id === p.id);
+    idHint.className = "hint" + (dup ? " id-warn" : "");
+    idHint.textContent = dup ? "⚠ Duplicate id — must be unique." : "Used as the unique key / URL slug.";
+  };
+  idInput.addEventListener("input", () => { p.id = idInput.value; refreshIdHint(); });
+
+  const nameInput = el("input", { type: "text", value: p.name, placeholder: "Project name" });
+  nameInput.addEventListener("input", () => {
+    p.name = nameInput.value;
+    renderSidebar();
+    if (!p.id) { p.id = slugify(p.name); idInput.value = p.id; refreshIdHint(); }
+  });
+
+  sheet.appendChild(el("div", { class: "row" },
+    fieldWrap("Name", nameInput),
+    (() => {
+      const w = fieldWrap("ID", el("div", { class: "inline" },
+        idInput,
+        el("button", { class: "small", title: "Generate from name", onclick: () => { p.id = slugify(p.name); idInput.value = p.id; refreshIdHint(); } }, "⟳"),
+      ));
+      w.appendChild(idHint);
+      refreshIdHint();
+      return w;
+    })(),
+  ));
+
+  /* description */
+  sheet.appendChild(field("Short description (card text)", () => {
+    const ta = el("textarea", { placeholder: "One or two sentences shown on the project card." }, p.description);
+    ta.addEventListener("input", () => p.description = ta.value);
+    return ta;
+  }));
+
+  /* image + live preview */
+  (() => {
+    const w = el("div", { class: "field" }, el("label", {}, "Card image URL"));
+    const inp = el("input", { type: "url", value: p.image, placeholder: "https://..." });
+    const thumb = el("div", { class: "img-thumb" });
+    const updateThumb = () => renderThumb(thumb, inp.value);
+    inp.addEventListener("input", () => { p.image = inp.value; updateThumb(); });
+    w.appendChild(el("div", { class: "inline" }, inp, openBtn(() => inp.value)));
+    w.appendChild(thumb);
+    updateThumb();
+    sheet.appendChild(w);
+  })();
+
+  /* tags */
+  sheet.appendChild(tagsFieldset(p));
+
+  /* details: body */
+  const bodyFs = el("fieldset", {},
+    el("legend", {}, "Details — Body (HTML)"));
+  bodyFs.appendChild(bodyEditor(p));
+  sheet.appendChild(bodyFs);
+
+  /* details: videos / images / likes */
+  sheet.appendChild(stringListFieldset("Videos (YouTube URLs)", p.details.videos, "https://www.youtube.com/watch?v=..."));
+  sheet.appendChild(stringListFieldset("Images (URLs)", p.details.images, "https://...", true));
+  sheet.appendChild(likesFieldset(p.details.likes));
+
+  ed.appendChild(sheet);
+}
+
+/* Render an image thumbnail into `host`, handling empty/broken URLs. */
+function renderThumb(host, url) {
+  host.innerHTML = "";
+  url = (url || "").trim();
+  if (!url) { host.appendChild(el("span", { class: "ph" }, "No image")); return; }
+  const img = el("img", { src: url, alt: "preview" });
+  img.onerror = () => { host.innerHTML = ""; host.appendChild(el("span", { class: "ph err" }, "⚠ Could not load image")); };
+  host.appendChild(img);
+}
+
+function fieldWrap(labelText, control) {
+  const f = el("div", { class: "field" });
+  if (labelText) f.appendChild(el("label", {}, labelText));
+  f.appendChild(control);
+  return f;
+}
+function field(labelText, makeControl) { return fieldWrap(labelText, makeControl()); }
+/* Button that opens the current value of a URL field in a new tab. */
+function openBtn(getUrl) {
+  return el("button", { class: "small", title: "Open link in new tab", onclick: () => {
+    let u = (getUrl() || "").trim();
+    if (!u) { toast("No URL to open", true); return; }
+    window.open(u, "_blank", "noopener");
+  } }, "↗ Open");
+}
+function checkbox(val, onChange) {
+  const c = el("input", { type: "checkbox" });
+  c.checked = val;
+  c.addEventListener("change", () => onChange(c.checked));
+  return c;
+}
+
+/* ----- Tags ----- */
+function tagsFieldset(p) {
+  const fs = el("fieldset", {}, el("legend", {}, "Tags"));
+  const list = el("div", {});
+  fs.appendChild(list);
+
+  function draw() {
+    list.innerHTML = "";
+    p.tags.forEach((tag, ti) => {
+      const colorObj = TAG_COLORS.find(c => c.value === tag.color) || TAG_COLORS[0];
+      const swatch = el("span", { class: "swatch", style: "background:" + colorObj.color });
+      const nameInp = el("input", { type: "text", value: tag.name, placeholder: "Tag name" });
+      nameInp.addEventListener("input", () => tag.name = nameInp.value);
+      const sel = el("select", {});
+      TAG_COLORS.forEach(c => {
+        const o = el("option", { value: c.value }, c.label);
+        if (c.value === tag.color) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.style.maxWidth = "120px";
+      sel.addEventListener("change", () => { tag.color = sel.value; swatch.style.background = (TAG_COLORS.find(c => c.value === tag.color) || TAG_COLORS[0]).color; });
+      list.appendChild(el("div", { class: "list-row" },
+        swatch, nameInp, sel,
+        el("button", { class: "small danger", onclick: () => { p.tags.splice(ti, 1); draw(); } }, "✕"),
+      ));
+    });
+  }
+  draw();
+  fs.appendChild(el("button", { class: "small", onclick: () => { p.tags.push({ name: "", color: TAG_COLORS[0].value }); draw(); } }, "+ Add tag"));
+  return fs;
+}
+
+/* ----- Generic string list (optional per-row image thumb) ----- */
+function stringListFieldset(legend, arr, placeholder, withThumb) {
+  const fs = el("fieldset", {}, el("legend", {}, legend));
+  const list = el("div", {});
+  fs.appendChild(list);
+  function draw() {
+    list.innerHTML = "";
+    arr.forEach((val, i) => {
+      const inp = el("input", { type: "url", value: val, placeholder });
+      const row = el("div", { class: "list-row" });
+      let thumb = null;
+      if (withThumb) {
+        thumb = el("img", { class: "mini-thumb empty", alt: "" });
+        const setThumb = () => {
+          const u = (arr[i] || "").trim();
+          if (u) { thumb.src = u; thumb.classList.remove("empty"); }
+          else { thumb.removeAttribute("src"); thumb.classList.add("empty"); }
+        };
+        thumb.onerror = () => thumb.classList.add("empty");
+        setThumb();
+        inp.addEventListener("input", () => { arr[i] = inp.value; setThumb(); });
+        row.appendChild(thumb);
+      } else {
+        inp.addEventListener("input", () => arr[i] = inp.value);
+      }
+      row.appendChild(inp);
+      row.appendChild(openBtn(() => arr[i]));
+      row.appendChild(el("button", { class: "small", title: "Move up", onclick: () => { if (i > 0) { [arr[i-1],arr[i]]=[arr[i],arr[i-1]]; draw(); } } }, "▲"));
+      row.appendChild(el("button", { class: "small danger", onclick: () => { arr.splice(i, 1); draw(); } }, "✕"));
+      list.appendChild(row);
+    });
+  }
+  draw();
+  fs.appendChild(el("button", { class: "small", onclick: () => { arr.push(""); draw(); } }, "+ Add"));
+  return fs;
+}
+
+/* ----- Likes (name + url) ----- */
+function likesFieldset(arr) {
+  const fs = el("fieldset", {}, el("legend", {}, "Links / Likes (label + URL)"));
+  const list = el("div", {});
+  fs.appendChild(list);
+  function draw() {
+    list.innerHTML = "";
+    arr.forEach((lk, i) => {
+      const nameInp = el("input", { type: "text", value: lk.name, placeholder: "Label (e.g. Link to source code)" });
+      nameInp.style.maxWidth = "240px";
+      nameInp.addEventListener("input", () => lk.name = nameInp.value);
+      const urlInp = el("input", { type: "url", value: lk.url, placeholder: "https://..." });
+      urlInp.addEventListener("input", () => lk.url = urlInp.value);
+      list.appendChild(el("div", { class: "list-row" },
+        nameInp, urlInp,
+        openBtn(() => lk.url),
+        el("button", { class: "small danger", onclick: () => { arr.splice(i, 1); draw(); } }, "✕"),
+      ));
+    });
+  }
+  draw();
+  fs.appendChild(el("button", { class: "small", onclick: () => { arr.push({ name: "", url: "" }); draw(); } }, "+ Add link"));
+  return fs;
+}
+
+/* ----------------------------- WYSIWYG body ----------------------------- */
+function bodyEditor(p) {
+  const wrap = el("div", {});
+  rawMode = false;
+
+  const cmd = (c, v) => { document.execCommand(c, false, v); ce.focus(); };
+  const tb = el("div", { class: "wysiwyg-toolbar" });
+
+  const ce = el("div", { class: "wysiwyg", contenteditable: "true" });
+  ce.innerHTML = p.details.body || "";
+  ce.addEventListener("input", () => p.details.body = ce.innerHTML);
+  bodyEditorEl = ce;
+
+  function tbBtn(label, title, fn) {
+    return el("button", { title, onclick: (e) => { e.preventDefault(); fn(); } }, label);
+  }
+
+  tb.append(
+    tbBtn("H2", "Big heading (text-4xl)", () => insertBlock("h2", "font-bold text-4xl")),
+    tbBtn("H3", "Section heading (text-2xl)", () => insertBlock("h3", "font-bold text-2xl")),
+    tbBtn("¶", "Paragraph", () => cmd("formatBlock", "p")),
+    el("div", { class: "sep" }),
+    tbBtn("B", "Bold", () => cmd("bold")),
+    tbBtn("I", "Italic", () => cmd("italic")),
+    tbBtn("• List", "Bullet list", () => cmd("insertUnorderedList")),
+    tbBtn("1. List", "Numbered list", () => cmd("insertOrderedList")),
+    tbBtn("</>", "Inline code", () => wrapInline("code")),
+    el("div", { class: "sep" }),
+    tbBtn("🔗 Link", "Insert link", () => insertLink()),
+    tbBtn("🖼 Image", "Insert image", () => insertImage()),
+    tbBtn("↵ Break", "Line break", () => cmd("insertHTML", "<br>")),
+    el("div", { class: "sep" }),
+    (() => {
+      const rawBtn = tbBtn("<> Raw HTML", "Toggle raw HTML editing", () => toggleRaw(rawBtn));
+      return rawBtn;
+    })(),
+  );
+
+  function insertBlock(tag, cls) {
+    const sel = window.getSelection();
+    const text = sel && sel.toString() ? sel.toString() : "Heading";
+    cmd("insertHTML", `<${tag} class="${cls}">${escapeHtml(text)}</${tag}>`);
+  }
+  function wrapInline(tag) {
+    const sel = window.getSelection();
+    const text = sel && sel.toString() ? sel.toString() : "";
+    cmd("insertHTML", `<${tag}>${escapeHtml(text)}</${tag}>`);
+  }
+  function insertLink() {
+    const url = prompt("Link URL:", "https://");
+    if (!url) return;
+    const sel = window.getSelection();
+    const text = (sel && sel.toString()) || prompt("Link text:", url) || url;
+    cmd("insertHTML", `<a class="text-secondary" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>`);
+  }
+  function insertImage() {
+    const url = prompt("Image URL:");
+    if (!url) return;
+    cmd("insertHTML", `<p><img src="${escapeHtml(url)}"></p>`);
+  }
+
+  const editorHost = el("div", {});
+  editorHost.appendChild(ce);
+
+  function toggleRaw(btn) {
+    if (!rawMode) {
+      // switch to raw
+      flushBody();
+      rawMode = true;
+      btn.classList.add("toggled");
+      const ta = el("textarea", { id: "rawBody", class: "raw-area" }, p.details.body || "");
+      ta.addEventListener("input", () => p.details.body = ta.value);
+      editorHost.innerHTML = "";
+      editorHost.appendChild(ta);
+      bodyEditorEl = null;
+    } else {
+      // switch back to wysiwyg
+      const ta = document.getElementById("rawBody");
+      if (ta) p.details.body = ta.value;
+      rawMode = false;
+      btn.classList.remove("toggled");
+      ce.innerHTML = p.details.body || "";
+      editorHost.innerHTML = "";
+      editorHost.appendChild(ce);
+      bodyEditorEl = ce;
+    }
+  }
+
+  wrap.appendChild(tb);
+  wrap.appendChild(editorHost);
+  wrap.appendChild(el("div", { class: "hint" }, "Tip: \"Raw HTML\" lets you paste/tune the exact markup. Headings use your font-bold / text-2xl classes."));
+  return wrap;
+}
+
+/* ----------------------------- Import / Export ----------------------------- */
+document.getElementById("btnImport").onclick = () => document.getElementById("fileInput").click();
+document.getElementById("fileInput").onchange = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!Array.isArray(data)) throw new Error("Root is not an array");
+      projects = data.map(normalize);
+      selected = projects.length ? 0 : -1;
+      renderSidebar();
+      renderEditor();
+      toast("Loaded " + projects.length + " projects");
+    } catch (err) {
+      toast("Invalid JSON: " + err.message, true);
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = "";
+};
+
+document.getElementById("btnExport").onclick = () => {
+  flushBody();
+  const bad = validate();
+  if (bad) { toast(bad, true); return; }
+  const blob = new Blob([buildJson()], { type: "application/json" });
+  const a = el("a", { href: URL.createObjectURL(blob), download: "Projects.json" });
+  document.body.appendChild(a); a.click(); a.remove();
+  toast("Exported Projects.json");
+};
+
+function validate() {
+  const ids = {};
+  for (const p of projects) {
+    if (!p.id) return "Every project needs an id (\"" + (p.name || "untitled") + "\" is missing one).";
+    if (ids[p.id]) return "Duplicate id: \"" + p.id + "\".";
+    ids[p.id] = true;
+  }
+  return null;
+}
+
+document.getElementById("btnAdd").onclick = addProject;
+
+document.getElementById("btnPreviewJson").onclick = () => {
+  flushBody();
+  document.getElementById("jsonView").value = buildJson();
+  document.getElementById("jsonModal").classList.add("show");
+};
+function closeModal(id) { document.getElementById(id).classList.remove("show"); }
+function copyJson() {
+  navigator.clipboard.writeText(document.getElementById("jsonView").value)
+    .then(() => toast("Copied to clipboard"))
+    .catch(() => toast("Copy failed", true));
+}
+window.closeModal = closeModal; window.copyJson = copyJson;
+window.addProject = addProject;
+
+/* category datalist */
+document.body.appendChild((() => {
+  const dl = el("datalist", { id: "catList" });
+  CATEGORIES.forEach(c => dl.appendChild(el("option", { value: c })));
+  return dl;
+})());
+
+/* ----------------------------- Dark mode ----------------------------- */
+function applyTheme(dark) {
+  document.body.classList.toggle("dark", dark);
+  document.getElementById("themeIcon").textContent = dark ? "☀️" : "🌙";
+  document.getElementById("themeLabel").textContent = dark ? "Light" : "Dark";
+}
+(function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem("pce-theme"); } catch (e) {}
+  const dark = saved ? saved === "dark"
+    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  applyTheme(!!dark);
+})();
+document.getElementById("btnTheme").onclick = () => {
+  const dark = !document.body.classList.contains("dark");
+  applyTheme(dark);
+  try { localStorage.setItem("pce-theme", dark ? "dark" : "light"); } catch (e) {}
+};
+
+/* warn before leaving with unsaved work */
+window.addEventListener("beforeunload", (e) => {
+  if (projects.length) { e.preventDefault(); e.returnValue = ""; }
+});
+
+renderSidebar();
+</script>
+</body>
+</html>
